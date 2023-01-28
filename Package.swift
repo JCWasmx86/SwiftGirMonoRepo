@@ -5,6 +5,50 @@ import PackageDescription
 
 let package = Package(
   name: "SwiftGirMonoRepo",
+  products: [
+    .library(
+      name: "Adw",
+      targets: ["Adw"]),
+    .library(
+      name: "Atk",
+      targets: ["Atk"]),
+    .library(
+      name: "Gdk",
+      targets: ["Gdk"]),
+    .library(
+      name: "GdkPixBuf",
+      targets: ["GdkPixBuf"]),
+    .library(
+      name: "Gtk",
+      targets: ["Gtk"]),
+    .library(
+      name: "GIO",
+      targets: ["GIO"]),
+    .library(
+      name: "GLib",
+      targets: ["GLib"]),
+    .library(
+      name: "GLibObject",
+      targets: ["GLibObject"]),
+    .library(
+      name: "GModule",
+      targets: ["GModule"]),
+    .library(
+      name: "Graphene",
+      targets: ["Graphene"]),
+    .library(
+      name: "Gsk",
+      targets: ["Gsk"]),
+    .library(
+      name: "HarfBuff",
+      targets: ["HarfBuzz"]),
+    .library(
+      name: "Pango",
+      targets: ["Pango"]),
+    .library(
+      name: "PangoCairo",
+      targets: ["PangoCairo"]),
+  ],
   dependencies: [
     .package(url: "https://github.com/rhx/gir2swift.git", branch: "main"),
     .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
