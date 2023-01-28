@@ -1,0 +1,11439 @@
+import CGLib
+import CCairo
+import CPango
+import CGraphene
+import CGdkPixbuf
+import CGdk
+import CGsk
+import CGtk
+import GLib
+import GLibObject
+import GIO
+import Graphene
+import Pango
+import Cairo
+import PangoCairo
+import GdkPixBuf
+import Gdk
+import Gsk
+
+/// Metatype/GType declaration for IMContext
+public extension IMContextClassRef {
+    
+    /// This getter returns the GLib type identifier registered for `IMContext`
+    static var metatypeReference: GType { gtk_im_context_get_type() }
+    
+    private static var metatypePointer: UnsafeMutablePointer<GtkIMContextClass>? { g_type_class_peek_static(metatypeReference)?.assumingMemoryBound(to: GtkIMContextClass.self) }
+    
+    static var metatype: GtkIMContextClass? { metatypePointer?.pointee } 
+    
+    static var wrapper: IMContextClassRef? { IMContextClassRef(metatypePointer) }
+    
+    
+}
+
+// MARK: - IMContextClass Record
+
+
+///
+/// The `IMContextClassProtocol` protocol exposes the methods and properties of an underlying `GtkIMContextClass` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `IMContextClass`.
+/// Alternatively, use `IMContextClassRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol IMContextClassProtocol {
+        /// Untyped pointer to the underlying `GtkIMContextClass` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkIMContextClass` instance.
+    var _ptr: UnsafeMutablePointer<GtkIMContextClass>! { get }
+
+    /// Required Initialiser for types conforming to `IMContextClassProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+
+///
+/// The `IMContextClassRef` type acts as a lightweight Swift reference to an underlying `GtkIMContextClass` instance.
+/// It exposes methods that can operate on this data type through `IMContextClassProtocol` conformance.
+/// Use `IMContextClassRef` only as an `unowned` reference to an existing `GtkIMContextClass` instance.
+///
+public struct IMContextClassRef: IMContextClassProtocol {
+        /// Untyped pointer to the underlying `GtkIMContextClass` instance.
+    /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension IMContextClassRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkIMContextClass>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkIMContextClass>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkIMContextClass>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkIMContextClass>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `IMContextClassProtocol`
+    @inlinable init<T: IMContextClassProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextClassProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextClassProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextClassProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextClassProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextClassProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+    }
+
+// MARK: IMContextClass Record: IMContextClassProtocol extension (methods and fields)
+public extension IMContextClassProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkIMContextClass` instance.
+    @inlinable var _ptr: UnsafeMutablePointer<GtkIMContextClass>! { return ptr?.assumingMemoryBound(to: GtkIMContextClass.self) }
+
+
+    // var parentClass is unavailable because parent_class is private
+
+    // var preeditStart is unavailable because preedit_start is void
+
+    // var preeditEnd is unavailable because preedit_end is void
+
+    // var preeditChanged is unavailable because preedit_changed is void
+
+    // var commit is unavailable because commit is void
+
+    // var retrieveSurrounding is unavailable because retrieve_surrounding is void
+
+    // var deleteSurrounding is unavailable because delete_surrounding is void
+
+    // var setClientWidget is unavailable because set_client_widget is void
+
+    // var getPreeditString is unavailable because get_preedit_string is void
+
+    // var filterKeypress is unavailable because filter_keypress is void
+
+    // var focusIn is unavailable because focus_in is void
+
+    // var focusOut is unavailable because focus_out is void
+
+    // var reset is unavailable because reset is void
+
+    // var setCursorLocation is unavailable because set_cursor_location is void
+
+    // var setUsePreedit is unavailable because set_use_preedit is void
+
+    // var setSurrounding is unavailable because set_surrounding is void
+
+    // var getSurrounding is unavailable because get_surrounding is void
+
+    // var setSurroundingWithSelection is unavailable because set_surrounding_with_selection is void
+
+    // var getSurroundingWithSelection is unavailable because get_surrounding_with_selection is void
+
+    // var GtkReserved1 is unavailable because _gtk_reserved1 is void
+
+    // var GtkReserved2 is unavailable because _gtk_reserved2 is void
+
+    // var GtkReserved3 is unavailable because _gtk_reserved3 is void
+
+    // var GtkReserved4 is unavailable because _gtk_reserved4 is void
+
+    // var GtkReserved5 is unavailable because _gtk_reserved5 is void
+
+}
+
+
+
+/// Metatype/GType declaration for IMContextSimple
+public extension IMContextSimpleClassRef {
+    
+    /// This getter returns the GLib type identifier registered for `IMContextSimple`
+    static var metatypeReference: GType { gtk_im_context_simple_get_type() }
+    
+    private static var metatypePointer: UnsafeMutablePointer<GtkIMContextSimpleClass>? { g_type_class_peek_static(metatypeReference)?.assumingMemoryBound(to: GtkIMContextSimpleClass.self) }
+    
+    static var metatype: GtkIMContextSimpleClass? { metatypePointer?.pointee } 
+    
+    static var wrapper: IMContextSimpleClassRef? { IMContextSimpleClassRef(metatypePointer) }
+    
+    
+}
+
+// MARK: - IMContextSimpleClass Record
+
+
+///
+/// The `IMContextSimpleClassProtocol` protocol exposes the methods and properties of an underlying `GtkIMContextSimpleClass` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `IMContextSimpleClass`.
+/// Alternatively, use `IMContextSimpleClassRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol IMContextSimpleClassProtocol {
+        /// Untyped pointer to the underlying `GtkIMContextSimpleClass` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkIMContextSimpleClass` instance.
+    var _ptr: UnsafeMutablePointer<GtkIMContextSimpleClass>! { get }
+
+    /// Required Initialiser for types conforming to `IMContextSimpleClassProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+
+///
+/// The `IMContextSimpleClassRef` type acts as a lightweight Swift reference to an underlying `GtkIMContextSimpleClass` instance.
+/// It exposes methods that can operate on this data type through `IMContextSimpleClassProtocol` conformance.
+/// Use `IMContextSimpleClassRef` only as an `unowned` reference to an existing `GtkIMContextSimpleClass` instance.
+///
+public struct IMContextSimpleClassRef: IMContextSimpleClassProtocol {
+        /// Untyped pointer to the underlying `GtkIMContextSimpleClass` instance.
+    /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension IMContextSimpleClassRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkIMContextSimpleClass>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkIMContextSimpleClass>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkIMContextSimpleClass>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkIMContextSimpleClass>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `IMContextSimpleClassProtocol`
+    @inlinable init<T: IMContextSimpleClassProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleClassProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleClassProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleClassProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleClassProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleClassProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+    }
+
+// MARK: IMContextSimpleClass Record: IMContextSimpleClassProtocol extension (methods and fields)
+public extension IMContextSimpleClassProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkIMContextSimpleClass` instance.
+    @inlinable var _ptr: UnsafeMutablePointer<GtkIMContextSimpleClass>! { return ptr?.assumingMemoryBound(to: GtkIMContextSimpleClass.self) }
+
+
+    @inlinable var parentClass: GtkIMContextClass {
+        get {
+            let rv = _ptr.pointee.parent_class
+    return rv
+        }
+    }
+
+}
+
+
+
+/// Metatype/GType declaration for IMMulticontext
+public extension IMMulticontextClassRef {
+    
+    /// This getter returns the GLib type identifier registered for `IMMulticontext`
+    static var metatypeReference: GType { gtk_im_multicontext_get_type() }
+    
+    private static var metatypePointer: UnsafeMutablePointer<GtkIMMulticontextClass>? { g_type_class_peek_static(metatypeReference)?.assumingMemoryBound(to: GtkIMMulticontextClass.self) }
+    
+    static var metatype: GtkIMMulticontextClass? { metatypePointer?.pointee } 
+    
+    static var wrapper: IMMulticontextClassRef? { IMMulticontextClassRef(metatypePointer) }
+    
+    
+}
+
+// MARK: - IMMulticontextClass Record
+
+
+///
+/// The `IMMulticontextClassProtocol` protocol exposes the methods and properties of an underlying `GtkIMMulticontextClass` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `IMMulticontextClass`.
+/// Alternatively, use `IMMulticontextClassRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol IMMulticontextClassProtocol {
+        /// Untyped pointer to the underlying `GtkIMMulticontextClass` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkIMMulticontextClass` instance.
+    var _ptr: UnsafeMutablePointer<GtkIMMulticontextClass>! { get }
+
+    /// Required Initialiser for types conforming to `IMMulticontextClassProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+
+///
+/// The `IMMulticontextClassRef` type acts as a lightweight Swift reference to an underlying `GtkIMMulticontextClass` instance.
+/// It exposes methods that can operate on this data type through `IMMulticontextClassProtocol` conformance.
+/// Use `IMMulticontextClassRef` only as an `unowned` reference to an existing `GtkIMMulticontextClass` instance.
+///
+public struct IMMulticontextClassRef: IMMulticontextClassProtocol {
+        /// Untyped pointer to the underlying `GtkIMMulticontextClass` instance.
+    /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension IMMulticontextClassRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkIMMulticontextClass>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkIMMulticontextClass>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkIMMulticontextClass>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkIMMulticontextClass>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `IMMulticontextClassProtocol`
+    @inlinable init<T: IMMulticontextClassProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextClassProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextClassProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextClassProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextClassProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextClassProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+    }
+
+// MARK: IMMulticontextClass Record: IMMulticontextClassProtocol extension (methods and fields)
+public extension IMMulticontextClassProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkIMMulticontextClass` instance.
+    @inlinable var _ptr: UnsafeMutablePointer<GtkIMMulticontextClass>! { return ptr?.assumingMemoryBound(to: GtkIMMulticontextClass.self) }
+
+
+    @inlinable var parentClass: GtkIMContextClass {
+        get {
+            let rv = _ptr.pointee.parent_class
+    return rv
+        }
+    }
+
+    // var GtkReserved1 is unavailable because _gtk_reserved1 is void
+
+    // var GtkReserved2 is unavailable because _gtk_reserved2 is void
+
+    // var GtkReserved3 is unavailable because _gtk_reserved3 is void
+
+    // var GtkReserved4 is unavailable because _gtk_reserved4 is void
+
+}
+
+
+
+/// Metatype/GType declaration for Inscription
+public extension InscriptionClassRef {
+    
+    /// This getter returns the GLib type identifier registered for `Inscription`
+    static var metatypeReference: GType { gtk_inscription_get_type() }
+    
+    private static var metatypePointer: UnsafeMutablePointer<GtkInscriptionClass>? { g_type_class_peek_static(metatypeReference)?.assumingMemoryBound(to: GtkInscriptionClass.self) }
+    
+    static var metatype: GtkInscriptionClass? { metatypePointer?.pointee } 
+    
+    static var wrapper: InscriptionClassRef? { InscriptionClassRef(metatypePointer) }
+    
+    
+}
+
+// MARK: - InscriptionClass Record
+
+
+///
+/// The `InscriptionClassProtocol` protocol exposes the methods and properties of an underlying `GtkInscriptionClass` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `InscriptionClass`.
+/// Alternatively, use `InscriptionClassRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol InscriptionClassProtocol {
+        /// Untyped pointer to the underlying `GtkInscriptionClass` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkInscriptionClass` instance.
+    var _ptr: UnsafeMutablePointer<GtkInscriptionClass>! { get }
+
+    /// Required Initialiser for types conforming to `InscriptionClassProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+
+///
+/// The `InscriptionClassRef` type acts as a lightweight Swift reference to an underlying `GtkInscriptionClass` instance.
+/// It exposes methods that can operate on this data type through `InscriptionClassProtocol` conformance.
+/// Use `InscriptionClassRef` only as an `unowned` reference to an existing `GtkInscriptionClass` instance.
+///
+public struct InscriptionClassRef: InscriptionClassProtocol {
+        /// Untyped pointer to the underlying `GtkInscriptionClass` instance.
+    /// For type-safe access, use the generated, typed pointer `_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension InscriptionClassRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkInscriptionClass>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkInscriptionClass>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkInscriptionClass>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkInscriptionClass>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `InscriptionClassProtocol`
+    @inlinable init<T: InscriptionClassProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionClassProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionClassProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionClassProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionClassProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionClassProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+    }
+
+// MARK: InscriptionClass Record: InscriptionClassProtocol extension (methods and fields)
+public extension InscriptionClassProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkInscriptionClass` instance.
+    @inlinable var _ptr: UnsafeMutablePointer<GtkInscriptionClass>! { return ptr?.assumingMemoryBound(to: GtkInscriptionClass.self) }
+
+
+    @inlinable var parentClass: GtkWidgetClass {
+        get {
+            let rv = _ptr.pointee.parent_class
+    return rv
+        }
+    }
+
+}
+
+
+
+// MARK: - IMContext Class
+
+/// `GtkIMContext` defines the interface for GTK input methods.
+/// 
+/// `GtkIMContext` is used by GTK text input widgets like `GtkText`
+/// to map from key events to Unicode character strings.
+/// 
+/// An input method may consume multiple key events in sequence before finally
+/// outputting the composed result. This is called *preediting*, and an input
+/// method may provide feedback about this process by displaying the intermediate
+/// composition states as preedit text. To do so, the `GtkIMContext` will emit
+/// [signal`Gtk.IMContext::preedit-start`], [signal`Gtk.IMContext::preedit-changed`]
+/// and [signal`Gtk.IMContext::preedit-end`] signals.
+/// 
+/// For instance, the built-in GTK input method [class`Gtk.IMContextSimple`]
+/// implements the input of arbitrary Unicode code points by holding down the
+/// &lt;kbd&gt;Control&lt;/kbd&gt; and &lt;kbd&gt;Shift&lt;/kbd&gt; keys and then typing &lt;kbd&gt;u&lt;/kbd&gt;
+/// followed by the hexadecimal digits of the code point. When releasing the
+/// &lt;kbd&gt;Control&lt;/kbd&gt; and &lt;kbd&gt;Shift&lt;/kbd&gt; keys, preediting ends and the
+/// character is inserted as text. For example,
+/// 
+///     Ctrl+Shift+u 2 0 A C
+/// 
+/// results in the € sign.
+/// 
+/// Additional input methods can be made available for use by GTK widgets as
+/// loadable modules. An input method module is a small shared library which
+/// provides a `GIOExtension` for the extension point named "gtk-im-module".
+/// 
+/// To connect a widget to the users preferred input method, you should use
+/// [class`Gtk.IMMulticontext`].
+///
+/// The `IMContextProtocol` protocol exposes the methods and properties of an underlying `GtkIMContext` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `IMContext`.
+/// Alternatively, use `IMContextRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol IMContextProtocol: GLibObject.ObjectProtocol {
+        /// Untyped pointer to the underlying `GtkIMContext` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkIMContext` instance.
+    var im_context_ptr: UnsafeMutablePointer<GtkIMContext>! { get }
+
+    /// Required Initialiser for types conforming to `IMContextProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+/// `GtkIMContext` defines the interface for GTK input methods.
+/// 
+/// `GtkIMContext` is used by GTK text input widgets like `GtkText`
+/// to map from key events to Unicode character strings.
+/// 
+/// An input method may consume multiple key events in sequence before finally
+/// outputting the composed result. This is called *preediting*, and an input
+/// method may provide feedback about this process by displaying the intermediate
+/// composition states as preedit text. To do so, the `GtkIMContext` will emit
+/// [signal`Gtk.IMContext::preedit-start`], [signal`Gtk.IMContext::preedit-changed`]
+/// and [signal`Gtk.IMContext::preedit-end`] signals.
+/// 
+/// For instance, the built-in GTK input method [class`Gtk.IMContextSimple`]
+/// implements the input of arbitrary Unicode code points by holding down the
+/// &lt;kbd&gt;Control&lt;/kbd&gt; and &lt;kbd&gt;Shift&lt;/kbd&gt; keys and then typing &lt;kbd&gt;u&lt;/kbd&gt;
+/// followed by the hexadecimal digits of the code point. When releasing the
+/// &lt;kbd&gt;Control&lt;/kbd&gt; and &lt;kbd&gt;Shift&lt;/kbd&gt; keys, preediting ends and the
+/// character is inserted as text. For example,
+/// 
+///     Ctrl+Shift+u 2 0 A C
+/// 
+/// results in the € sign.
+/// 
+/// Additional input methods can be made available for use by GTK widgets as
+/// loadable modules. An input method module is a small shared library which
+/// provides a `GIOExtension` for the extension point named "gtk-im-module".
+/// 
+/// To connect a widget to the users preferred input method, you should use
+/// [class`Gtk.IMMulticontext`].
+///
+/// The `IMContextRef` type acts as a lightweight Swift reference to an underlying `GtkIMContext` instance.
+/// It exposes methods that can operate on this data type through `IMContextProtocol` conformance.
+/// Use `IMContextRef` only as an `unowned` reference to an existing `GtkIMContext` instance.
+///
+public struct IMContextRef: IMContextProtocol, GWeakCapturing {
+        /// Untyped pointer to the underlying `GtkIMContext` instance.
+    /// For type-safe access, use the generated, typed pointer `im_context_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension IMContextRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkIMContext>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkIMContext>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkIMContext>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkIMContext>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `IMContextProtocol`
+    @inlinable init<T: IMContextProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// This factory is syntactic sugar for setting weak pointers wrapped in `GWeak<T>`
+    @inlinable static func unowned<T: IMContextProtocol>(_ other: T) -> IMContextRef { IMContextRef(other) }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+    }
+
+/// `GtkIMContext` defines the interface for GTK input methods.
+/// 
+/// `GtkIMContext` is used by GTK text input widgets like `GtkText`
+/// to map from key events to Unicode character strings.
+/// 
+/// An input method may consume multiple key events in sequence before finally
+/// outputting the composed result. This is called *preediting*, and an input
+/// method may provide feedback about this process by displaying the intermediate
+/// composition states as preedit text. To do so, the `GtkIMContext` will emit
+/// [signal`Gtk.IMContext::preedit-start`], [signal`Gtk.IMContext::preedit-changed`]
+/// and [signal`Gtk.IMContext::preedit-end`] signals.
+/// 
+/// For instance, the built-in GTK input method [class`Gtk.IMContextSimple`]
+/// implements the input of arbitrary Unicode code points by holding down the
+/// &lt;kbd&gt;Control&lt;/kbd&gt; and &lt;kbd&gt;Shift&lt;/kbd&gt; keys and then typing &lt;kbd&gt;u&lt;/kbd&gt;
+/// followed by the hexadecimal digits of the code point. When releasing the
+/// &lt;kbd&gt;Control&lt;/kbd&gt; and &lt;kbd&gt;Shift&lt;/kbd&gt; keys, preediting ends and the
+/// character is inserted as text. For example,
+/// 
+///     Ctrl+Shift+u 2 0 A C
+/// 
+/// results in the € sign.
+/// 
+/// Additional input methods can be made available for use by GTK widgets as
+/// loadable modules. An input method module is a small shared library which
+/// provides a `GIOExtension` for the extension point named "gtk-im-module".
+/// 
+/// To connect a widget to the users preferred input method, you should use
+/// [class`Gtk.IMMulticontext`].
+///
+/// The `IMContext` type acts as a reference-counted owner of an underlying `GtkIMContext` instance.
+/// It provides the methods that can operate on this data type through `IMContextProtocol` conformance.
+/// Use `IMContext` as a strong reference or owner of a `GtkIMContext` instance.
+///
+open class IMContext: GLibObject.Object, IMContextProtocol {
+        /// Designated initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafeMutablePointer<GtkIMContext>) {
+        super.init(cPointer: op)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafePointer<GtkIMContext>) {
+        super.init(raw: UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: op)))
+    }
+
+    /// Optional initialiser from a non-mutating `gpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContext` instance.
+    /// - Parameter op: gpointer to the underlying object
+    @inlinable override public init!(gpointer op: gpointer?) {
+        guard let p = UnsafeMutableRawPointer(op) else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a non-mutating `gconstpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable override public init!(gconstpointer op: gconstpointer?) {
+        guard let p = op else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafePointer<GtkIMContext>?) {
+        guard let p = UnsafeMutablePointer(mutating: op) else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Optional initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafeMutablePointer<GtkIMContext>?) {
+        guard let p = op else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Designated initialiser from the underlying `C` data type.
+    /// Will retain `GtkIMContext`.
+    /// i.e., ownership is transferred to the `IMContext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(retaining op: UnsafeMutablePointer<GtkIMContext>) {
+        super.init(retainingCPointer: op)
+    }
+
+    /// Reference intialiser for a related type that implements `IMContextProtocol`
+    /// Will retain `GtkIMContext`.
+    /// - Parameter other: an instance of a related type that implements `IMContextProtocol`
+    @inlinable public init<T: IMContextProtocol>(iMContext other: T) {
+        super.init(retainingRaw: other.ptr)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(cPointer p: UnsafeMutablePointer<T>) {
+        super.init(cPointer: p)
+    }
+
+    /// Unsafe typed, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(retainingCPointer cPointer: UnsafeMutablePointer<T>) {
+        super.init(retainingCPointer: cPointer)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    /// - Parameter p: raw pointer to the underlying object
+    @inlinable override public init(raw p: UnsafeRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    @inlinable override public init(retainingRaw raw: UnsafeRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    /// - Parameter p: mutable raw pointer to the underlying object
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    /// - Parameter raw: mutable raw pointer to the underlying object
+    @inlinable required public init(retainingRaw raw: UnsafeMutableRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(opaquePointer p: OpaquePointer) {
+        super.init(opaquePointer: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(retainingOpaquePointer p: OpaquePointer) {
+        super.init(retainingOpaquePointer: p)
+    }
+
+
+
+}
+
+public enum IMContextPropertyName: String, PropertyNameProtocol {
+    /// Additional hints that allow input methods to fine-tune
+    /// their behaviour.
+    case inputHints = "input-hints"
+    /// The purpose of the text field that the `GtkIMContext is connected to.
+    /// 
+    /// This property can be used by on-screen keyboards and other input
+    /// methods to adjust their behaviour.
+    case inputPurpose = "input-purpose"
+}
+
+public extension IMContextProtocol {
+    /// Bind a `IMContextPropertyName` source property to a given target object.
+    /// - Parameter source_property: the source property to bind
+    /// - Parameter target: the target object to bind to
+    /// - Parameter target_property: the target property to bind to
+    /// - Parameter flags: the flags to pass to the `Binding`
+    /// - Parameter transform_from: `ValueTransformer` to use for forward transformation
+    /// - Parameter transform_to: `ValueTransformer` to use for backwards transformation
+    /// - Returns: binding reference or `nil` in case of an error
+    @discardableResult @inlinable func bind<Q: PropertyNameProtocol, T: GLibObject.ObjectProtocol>(property source_property: IMContextPropertyName, to target: T, _ target_property: Q, flags f: BindingFlags = .default, transformFrom transform_from: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }, transformTo transform_to: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }) -> BindingRef! {
+        func _bind(_ source: UnsafePointer<gchar>, to t: T, _ target_property: UnsafePointer<gchar>, flags f: BindingFlags = .default, holder: BindingClosureHolder, transformFrom transform_from: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean, transformTo transform_to: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean) -> BindingRef! {
+            let holder = UnsafeMutableRawPointer(Unmanaged.passRetained(holder).toOpaque())
+            let from = unsafeBitCast(transform_from, to: BindingTransformFunc.self)
+            let to   = unsafeBitCast(transform_to,   to: BindingTransformFunc.self)
+            let rv = GLibObject.ObjectRef(raw: ptr).bindPropertyFull(sourceProperty: source, target: t, targetProperty: target_property, flags: f, transformTo: to, transformFrom: from, userData: holder) {
+                if let swift = UnsafeRawPointer($0) {
+                    let holder = Unmanaged<GLibObject.SignalHandlerClosureHolder>.fromOpaque(swift)
+                    holder.release()
+                }
+            }
+            return rv.map { BindingRef($0) }
+        }
+
+        let rv = _bind(source_property.name, to: target, target_property.name, flags: f, holder: BindingClosureHolder(transform_from, transform_to), transformFrom: {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_from(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }) {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_to(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }
+        return rv
+    }
+
+    /// Get the value of a IMContext property
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func get(property: IMContextPropertyName) -> GLibObject.Value {
+        let v = GLibObject.Value()
+        g_object_get_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+        return v
+    }
+
+    /// Set the value of a IMContext property.
+    /// *Note* that this will only have an effect on properties that are writable and not construct-only!
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func set(property: IMContextPropertyName, value v: GLibObject.Value) {
+        g_object_set_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+    }
+}
+
+public enum IMContextSignalName: String, SignalNameProtocol {
+    /// The `commit` signal is emitted when a complete input sequence
+    /// has been entered by the user.
+    /// 
+    /// If the commit comes after a preediting sequence, the
+    /// `commit` signal is emitted after `preedit-end`.
+    /// 
+    /// This can be a single character immediately after a key press or
+    /// the final result of preediting.
+    case commit = "commit"
+    /// The `delete-surrounding` signal is emitted when the input method
+    /// needs to delete all or part of the context surrounding the cursor.
+    case deleteSurrounding = "delete-surrounding"
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    case notify = "notify"
+    /// The `preedit-changed` signal is emitted whenever the preedit sequence
+    /// currently being entered has changed.
+    /// 
+    /// It is also emitted at the end of a preedit sequence, in which case
+    /// [method`Gtk.IMContext.get_preedit_string`] returns the empty string.
+    case preeditChanged = "preedit-changed"
+    /// The `preedit-end` signal is emitted when a preediting sequence
+    /// has been completed or canceled.
+    case preeditEnd = "preedit-end"
+    /// The `preedit-start` signal is emitted when a new preediting sequence
+    /// starts.
+    case preeditStart = "preedit-start"
+    /// The `retrieve-surrounding` signal is emitted when the input method
+    /// requires the context surrounding the cursor.
+    /// 
+    /// The callback should set the input method surrounding context by
+    /// calling the [method`Gtk.IMContext.set_surrounding`] method.
+    case retrieveSurrounding = "retrieve-surrounding"
+    /// Additional hints that allow input methods to fine-tune
+    /// their behaviour.
+    case notifyInputHints = "notify::input-hints"
+    /// The purpose of the text field that the `GtkIMContext is connected to.
+    /// 
+    /// This property can be used by on-screen keyboards and other input
+    /// methods to adjust their behaviour.
+    case notifyInputPurpose = "notify::input-purpose"
+}
+
+// MARK: IMContext signals
+public extension IMContextProtocol {
+    /// Connect a Swift signal handler to the given, typed `IMContextSignalName` signal
+    /// - Parameters:
+    ///   - signal: The signal to connect
+    ///   - flags: The connection flags to use
+    ///   - data: A pointer to user data to provide to the callback
+    ///   - destroyData: A `GClosureNotify` C function to destroy the data pointed to by `userData`
+    ///   - handler: The Swift signal handler (function or callback) to invoke on the given signal
+    /// - Returns: The signal handler ID (always greater than 0 for successful connections)
+    @inlinable @discardableResult func connect(signal s: IMContextSignalName, flags f: ConnectFlags = ConnectFlags(0), handler h: @escaping SignalHandler) -> Int {
+        connect(s, flags: f, handler: h)
+    }
+    
+    
+    /// Connect a C signal handler to the given, typed `IMContextSignalName` signal
+    /// - Parameters:
+    ///   - signal: The signal to connect
+    ///   - flags: The connection flags to use
+    ///   - data: A pointer to user data to provide to the callback
+    ///   - destroyData: A `GClosureNotify` C function to destroy the data pointed to by `userData`
+    ///   - signalHandler: The C function to be called on the given signal
+    /// - Returns: The signal handler ID (always greater than 0 for successful connections)
+    @inlinable @discardableResult func connect(signal s: IMContextSignalName, flags f: ConnectFlags = ConnectFlags(0), data userData: gpointer!, destroyData destructor: GClosureNotify? = nil, signalHandler h: @escaping GCallback) -> Int {
+        connectSignal(s, flags: f, data: userData, destroyData: destructor, handler: h)
+    }
+    
+    
+    /// The `commit` signal is emitted when a complete input sequence
+    /// has been entered by the user.
+    /// 
+    /// If the commit comes after a preediting sequence, the
+    /// `commit` signal is emitted after `preedit-end`.
+    /// 
+    /// This can be a single character immediately after a key press or
+    /// the final result of preediting.
+    /// - Note: This represents the underlying `commit` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter str: the completed `character(s)` entered by the user
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `commit` signal is emitted
+    @discardableResult @inlinable func onCommit(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IMContextRef, _ str: String) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IMContextRef, String), Void>
+        let cCallback: @convention(c) (gpointer, UnsafeMutablePointer<gchar>?, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IMContextRef(raw: unownedSelf), arg1.map({ String(cString: $0) })!))
+            return output
+        }
+        return connect(
+            signal: .commit,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `commit` signal for using the `connect(signal:)` methods
+    static var commitSignal: IMContextSignalName { .commit }
+    
+    /// The `delete-surrounding` signal is emitted when the input method
+    /// needs to delete all or part of the context surrounding the cursor.
+    /// - Note: This represents the underlying `delete-surrounding` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter offset: the character offset from the cursor position of the text   to be deleted. A negative value indicates a position before   the cursor.
+    /// - Parameter nChars: the number of characters to be deleted
+    /// - Parameter handler: `true` if the signal was handled.
+    /// Run the given callback whenever the `deleteSurrounding` signal is emitted
+    @discardableResult @inlinable func onDeleteSurrounding(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IMContextRef, _ offset: Int, _ nChars: Int) -> Bool ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IMContextRef, Int, Int), Bool>
+        let cCallback: @convention(c) (gpointer, gint, gint, gpointer) -> gboolean = { unownedSelf, arg1, arg2, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output = holder.call((IMContextRef(raw: unownedSelf), Int(arg1), Int(arg2)))
+            return gboolean((output) ? 1 : 0)
+        }
+        return connect(
+            signal: .deleteSurrounding,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `delete-surrounding` signal for using the `connect(signal:)` methods
+    static var deleteSurroundingSignal: IMContextSignalName { .deleteSurrounding }
+    
+    /// The `preedit-changed` signal is emitted whenever the preedit sequence
+    /// currently being entered has changed.
+    /// 
+    /// It is also emitted at the end of a preedit sequence, in which case
+    /// [method`Gtk.IMContext.get_preedit_string`] returns the empty string.
+    /// - Note: This represents the underlying `preedit-changed` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `preeditChanged` signal is emitted
+    @discardableResult @inlinable func onPreeditChanged(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IMContextRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IMContextRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer) -> Void = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IMContextRef(raw: unownedSelf)))
+            return output
+        }
+        return connect(
+            signal: .preeditChanged,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `preedit-changed` signal for using the `connect(signal:)` methods
+    static var preeditChangedSignal: IMContextSignalName { .preeditChanged }
+    
+    /// The `preedit-end` signal is emitted when a preediting sequence
+    /// has been completed or canceled.
+    /// - Note: This represents the underlying `preedit-end` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `preeditEnd` signal is emitted
+    @discardableResult @inlinable func onPreeditEnd(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IMContextRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IMContextRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer) -> Void = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IMContextRef(raw: unownedSelf)))
+            return output
+        }
+        return connect(
+            signal: .preeditEnd,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `preedit-end` signal for using the `connect(signal:)` methods
+    static var preeditEndSignal: IMContextSignalName { .preeditEnd }
+    
+    /// The `preedit-start` signal is emitted when a new preediting sequence
+    /// starts.
+    /// - Note: This represents the underlying `preedit-start` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `preeditStart` signal is emitted
+    @discardableResult @inlinable func onPreeditStart(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IMContextRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IMContextRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer) -> Void = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IMContextRef(raw: unownedSelf)))
+            return output
+        }
+        return connect(
+            signal: .preeditStart,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `preedit-start` signal for using the `connect(signal:)` methods
+    static var preeditStartSignal: IMContextSignalName { .preeditStart }
+    
+    /// The `retrieve-surrounding` signal is emitted when the input method
+    /// requires the context surrounding the cursor.
+    /// 
+    /// The callback should set the input method surrounding context by
+    /// calling the [method`Gtk.IMContext.set_surrounding`] method.
+    /// - Note: This represents the underlying `retrieve-surrounding` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: `true` if the signal was handled.
+    /// Run the given callback whenever the `retrieveSurrounding` signal is emitted
+    @discardableResult @inlinable func onRetrieveSurrounding(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IMContextRef) -> Bool ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IMContextRef), Bool>
+        let cCallback: @convention(c) (gpointer, gpointer) -> gboolean = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output = holder.call((IMContextRef(raw: unownedSelf)))
+            return gboolean((output) ? 1 : 0)
+        }
+        return connect(
+            signal: .retrieveSurrounding,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `retrieve-surrounding` signal for using the `connect(signal:)` methods
+    static var retrieveSurroundingSignal: IMContextSignalName { .retrieveSurrounding }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::input-hints` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyInputHints` signal is emitted
+    @discardableResult @inlinable func onNotifyInputHints(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IMContextRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IMContextRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IMContextRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyInputHints,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::input-hints` signal for using the `connect(signal:)` methods
+    static var notifyInputHintsSignal: IMContextSignalName { .notifyInputHints }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::input-purpose` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyInputPurpose` signal is emitted
+    @discardableResult @inlinable func onNotifyInputPurpose(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IMContextRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IMContextRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IMContextRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyInputPurpose,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::input-purpose` signal for using the `connect(signal:)` methods
+    static var notifyInputPurposeSignal: IMContextSignalName { .notifyInputPurpose }
+    
+}
+
+// MARK: IMContext Class: IMContextProtocol extension (methods and fields)
+public extension IMContextProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkIMContext` instance.
+    @inlinable var im_context_ptr: UnsafeMutablePointer<GtkIMContext>! { return ptr?.assumingMemoryBound(to: GtkIMContext.self) }
+
+    /// Asks the widget that the input context is attached to delete
+    /// characters around the cursor position by emitting the
+    /// ``delete_surrounding`` signal.
+    /// 
+    /// Note that `offset` and `n_chars` are in characters not in bytes
+    /// which differs from the usage other places in `GtkIMContext`.
+    /// 
+    /// In order to use this function, you should first call
+    /// [method`Gtk.IMContext.get_surrounding`] to get the current context,
+    /// and call this function immediately afterwards to make sure that you
+    /// know what you are deleting. You should also account for the fact
+    /// that even if the signal was handled, the input context might not
+    /// have deleted all the characters that were requested to be deleted.
+    /// 
+    /// This function is used by an input method that wants to make
+    /// subsitutions in the existing text in response to new input.
+    /// It is not useful for applications.
+    @inlinable func deleteSurrounding(offset: Int, nChars: Int) -> Bool {
+        let result = gtk_im_context_delete_surrounding(im_context_ptr, gint(offset), gint(nChars))
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Allow an input method to forward key press and release events
+    /// to another input method without necessarily having a `GdkEvent`
+    /// available.
+    @inlinable func filterKey<GdkDeviceT: Gdk.DeviceProtocol, GdkSurfaceT: Gdk.SurfaceProtocol>(press: Bool, surface: GdkSurfaceT, device: GdkDeviceT, time: guint32, keycode: Int, state: Gdk.ModifierType, group: Int) -> Bool {
+        let result = gtk_im_context_filter_key(im_context_ptr, gboolean((press) ? 1 : 0), surface.surface_ptr, device.device_ptr, time, guint(keycode), state.value, gint(group))
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Allow an input method to internally handle key press and release
+    /// events.
+    /// 
+    /// If this function returns `true`, then no further processing
+    /// should be done for this key event.
+    @inlinable func filterKeypress<GdkEventT: Gdk.EventProtocol>(event: GdkEventT) -> Bool {
+        let result = gtk_im_context_filter_keypress(im_context_ptr, event.event_ptr)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Notify the input method that the widget to which this
+    /// input context corresponds has gained focus.
+    /// 
+    /// The input method may, for example, change the displayed
+    /// feedback to reflect this change.
+    @inlinable func focusIn() {
+        
+        gtk_im_context_focus_in(im_context_ptr)
+        
+    }
+
+    /// Notify the input method that the widget to which this
+    /// input context corresponds has lost focus.
+    /// 
+    /// The input method may, for example, change the displayed
+    /// feedback or reset the contexts state to reflect this change.
+    @inlinable func focusOut() {
+        
+        gtk_im_context_focus_out(im_context_ptr)
+        
+    }
+
+    /// Retrieve the current preedit string for the input context,
+    /// and a list of attributes to apply to the string.
+    /// 
+    /// This string should be displayed inserted at the insertion point.
+    @inlinable func getPreeditString(str: UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>!, attrs: UnsafeMutablePointer<UnsafeMutablePointer<PangoAttrList>?>!, cursorPos: UnsafeMutablePointer<gint>!) {
+        
+        gtk_im_context_get_preedit_string(im_context_ptr, str, attrs, cursorPos)
+        
+    }
+
+    /// Retrieves context around the insertion point.
+    /// 
+    /// Input methods typically want context in order to constrain input text
+    /// based on existing text; this is important for languages such as Thai
+    /// where only some sequences of characters are allowed.
+    /// 
+    /// This function is implemented by emitting the
+    /// [signal`Gtk.IMContext::retrieve-surrounding`] signal on the input method;
+    /// in response to this signal, a widget should provide as much context as
+    /// is available, up to an entire paragraph, by calling
+    /// [method`Gtk.IMContext.set_surrounding`].
+    /// 
+    /// Note that there is no obligation for a widget to respond to the
+    /// ``retrieve-surrounding`` signal, so input methods must be prepared to
+    /// function without context.
+    ///
+    /// **get_surrounding is deprecated:**
+    /// Use [method@Gtk.IMContext.get_surrounding_with_selection] instead.
+    @available(*, deprecated) @inlinable func getSurrounding(text: UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>!, cursorIndex: UnsafeMutablePointer<gint>!) -> Bool {
+        let result = gtk_im_context_get_surrounding(im_context_ptr, text, cursorIndex)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Retrieves context around the insertion point.
+    /// 
+    /// Input methods typically want context in order to constrain input
+    /// text based on existing text; this is important for languages such
+    /// as Thai where only some sequences of characters are allowed.
+    /// 
+    /// This function is implemented by emitting the
+    /// [signal`Gtk.IMContext::retrieve-surrounding`] signal on the input method;
+    /// in response to this signal, a widget should provide as much context as
+    /// is available, up to an entire paragraph, by calling
+    /// [method`Gtk.IMContext.set_surrounding_with_selection`].
+    /// 
+    /// Note that there is no obligation for a widget to respond to the
+    /// ``retrieve-surrounding`` signal, so input methods must be prepared to
+    /// function without context.
+    @inlinable func getSurroundingWithSelection(text: UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>!, cursorIndex: UnsafeMutablePointer<gint>!, anchorIndex: UnsafeMutablePointer<gint>!) -> Bool {
+        let result = gtk_im_context_get_surrounding_with_selection(im_context_ptr, text, cursorIndex, anchorIndex)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Notify the input method that a change such as a change in cursor
+    /// position has been made.
+    /// 
+    /// This will typically cause the input method to clear the preedit state.
+    @inlinable func reset() {
+        
+        gtk_im_context_reset(im_context_ptr)
+        
+    }
+
+    /// Set the client widget for the input context.
+    /// 
+    /// This is the `GtkWidget` holding the input focus. This widget is
+    /// used in order to correctly position status windows, and may
+    /// also be used for purposes internal to the input method.
+    @inlinable func setClient(widget: WidgetRef? = nil) {
+            
+        gtk_im_context_set_client_widget(im_context_ptr, widget?.widget_ptr)
+            
+    }
+    /// Set the client widget for the input context.
+    /// 
+    /// This is the `GtkWidget` holding the input focus. This widget is
+    /// used in order to correctly position status windows, and may
+    /// also be used for purposes internal to the input method.
+    @inlinable func setClient<WidgetT: WidgetProtocol>(widget: WidgetT?) {
+        
+        gtk_im_context_set_client_widget(im_context_ptr, widget?.widget_ptr)
+        
+    }
+
+    /// Notify the input method that a change in cursor
+    /// position has been made.
+    /// 
+    /// The location is relative to the client widget.
+    @inlinable func setCursorLocation<GdkRectangleT: Gdk.RectangleProtocol>(area: GdkRectangleT) {
+        
+        gtk_im_context_set_cursor_location(im_context_ptr, area.rectangle_ptr)
+        
+    }
+
+    /// Sets surrounding context around the insertion point and preedit
+    /// string.
+    /// 
+    /// This function is expected to be called in response to the
+    /// [signal`Gtk.IMContext::retrieve-surrounding`] signal, and will
+    /// likely have no effect if called at other times.
+    ///
+    /// **set_surrounding is deprecated:**
+    /// Use [method@Gtk.IMContext.set_surrounding_with_selection] instead
+    @available(*, deprecated) @inlinable func setSurrounding(text: UnsafePointer<CChar>!, len: Int, cursorIndex: Int) {
+        
+        gtk_im_context_set_surrounding(im_context_ptr, text, gint(len), gint(cursorIndex))
+        
+    }
+
+    /// Sets surrounding context around the insertion point and preedit
+    /// string. This function is expected to be called in response to the
+    /// [signal`Gtk.IMContext::retrieve_surrounding`] signal, and will likely
+    /// have no effect if called at other times.
+    @inlinable func setSurroundingWithSelection(text: UnsafePointer<CChar>!, len: Int, cursorIndex: Int, anchorIndex: Int) {
+        
+        gtk_im_context_set_surrounding_with_selection(im_context_ptr, text, gint(len), gint(cursorIndex), gint(anchorIndex))
+        
+    }
+
+    /// Sets whether the IM context should use the preedit string
+    /// to display feedback.
+    /// 
+    /// If `use_preedit` is `false` (default is `true`), then the IM context
+    /// may use some other method to display feedback, such as displaying
+    /// it in a child of the root window.
+    @inlinable func set(usePreedit: Bool) {
+        
+        gtk_im_context_set_use_preedit(im_context_ptr, gboolean((usePreedit) ? 1 : 0))
+        
+    }
+
+    @inlinable var parentInstance: GObject {
+        get {
+            let rv = im_context_ptr.pointee.parent_instance
+    return rv
+        }
+    }
+
+}
+
+
+
+// MARK: - IMContextSimple Class
+
+/// `GtkIMContextSimple` is an input method supporting table-based input methods.
+/// 
+/// ## Compose sequences
+/// 
+/// `GtkIMContextSimple` reads compose sequences from the first of the
+/// following files that is found: ~/.config/gtk-4.0/Compose, ~/.XCompose,
+/// /usr/share/X11/locale/$locale/Compose (for locales that have a nontrivial
+/// Compose file). The syntax of these files is described in the `Compose(5)`
+/// manual page.
+/// 
+/// If none of these files is found, `GtkIMContextSimple` uses a built-in table
+/// of compose sequences that is derived from the X11 Compose files.
+/// 
+/// Note that compose sequences typically start with the Compose_key, which is
+/// often not available as a dedicated key on keyboards. Keyboard layouts may
+/// map this keysym to other keys, such as the right Control key.
+/// 
+/// ## Unicode characters
+/// 
+/// `GtkIMContextSimple` also supports numeric entry of Unicode characters
+/// by typing &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;Shift&lt;/kbd&gt;-&lt;kbd&gt;u&lt;/kbd&gt;, followed by a
+/// hexadecimal Unicode codepoint.
+/// 
+/// For example,
+/// 
+///     Ctrl-Shift-u 1 2 3 Enter
+/// 
+/// yields U+0123 LATIN SMALL LETTER G WITH CEDILLA, i.e. ģ.
+/// 
+/// ## Dead keys
+/// 
+/// `GtkIMContextSimple` supports dead keys. For example, typing
+/// 
+///     dead_acute a
+/// 
+///  yields U+00E! LATIN SMALL LETTER_A WITH ACUTE, i.e. á. Note that this
+///  depends on the keyboard layout including dead keys.
+///
+/// The `IMContextSimpleProtocol` protocol exposes the methods and properties of an underlying `GtkIMContextSimple` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `IMContextSimple`.
+/// Alternatively, use `IMContextSimpleRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol IMContextSimpleProtocol: IMContextProtocol {
+        /// Untyped pointer to the underlying `GtkIMContextSimple` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkIMContextSimple` instance.
+    var im_context_simple_ptr: UnsafeMutablePointer<GtkIMContextSimple>! { get }
+
+    /// Required Initialiser for types conforming to `IMContextSimpleProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+/// `GtkIMContextSimple` is an input method supporting table-based input methods.
+/// 
+/// ## Compose sequences
+/// 
+/// `GtkIMContextSimple` reads compose sequences from the first of the
+/// following files that is found: ~/.config/gtk-4.0/Compose, ~/.XCompose,
+/// /usr/share/X11/locale/$locale/Compose (for locales that have a nontrivial
+/// Compose file). The syntax of these files is described in the `Compose(5)`
+/// manual page.
+/// 
+/// If none of these files is found, `GtkIMContextSimple` uses a built-in table
+/// of compose sequences that is derived from the X11 Compose files.
+/// 
+/// Note that compose sequences typically start with the Compose_key, which is
+/// often not available as a dedicated key on keyboards. Keyboard layouts may
+/// map this keysym to other keys, such as the right Control key.
+/// 
+/// ## Unicode characters
+/// 
+/// `GtkIMContextSimple` also supports numeric entry of Unicode characters
+/// by typing &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;Shift&lt;/kbd&gt;-&lt;kbd&gt;u&lt;/kbd&gt;, followed by a
+/// hexadecimal Unicode codepoint.
+/// 
+/// For example,
+/// 
+///     Ctrl-Shift-u 1 2 3 Enter
+/// 
+/// yields U+0123 LATIN SMALL LETTER G WITH CEDILLA, i.e. ģ.
+/// 
+/// ## Dead keys
+/// 
+/// `GtkIMContextSimple` supports dead keys. For example, typing
+/// 
+///     dead_acute a
+/// 
+///  yields U+00E! LATIN SMALL LETTER_A WITH ACUTE, i.e. á. Note that this
+///  depends on the keyboard layout including dead keys.
+///
+/// The `IMContextSimpleRef` type acts as a lightweight Swift reference to an underlying `GtkIMContextSimple` instance.
+/// It exposes methods that can operate on this data type through `IMContextSimpleProtocol` conformance.
+/// Use `IMContextSimpleRef` only as an `unowned` reference to an existing `GtkIMContextSimple` instance.
+///
+public struct IMContextSimpleRef: IMContextSimpleProtocol, GWeakCapturing {
+        /// Untyped pointer to the underlying `GtkIMContextSimple` instance.
+    /// For type-safe access, use the generated, typed pointer `im_context_simple_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension IMContextSimpleRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkIMContextSimple>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkIMContextSimple>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkIMContextSimple>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkIMContextSimple>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `IMContextSimpleProtocol`
+    @inlinable init<T: IMContextSimpleProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// This factory is syntactic sugar for setting weak pointers wrapped in `GWeak<T>`
+    @inlinable static func unowned<T: IMContextSimpleProtocol>(_ other: T) -> IMContextSimpleRef { IMContextSimpleRef(other) }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+        /// Creates a new `GtkIMContextSimple`.
+    @inlinable init() {
+            let result = gtk_im_context_simple_new()
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+}
+
+/// `GtkIMContextSimple` is an input method supporting table-based input methods.
+/// 
+/// ## Compose sequences
+/// 
+/// `GtkIMContextSimple` reads compose sequences from the first of the
+/// following files that is found: ~/.config/gtk-4.0/Compose, ~/.XCompose,
+/// /usr/share/X11/locale/$locale/Compose (for locales that have a nontrivial
+/// Compose file). The syntax of these files is described in the `Compose(5)`
+/// manual page.
+/// 
+/// If none of these files is found, `GtkIMContextSimple` uses a built-in table
+/// of compose sequences that is derived from the X11 Compose files.
+/// 
+/// Note that compose sequences typically start with the Compose_key, which is
+/// often not available as a dedicated key on keyboards. Keyboard layouts may
+/// map this keysym to other keys, such as the right Control key.
+/// 
+/// ## Unicode characters
+/// 
+/// `GtkIMContextSimple` also supports numeric entry of Unicode characters
+/// by typing &lt;kbd&gt;Ctrl&lt;/kbd&gt;-&lt;kbd&gt;Shift&lt;/kbd&gt;-&lt;kbd&gt;u&lt;/kbd&gt;, followed by a
+/// hexadecimal Unicode codepoint.
+/// 
+/// For example,
+/// 
+///     Ctrl-Shift-u 1 2 3 Enter
+/// 
+/// yields U+0123 LATIN SMALL LETTER G WITH CEDILLA, i.e. ģ.
+/// 
+/// ## Dead keys
+/// 
+/// `GtkIMContextSimple` supports dead keys. For example, typing
+/// 
+///     dead_acute a
+/// 
+///  yields U+00E! LATIN SMALL LETTER_A WITH ACUTE, i.e. á. Note that this
+///  depends on the keyboard layout including dead keys.
+///
+/// The `IMContextSimple` type acts as a reference-counted owner of an underlying `GtkIMContextSimple` instance.
+/// It provides the methods that can operate on this data type through `IMContextSimpleProtocol` conformance.
+/// Use `IMContextSimple` as a strong reference or owner of a `GtkIMContextSimple` instance.
+///
+open class IMContextSimple: IMContext, IMContextSimpleProtocol {
+        /// Designated initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContextSimple` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafeMutablePointer<GtkIMContextSimple>) {
+        super.init(cPointer: op)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContextSimple` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafePointer<GtkIMContextSimple>) {
+        super.init(raw: UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: op)))
+    }
+
+    /// Optional initialiser from a non-mutating `gpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContextSimple` instance.
+    /// - Parameter op: gpointer to the underlying object
+    @inlinable override public init!(gpointer op: gpointer?) {
+        guard let p = UnsafeMutableRawPointer(op) else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a non-mutating `gconstpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContextSimple` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable override public init!(gconstpointer op: gconstpointer?) {
+        guard let p = op else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContextSimple` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafePointer<GtkIMContextSimple>?) {
+        guard let p = UnsafeMutablePointer(mutating: op) else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Optional initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMContextSimple` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafeMutablePointer<GtkIMContextSimple>?) {
+        guard let p = op else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Designated initialiser from the underlying `C` data type.
+    /// Will retain `GtkIMContextSimple`.
+    /// i.e., ownership is transferred to the `IMContextSimple` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(retaining op: UnsafeMutablePointer<GtkIMContextSimple>) {
+        super.init(retainingCPointer: op)
+    }
+
+    /// Reference intialiser for a related type that implements `IMContextSimpleProtocol`
+    /// Will retain `GtkIMContextSimple`.
+    /// - Parameter other: an instance of a related type that implements `IMContextSimpleProtocol`
+    @inlinable public init<T: IMContextSimpleProtocol>(iMContextSimple other: T) {
+        super.init(retainingRaw: other.ptr)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(cPointer p: UnsafeMutablePointer<T>) {
+        super.init(cPointer: p)
+    }
+
+    /// Unsafe typed, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(retainingCPointer cPointer: UnsafeMutablePointer<T>) {
+        super.init(retainingCPointer: cPointer)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    /// - Parameter p: raw pointer to the underlying object
+    @inlinable override public init(raw p: UnsafeRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    @inlinable override public init(retainingRaw raw: UnsafeRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    /// - Parameter p: mutable raw pointer to the underlying object
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    /// - Parameter raw: mutable raw pointer to the underlying object
+    @inlinable required public init(retainingRaw raw: UnsafeMutableRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(opaquePointer p: OpaquePointer) {
+        super.init(opaquePointer: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMContextSimpleProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(retainingOpaquePointer p: OpaquePointer) {
+        super.init(retainingOpaquePointer: p)
+    }
+
+    /// Creates a new `GtkIMContextSimple`.
+    @inlinable public init() {
+            let result = gtk_im_context_simple_new()
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+
+}
+
+public enum IMContextSimplePropertyName: String, PropertyNameProtocol {
+    /// Additional hints that allow input methods to fine-tune
+    /// their behaviour.
+    case inputHints = "input-hints"
+    /// The purpose of the text field that the `GtkIMContext is connected to.
+    /// 
+    /// This property can be used by on-screen keyboards and other input
+    /// methods to adjust their behaviour.
+    case inputPurpose = "input-purpose"
+}
+
+public extension IMContextSimpleProtocol {
+    /// Bind a `IMContextSimplePropertyName` source property to a given target object.
+    /// - Parameter source_property: the source property to bind
+    /// - Parameter target: the target object to bind to
+    /// - Parameter target_property: the target property to bind to
+    /// - Parameter flags: the flags to pass to the `Binding`
+    /// - Parameter transform_from: `ValueTransformer` to use for forward transformation
+    /// - Parameter transform_to: `ValueTransformer` to use for backwards transformation
+    /// - Returns: binding reference or `nil` in case of an error
+    @discardableResult @inlinable func bind<Q: PropertyNameProtocol, T: GLibObject.ObjectProtocol>(property source_property: IMContextSimplePropertyName, to target: T, _ target_property: Q, flags f: BindingFlags = .default, transformFrom transform_from: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }, transformTo transform_to: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }) -> BindingRef! {
+        func _bind(_ source: UnsafePointer<gchar>, to t: T, _ target_property: UnsafePointer<gchar>, flags f: BindingFlags = .default, holder: BindingClosureHolder, transformFrom transform_from: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean, transformTo transform_to: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean) -> BindingRef! {
+            let holder = UnsafeMutableRawPointer(Unmanaged.passRetained(holder).toOpaque())
+            let from = unsafeBitCast(transform_from, to: BindingTransformFunc.self)
+            let to   = unsafeBitCast(transform_to,   to: BindingTransformFunc.self)
+            let rv = GLibObject.ObjectRef(raw: ptr).bindPropertyFull(sourceProperty: source, target: t, targetProperty: target_property, flags: f, transformTo: to, transformFrom: from, userData: holder) {
+                if let swift = UnsafeRawPointer($0) {
+                    let holder = Unmanaged<GLibObject.SignalHandlerClosureHolder>.fromOpaque(swift)
+                    holder.release()
+                }
+            }
+            return rv.map { BindingRef($0) }
+        }
+
+        let rv = _bind(source_property.name, to: target, target_property.name, flags: f, holder: BindingClosureHolder(transform_from, transform_to), transformFrom: {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_from(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }) {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_to(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }
+        return rv
+    }
+
+    /// Get the value of a IMContextSimple property
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func get(property: IMContextSimplePropertyName) -> GLibObject.Value {
+        let v = GLibObject.Value()
+        g_object_get_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+        return v
+    }
+
+    /// Set the value of a IMContextSimple property.
+    /// *Note* that this will only have an effect on properties that are writable and not construct-only!
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func set(property: IMContextSimplePropertyName, value v: GLibObject.Value) {
+        g_object_set_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+    }
+}
+
+public enum IMContextSimpleSignalName: String, SignalNameProtocol {
+    /// The `commit` signal is emitted when a complete input sequence
+    /// has been entered by the user.
+    /// 
+    /// If the commit comes after a preediting sequence, the
+    /// `commit` signal is emitted after `preedit-end`.
+    /// 
+    /// This can be a single character immediately after a key press or
+    /// the final result of preediting.
+    case commit = "commit"
+    /// The `delete-surrounding` signal is emitted when the input method
+    /// needs to delete all or part of the context surrounding the cursor.
+    case deleteSurrounding = "delete-surrounding"
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    case notify = "notify"
+    /// The `preedit-changed` signal is emitted whenever the preedit sequence
+    /// currently being entered has changed.
+    /// 
+    /// It is also emitted at the end of a preedit sequence, in which case
+    /// [method`Gtk.IMContext.get_preedit_string`] returns the empty string.
+    case preeditChanged = "preedit-changed"
+    /// The `preedit-end` signal is emitted when a preediting sequence
+    /// has been completed or canceled.
+    case preeditEnd = "preedit-end"
+    /// The `preedit-start` signal is emitted when a new preediting sequence
+    /// starts.
+    case preeditStart = "preedit-start"
+    /// The `retrieve-surrounding` signal is emitted when the input method
+    /// requires the context surrounding the cursor.
+    /// 
+    /// The callback should set the input method surrounding context by
+    /// calling the [method`Gtk.IMContext.set_surrounding`] method.
+    case retrieveSurrounding = "retrieve-surrounding"
+    /// Additional hints that allow input methods to fine-tune
+    /// their behaviour.
+    case notifyInputHints = "notify::input-hints"
+    /// The purpose of the text field that the `GtkIMContext is connected to.
+    /// 
+    /// This property can be used by on-screen keyboards and other input
+    /// methods to adjust their behaviour.
+    case notifyInputPurpose = "notify::input-purpose"
+}
+
+// MARK: IMContextSimple has no signals
+// MARK: IMContextSimple Class: IMContextSimpleProtocol extension (methods and fields)
+public extension IMContextSimpleProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkIMContextSimple` instance.
+    @inlinable var im_context_simple_ptr: UnsafeMutablePointer<GtkIMContextSimple>! { return ptr?.assumingMemoryBound(to: GtkIMContextSimple.self) }
+
+    /// Adds an additional table from the X11 compose file.
+    @inlinable func add(composeFile: UnsafePointer<CChar>!) {
+        
+        gtk_im_context_simple_add_compose_file(im_context_simple_ptr, composeFile)
+        
+    }
+
+    /// Adds an additional table to search to the input context.
+    /// Each row of the table consists of `max_seq_len` key symbols
+    /// followed by two `guint16` interpreted as the high and low
+    /// words of a `gunicode` value. Tables are searched starting
+    /// from the last added.
+    /// 
+    /// The table must be sorted in dictionary order on the
+    /// numeric value of the key symbol fields. (Values beyond
+    /// the length of the sequence should be zero.)
+    ///
+    /// **add_table is deprecated:**
+    /// Use gtk_im_context_simple_add_compose_file()
+    @available(*, deprecated) @inlinable func addTable(data: UnsafeMutablePointer<guint16>!, maxSeqLen: Int, nSeqs: Int) {
+        
+        gtk_im_context_simple_add_table(im_context_simple_ptr, data, gint(maxSeqLen), gint(nSeqs))
+        
+    }
+
+    @inlinable var object: GtkIMContext {
+        get {
+            let rv = im_context_simple_ptr.pointee.object
+    return rv
+        }
+    }
+
+    // var priv is unavailable because priv is private
+
+}
+
+
+
+// MARK: - IMMulticontext Class
+
+/// `GtkIMMulticontext` is an input method context supporting multiple,
+/// switchable input methods.
+/// 
+/// Text widgets such as `GtkText` or `GtkTextView` use a `GtkIMMultiContext`
+/// to implement their `im-module` property for switching between different
+/// input methods.
+///
+/// The `IMMulticontextProtocol` protocol exposes the methods and properties of an underlying `GtkIMMulticontext` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `IMMulticontext`.
+/// Alternatively, use `IMMulticontextRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol IMMulticontextProtocol: IMContextProtocol {
+        /// Untyped pointer to the underlying `GtkIMMulticontext` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkIMMulticontext` instance.
+    var im_multicontext_ptr: UnsafeMutablePointer<GtkIMMulticontext>! { get }
+
+    /// Required Initialiser for types conforming to `IMMulticontextProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+/// `GtkIMMulticontext` is an input method context supporting multiple,
+/// switchable input methods.
+/// 
+/// Text widgets such as `GtkText` or `GtkTextView` use a `GtkIMMultiContext`
+/// to implement their `im-module` property for switching between different
+/// input methods.
+///
+/// The `IMMulticontextRef` type acts as a lightweight Swift reference to an underlying `GtkIMMulticontext` instance.
+/// It exposes methods that can operate on this data type through `IMMulticontextProtocol` conformance.
+/// Use `IMMulticontextRef` only as an `unowned` reference to an existing `GtkIMMulticontext` instance.
+///
+public struct IMMulticontextRef: IMMulticontextProtocol, GWeakCapturing {
+        /// Untyped pointer to the underlying `GtkIMMulticontext` instance.
+    /// For type-safe access, use the generated, typed pointer `im_multicontext_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension IMMulticontextRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkIMMulticontext>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkIMMulticontext>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkIMMulticontext>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkIMMulticontext>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `IMMulticontextProtocol`
+    @inlinable init<T: IMMulticontextProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// This factory is syntactic sugar for setting weak pointers wrapped in `GWeak<T>`
+    @inlinable static func unowned<T: IMMulticontextProtocol>(_ other: T) -> IMMulticontextRef { IMMulticontextRef(other) }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+        /// Creates a new `GtkIMMulticontext`.
+    @inlinable init() {
+            let result = gtk_im_multicontext_new()
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+}
+
+/// `GtkIMMulticontext` is an input method context supporting multiple,
+/// switchable input methods.
+/// 
+/// Text widgets such as `GtkText` or `GtkTextView` use a `GtkIMMultiContext`
+/// to implement their `im-module` property for switching between different
+/// input methods.
+///
+/// The `IMMulticontext` type acts as a reference-counted owner of an underlying `GtkIMMulticontext` instance.
+/// It provides the methods that can operate on this data type through `IMMulticontextProtocol` conformance.
+/// Use `IMMulticontext` as a strong reference or owner of a `GtkIMMulticontext` instance.
+///
+open class IMMulticontext: IMContext, IMMulticontextProtocol {
+        /// Designated initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMMulticontext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafeMutablePointer<GtkIMMulticontext>) {
+        super.init(cPointer: op)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMMulticontext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafePointer<GtkIMMulticontext>) {
+        super.init(raw: UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: op)))
+    }
+
+    /// Optional initialiser from a non-mutating `gpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMMulticontext` instance.
+    /// - Parameter op: gpointer to the underlying object
+    @inlinable override public init!(gpointer op: gpointer?) {
+        guard let p = UnsafeMutableRawPointer(op) else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a non-mutating `gconstpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMMulticontext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable override public init!(gconstpointer op: gconstpointer?) {
+        guard let p = op else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMMulticontext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafePointer<GtkIMMulticontext>?) {
+        guard let p = UnsafeMutablePointer(mutating: op) else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Optional initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IMMulticontext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafeMutablePointer<GtkIMMulticontext>?) {
+        guard let p = op else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Designated initialiser from the underlying `C` data type.
+    /// Will retain `GtkIMMulticontext`.
+    /// i.e., ownership is transferred to the `IMMulticontext` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(retaining op: UnsafeMutablePointer<GtkIMMulticontext>) {
+        super.init(retainingCPointer: op)
+    }
+
+    /// Reference intialiser for a related type that implements `IMMulticontextProtocol`
+    /// Will retain `GtkIMMulticontext`.
+    /// - Parameter other: an instance of a related type that implements `IMMulticontextProtocol`
+    @inlinable public init<T: IMMulticontextProtocol>(iMMulticontext other: T) {
+        super.init(retainingRaw: other.ptr)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(cPointer p: UnsafeMutablePointer<T>) {
+        super.init(cPointer: p)
+    }
+
+    /// Unsafe typed, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(retainingCPointer cPointer: UnsafeMutablePointer<T>) {
+        super.init(retainingCPointer: cPointer)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    /// - Parameter p: raw pointer to the underlying object
+    @inlinable override public init(raw p: UnsafeRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    @inlinable override public init(retainingRaw raw: UnsafeRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    /// - Parameter p: mutable raw pointer to the underlying object
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    /// - Parameter raw: mutable raw pointer to the underlying object
+    @inlinable required public init(retainingRaw raw: UnsafeMutableRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(opaquePointer p: OpaquePointer) {
+        super.init(opaquePointer: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IMMulticontextProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(retainingOpaquePointer p: OpaquePointer) {
+        super.init(retainingOpaquePointer: p)
+    }
+
+    /// Creates a new `GtkIMMulticontext`.
+    @inlinable public init() {
+            let result = gtk_im_multicontext_new()
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+
+}
+
+public enum IMMulticontextPropertyName: String, PropertyNameProtocol {
+    /// Additional hints that allow input methods to fine-tune
+    /// their behaviour.
+    case inputHints = "input-hints"
+    /// The purpose of the text field that the `GtkIMContext is connected to.
+    /// 
+    /// This property can be used by on-screen keyboards and other input
+    /// methods to adjust their behaviour.
+    case inputPurpose = "input-purpose"
+}
+
+public extension IMMulticontextProtocol {
+    /// Bind a `IMMulticontextPropertyName` source property to a given target object.
+    /// - Parameter source_property: the source property to bind
+    /// - Parameter target: the target object to bind to
+    /// - Parameter target_property: the target property to bind to
+    /// - Parameter flags: the flags to pass to the `Binding`
+    /// - Parameter transform_from: `ValueTransformer` to use for forward transformation
+    /// - Parameter transform_to: `ValueTransformer` to use for backwards transformation
+    /// - Returns: binding reference or `nil` in case of an error
+    @discardableResult @inlinable func bind<Q: PropertyNameProtocol, T: GLibObject.ObjectProtocol>(property source_property: IMMulticontextPropertyName, to target: T, _ target_property: Q, flags f: BindingFlags = .default, transformFrom transform_from: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }, transformTo transform_to: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }) -> BindingRef! {
+        func _bind(_ source: UnsafePointer<gchar>, to t: T, _ target_property: UnsafePointer<gchar>, flags f: BindingFlags = .default, holder: BindingClosureHolder, transformFrom transform_from: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean, transformTo transform_to: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean) -> BindingRef! {
+            let holder = UnsafeMutableRawPointer(Unmanaged.passRetained(holder).toOpaque())
+            let from = unsafeBitCast(transform_from, to: BindingTransformFunc.self)
+            let to   = unsafeBitCast(transform_to,   to: BindingTransformFunc.self)
+            let rv = GLibObject.ObjectRef(raw: ptr).bindPropertyFull(sourceProperty: source, target: t, targetProperty: target_property, flags: f, transformTo: to, transformFrom: from, userData: holder) {
+                if let swift = UnsafeRawPointer($0) {
+                    let holder = Unmanaged<GLibObject.SignalHandlerClosureHolder>.fromOpaque(swift)
+                    holder.release()
+                }
+            }
+            return rv.map { BindingRef($0) }
+        }
+
+        let rv = _bind(source_property.name, to: target, target_property.name, flags: f, holder: BindingClosureHolder(transform_from, transform_to), transformFrom: {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_from(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }) {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_to(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }
+        return rv
+    }
+
+    /// Get the value of a IMMulticontext property
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func get(property: IMMulticontextPropertyName) -> GLibObject.Value {
+        let v = GLibObject.Value()
+        g_object_get_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+        return v
+    }
+
+    /// Set the value of a IMMulticontext property.
+    /// *Note* that this will only have an effect on properties that are writable and not construct-only!
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func set(property: IMMulticontextPropertyName, value v: GLibObject.Value) {
+        g_object_set_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+    }
+}
+
+public enum IMMulticontextSignalName: String, SignalNameProtocol {
+    /// The `commit` signal is emitted when a complete input sequence
+    /// has been entered by the user.
+    /// 
+    /// If the commit comes after a preediting sequence, the
+    /// `commit` signal is emitted after `preedit-end`.
+    /// 
+    /// This can be a single character immediately after a key press or
+    /// the final result of preediting.
+    case commit = "commit"
+    /// The `delete-surrounding` signal is emitted when the input method
+    /// needs to delete all or part of the context surrounding the cursor.
+    case deleteSurrounding = "delete-surrounding"
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    case notify = "notify"
+    /// The `preedit-changed` signal is emitted whenever the preedit sequence
+    /// currently being entered has changed.
+    /// 
+    /// It is also emitted at the end of a preedit sequence, in which case
+    /// [method`Gtk.IMContext.get_preedit_string`] returns the empty string.
+    case preeditChanged = "preedit-changed"
+    /// The `preedit-end` signal is emitted when a preediting sequence
+    /// has been completed or canceled.
+    case preeditEnd = "preedit-end"
+    /// The `preedit-start` signal is emitted when a new preediting sequence
+    /// starts.
+    case preeditStart = "preedit-start"
+    /// The `retrieve-surrounding` signal is emitted when the input method
+    /// requires the context surrounding the cursor.
+    /// 
+    /// The callback should set the input method surrounding context by
+    /// calling the [method`Gtk.IMContext.set_surrounding`] method.
+    case retrieveSurrounding = "retrieve-surrounding"
+    /// Additional hints that allow input methods to fine-tune
+    /// their behaviour.
+    case notifyInputHints = "notify::input-hints"
+    /// The purpose of the text field that the `GtkIMContext is connected to.
+    /// 
+    /// This property can be used by on-screen keyboards and other input
+    /// methods to adjust their behaviour.
+    case notifyInputPurpose = "notify::input-purpose"
+}
+
+// MARK: IMMulticontext has no signals
+// MARK: IMMulticontext Class: IMMulticontextProtocol extension (methods and fields)
+public extension IMMulticontextProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkIMMulticontext` instance.
+    @inlinable var im_multicontext_ptr: UnsafeMutablePointer<GtkIMMulticontext>! { return ptr?.assumingMemoryBound(to: GtkIMMulticontext.self) }
+
+    /// Gets the id of the currently active delegate of the `context`.
+    @inlinable func getContextId() -> String! {
+        let result = gtk_im_multicontext_get_context_id(im_multicontext_ptr)
+        let rv = result.map({ String(cString: $0) })
+        return rv
+    }
+
+    /// Sets the context id for `context`.
+    /// 
+    /// This causes the currently active delegate of `context` to be
+    /// replaced by the delegate corresponding to the new context id.
+    /// 
+    /// Setting this to a non-`nil` value overrides the system-wide
+    /// IM module setting. See the [property`Gtk.Settings:gtk-im-module`]
+    /// property.
+    @inlinable func set(contextId: UnsafePointer<CChar>? = nil) {
+        
+        gtk_im_multicontext_set_context_id(im_multicontext_ptr, contextId)
+        
+    }
+    /// Gets the id of the currently active delegate of the `context`.
+    @inlinable var contextId: String! {
+        /// Gets the id of the currently active delegate of the `context`.
+        get {
+            let result = gtk_im_multicontext_get_context_id(im_multicontext_ptr)
+        let rv = result.map({ String(cString: $0) })
+            return rv
+        }
+        /// Sets the context id for `context`.
+        /// 
+        /// This causes the currently active delegate of `context` to be
+        /// replaced by the delegate corresponding to the new context id.
+        /// 
+        /// Setting this to a non-`nil` value overrides the system-wide
+        /// IM module setting. See the [property`Gtk.Settings:gtk-im-module`]
+        /// property.
+        nonmutating set {
+            gtk_im_multicontext_set_context_id(im_multicontext_ptr, newValue)
+        }
+    }
+
+    @inlinable var object: GtkIMContext {
+        get {
+            let rv = im_multicontext_ptr.pointee.object
+    return rv
+        }
+    }
+
+    // var priv is unavailable because priv is private
+
+}
+
+
+
+// MARK: - IconPaintable Class
+
+/// Contains information found when looking up an icon in `GtkIconTheme`.
+/// 
+/// `GtkIconPaintable` implements `GdkPaintable`.
+///
+/// The `IconPaintableProtocol` protocol exposes the methods and properties of an underlying `GtkIconPaintable` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `IconPaintable`.
+/// Alternatively, use `IconPaintableRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol IconPaintableProtocol: GLibObject.ObjectProtocol, Gdk.PaintableProtocol, SymbolicPaintableProtocol {
+        /// Untyped pointer to the underlying `GtkIconPaintable` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkIconPaintable` instance.
+    var icon_paintable_ptr: UnsafeMutablePointer<GtkIconPaintable>! { get }
+
+    /// Required Initialiser for types conforming to `IconPaintableProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+/// Contains information found when looking up an icon in `GtkIconTheme`.
+/// 
+/// `GtkIconPaintable` implements `GdkPaintable`.
+///
+/// The `IconPaintableRef` type acts as a lightweight Swift reference to an underlying `GtkIconPaintable` instance.
+/// It exposes methods that can operate on this data type through `IconPaintableProtocol` conformance.
+/// Use `IconPaintableRef` only as an `unowned` reference to an existing `GtkIconPaintable` instance.
+///
+public struct IconPaintableRef: IconPaintableProtocol, GWeakCapturing {
+        /// Untyped pointer to the underlying `GtkIconPaintable` instance.
+    /// For type-safe access, use the generated, typed pointer `icon_paintable_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension IconPaintableRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkIconPaintable>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkIconPaintable>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkIconPaintable>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkIconPaintable>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `IconPaintableProtocol`
+    @inlinable init<T: IconPaintableProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// This factory is syntactic sugar for setting weak pointers wrapped in `GWeak<T>`
+    @inlinable static func unowned<T: IconPaintableProtocol>(_ other: T) -> IconPaintableRef { IconPaintableRef(other) }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+        /// Creates a `GtkIconPaintable` for a file with a given size and scale.
+    /// 
+    /// The icon can then be rendered by using it as a `GdkPaintable`.
+    @inlinable init<GIOFileT: GIO.FileProtocol>(file: GIOFileT, size: Int, scale: Int) {
+            let result = gtk_icon_paintable_new_for_file(file.file_ptr, gint(size), gint(scale))
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+    /// Creates a `GtkIconPaintable` for a file with a given size and scale.
+    /// 
+    /// The icon can then be rendered by using it as a `GdkPaintable`.
+    @inlinable static func newFor<GIOFileT: GIO.FileProtocol>(file: GIOFileT, size: Int, scale: Int) -> IconPaintableRef! {
+            let result = gtk_icon_paintable_new_for_file(file.file_ptr, gint(size), gint(scale))
+        guard let rv = IconPaintableRef(gconstpointer: gconstpointer(result)) else { return nil }
+        return rv
+    }
+}
+
+/// Contains information found when looking up an icon in `GtkIconTheme`.
+/// 
+/// `GtkIconPaintable` implements `GdkPaintable`.
+///
+/// The `IconPaintable` type acts as a reference-counted owner of an underlying `GtkIconPaintable` instance.
+/// It provides the methods that can operate on this data type through `IconPaintableProtocol` conformance.
+/// Use `IconPaintable` as a strong reference or owner of a `GtkIconPaintable` instance.
+///
+open class IconPaintable: GLibObject.Object, IconPaintableProtocol {
+        /// Designated initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconPaintable` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafeMutablePointer<GtkIconPaintable>) {
+        super.init(cPointer: op)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconPaintable` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafePointer<GtkIconPaintable>) {
+        super.init(raw: UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: op)))
+    }
+
+    /// Optional initialiser from a non-mutating `gpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconPaintable` instance.
+    /// - Parameter op: gpointer to the underlying object
+    @inlinable override public init!(gpointer op: gpointer?) {
+        guard let p = UnsafeMutableRawPointer(op) else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a non-mutating `gconstpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconPaintable` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable override public init!(gconstpointer op: gconstpointer?) {
+        guard let p = op else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconPaintable` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafePointer<GtkIconPaintable>?) {
+        guard let p = UnsafeMutablePointer(mutating: op) else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Optional initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconPaintable` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafeMutablePointer<GtkIconPaintable>?) {
+        guard let p = op else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Designated initialiser from the underlying `C` data type.
+    /// Will retain `GtkIconPaintable`.
+    /// i.e., ownership is transferred to the `IconPaintable` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(retaining op: UnsafeMutablePointer<GtkIconPaintable>) {
+        super.init(retainingCPointer: op)
+    }
+
+    /// Reference intialiser for a related type that implements `IconPaintableProtocol`
+    /// Will retain `GtkIconPaintable`.
+    /// - Parameter other: an instance of a related type that implements `IconPaintableProtocol`
+    @inlinable public init<T: IconPaintableProtocol>(iconPaintable other: T) {
+        super.init(retainingRaw: other.ptr)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(cPointer p: UnsafeMutablePointer<T>) {
+        super.init(cPointer: p)
+    }
+
+    /// Unsafe typed, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(retainingCPointer cPointer: UnsafeMutablePointer<T>) {
+        super.init(retainingCPointer: cPointer)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    /// - Parameter p: raw pointer to the underlying object
+    @inlinable override public init(raw p: UnsafeRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    @inlinable override public init(retainingRaw raw: UnsafeRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    /// - Parameter p: mutable raw pointer to the underlying object
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    /// - Parameter raw: mutable raw pointer to the underlying object
+    @inlinable required public init(retainingRaw raw: UnsafeMutableRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(opaquePointer p: OpaquePointer) {
+        super.init(opaquePointer: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconPaintableProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(retainingOpaquePointer p: OpaquePointer) {
+        super.init(retainingOpaquePointer: p)
+    }
+
+    /// Creates a `GtkIconPaintable` for a file with a given size and scale.
+    /// 
+    /// The icon can then be rendered by using it as a `GdkPaintable`.
+    @inlinable public init<GIOFileT: GIO.FileProtocol>(file: GIOFileT, size: Int, scale: Int) {
+            let result = gtk_icon_paintable_new_for_file(file.file_ptr, gint(size), gint(scale))
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a `GtkIconPaintable` for a file with a given size and scale.
+    /// 
+    /// The icon can then be rendered by using it as a `GdkPaintable`.
+    @inlinable public static func newFor<GIOFileT: GIO.FileProtocol>(file: GIOFileT, size: Int, scale: Int) -> IconPaintable! {
+            let result = gtk_icon_paintable_new_for_file(file.file_ptr, gint(size), gint(scale))
+        guard let rv = IconPaintable(gconstpointer: gconstpointer(result)) else { return nil }
+            if typeIsA(type: rv.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = rv.refSink() } 
+return rv
+    }
+
+}
+
+public enum IconPaintablePropertyName: String, PropertyNameProtocol {
+    /// The file representing the icon, if any.
+    case file = "file"
+    /// The icon name that was chosen during lookup.
+    case iconName = "icon-name"
+    /// Whether the icon is symbolic or not.
+    case isSymbolic = "is-symbolic"
+}
+
+public extension IconPaintableProtocol {
+    /// Bind a `IconPaintablePropertyName` source property to a given target object.
+    /// - Parameter source_property: the source property to bind
+    /// - Parameter target: the target object to bind to
+    /// - Parameter target_property: the target property to bind to
+    /// - Parameter flags: the flags to pass to the `Binding`
+    /// - Parameter transform_from: `ValueTransformer` to use for forward transformation
+    /// - Parameter transform_to: `ValueTransformer` to use for backwards transformation
+    /// - Returns: binding reference or `nil` in case of an error
+    @discardableResult @inlinable func bind<Q: PropertyNameProtocol, T: GLibObject.ObjectProtocol>(property source_property: IconPaintablePropertyName, to target: T, _ target_property: Q, flags f: BindingFlags = .default, transformFrom transform_from: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }, transformTo transform_to: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }) -> BindingRef! {
+        func _bind(_ source: UnsafePointer<gchar>, to t: T, _ target_property: UnsafePointer<gchar>, flags f: BindingFlags = .default, holder: BindingClosureHolder, transformFrom transform_from: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean, transformTo transform_to: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean) -> BindingRef! {
+            let holder = UnsafeMutableRawPointer(Unmanaged.passRetained(holder).toOpaque())
+            let from = unsafeBitCast(transform_from, to: BindingTransformFunc.self)
+            let to   = unsafeBitCast(transform_to,   to: BindingTransformFunc.self)
+            let rv = GLibObject.ObjectRef(raw: ptr).bindPropertyFull(sourceProperty: source, target: t, targetProperty: target_property, flags: f, transformTo: to, transformFrom: from, userData: holder) {
+                if let swift = UnsafeRawPointer($0) {
+                    let holder = Unmanaged<GLibObject.SignalHandlerClosureHolder>.fromOpaque(swift)
+                    holder.release()
+                }
+            }
+            return rv.map { BindingRef($0) }
+        }
+
+        let rv = _bind(source_property.name, to: target, target_property.name, flags: f, holder: BindingClosureHolder(transform_from, transform_to), transformFrom: {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_from(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }) {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_to(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }
+        return rv
+    }
+
+    /// Get the value of a IconPaintable property
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func get(property: IconPaintablePropertyName) -> GLibObject.Value {
+        let v = GLibObject.Value()
+        g_object_get_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+        return v
+    }
+
+    /// Set the value of a IconPaintable property.
+    /// *Note* that this will only have an effect on properties that are writable and not construct-only!
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func set(property: IconPaintablePropertyName, value v: GLibObject.Value) {
+        g_object_set_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+    }
+}
+
+public enum IconPaintableSignalName: String, SignalNameProtocol {
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    case notify = "notify"
+    /// The file representing the icon, if any.
+    case notifyFile = "notify::file"
+    /// The icon name that was chosen during lookup.
+    case notifyIconName = "notify::icon-name"
+    /// Whether the icon is symbolic or not.
+    case notifyIsSymbolic = "notify::is-symbolic"
+}
+
+// MARK: IconPaintable has no signals
+// MARK: IconPaintable Class: IconPaintableProtocol extension (methods and fields)
+public extension IconPaintableProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkIconPaintable` instance.
+    @inlinable var icon_paintable_ptr: UnsafeMutablePointer<GtkIconPaintable>! { return ptr?.assumingMemoryBound(to: GtkIconPaintable.self) }
+
+    /// Gets the `GFile` that was used to load the icon.
+    /// 
+    /// Returns `nil` if the icon was not loaded from a file.
+    @inlinable func getFile() -> GIO.FileRef! {
+        let result = gtk_icon_paintable_get_file(icon_paintable_ptr)
+        let rv = GIO.FileRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Get the icon name being used for this icon.
+    /// 
+    /// When an icon looked up in the icon theme was not available, the
+    /// icon theme may use fallback icons - either those specified to
+    /// `gtk_icon_theme_lookup_icon()` or the always-available
+    /// "image-missing". The icon chosen is returned by this function.
+    /// 
+    /// If the icon was created without an icon theme, this function
+    /// returns `nil`.
+    @inlinable func getIconName() -> String! {
+        let result = gtk_icon_paintable_get_icon_name(icon_paintable_ptr)
+        let rv = result.map({ String(cString: $0) })
+        return rv
+    }
+    /// The file representing the icon, if any.
+    @inlinable var file: GIO.FileRef! {
+        /// Gets the `GFile` that was used to load the icon.
+        /// 
+        /// Returns `nil` if the icon was not loaded from a file.
+        get {
+            let result = gtk_icon_paintable_get_file(icon_paintable_ptr)
+        let rv = GIO.FileRef(gconstpointer: gconstpointer(result))
+            return rv
+        }
+    }
+
+    /// Get the icon name being used for this icon.
+    /// 
+    /// When an icon looked up in the icon theme was not available, the
+    /// icon theme may use fallback icons - either those specified to
+    /// `gtk_icon_theme_lookup_icon()` or the always-available
+    /// "image-missing". The icon chosen is returned by this function.
+    /// 
+    /// If the icon was created without an icon theme, this function
+    /// returns `nil`.
+    @inlinable var iconName: String! {
+        /// Get the icon name being used for this icon.
+        /// 
+        /// When an icon looked up in the icon theme was not available, the
+        /// icon theme may use fallback icons - either those specified to
+        /// `gtk_icon_theme_lookup_icon()` or the always-available
+        /// "image-missing". The icon chosen is returned by this function.
+        /// 
+        /// If the icon was created without an icon theme, this function
+        /// returns `nil`.
+        get {
+            let result = gtk_icon_paintable_get_icon_name(icon_paintable_ptr)
+        let rv = result.map({ String(cString: $0) })
+            return rv
+        }
+    }
+
+    /// Checks if the icon is symbolic or not.
+    /// 
+    /// This currently uses only the file name and not the file contents
+    /// for determining this. This behaviour may change in the future.
+    /// 
+    /// Note that to render a symbolic `GtkIconPaintable` properly (with
+    /// recoloring), you have to set its icon name on a `GtkImage`.
+    @inlinable var isSymbolic: Bool {
+        /// Checks if the icon is symbolic or not.
+        /// 
+        /// This currently uses only the file name and not the file contents
+        /// for determining this. This behaviour may change in the future.
+        /// 
+        /// Note that to render a symbolic `GtkIconPaintable` properly (with
+        /// recoloring), you have to set its icon name on a `GtkImage`.
+        get {
+            let result = gtk_icon_paintable_is_symbolic(icon_paintable_ptr)
+        let rv = ((result) != 0)
+            return rv
+        }
+    }
+
+
+}
+
+
+
+// MARK: - IconTheme Class
+
+/// `GtkIconTheme` provides a facility for loading themed icons.
+/// 
+/// The main reason for using a name rather than simply providing a filename
+/// is to allow different icons to be used depending on what “icon theme” is
+/// selected by the user. The operation of icon themes on Linux and Unix
+/// follows the [Icon Theme Specification](http://www.freedesktop.org/Standards/icon-theme-spec)
+/// There is a fallback icon theme, named `hicolor`, where applications
+/// should install their icons, but additional icon themes can be installed
+/// as operating system vendors and users choose.
+/// 
+/// In many cases, named themes are used indirectly, via [class`Gtk.Image`]
+/// rather than directly, but looking up icons directly is also simple. The
+/// `GtkIconTheme` object acts as a database of all the icons in the current
+/// theme. You can create new `GtkIconTheme` objects, but it’s much more
+/// efficient to use the standard icon theme of the `GtkWidget` so that the
+/// icon information is shared with other people looking up icons.
+/// 
+/// ```c
+/// GtkIconTheme *icon_theme;
+/// GtkIconPaintable *icon;
+/// GdkPaintable *paintable;
+/// 
+/// icon_theme = gtk_icon_theme_get_for_display (gtk_widget_get_display (my_widget));
+/// icon = gtk_icon_theme_lookup_icon (icon_theme,
+///                                    "my-icon-name", // icon name
+///                                    48, // icon size
+///                                    1,  // scale
+///                                    0,  // flags);
+/// paintable = GDK_PAINTABLE (icon);
+/// // Use the paintable
+/// g_object_unref (icon);
+/// ```
+///
+/// The `IconThemeProtocol` protocol exposes the methods and properties of an underlying `GtkIconTheme` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `IconTheme`.
+/// Alternatively, use `IconThemeRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol IconThemeProtocol: GLibObject.ObjectProtocol {
+        /// Untyped pointer to the underlying `GtkIconTheme` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkIconTheme` instance.
+    var icon_theme_ptr: UnsafeMutablePointer<GtkIconTheme>! { get }
+
+    /// Required Initialiser for types conforming to `IconThemeProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+/// `GtkIconTheme` provides a facility for loading themed icons.
+/// 
+/// The main reason for using a name rather than simply providing a filename
+/// is to allow different icons to be used depending on what “icon theme” is
+/// selected by the user. The operation of icon themes on Linux and Unix
+/// follows the [Icon Theme Specification](http://www.freedesktop.org/Standards/icon-theme-spec)
+/// There is a fallback icon theme, named `hicolor`, where applications
+/// should install their icons, but additional icon themes can be installed
+/// as operating system vendors and users choose.
+/// 
+/// In many cases, named themes are used indirectly, via [class`Gtk.Image`]
+/// rather than directly, but looking up icons directly is also simple. The
+/// `GtkIconTheme` object acts as a database of all the icons in the current
+/// theme. You can create new `GtkIconTheme` objects, but it’s much more
+/// efficient to use the standard icon theme of the `GtkWidget` so that the
+/// icon information is shared with other people looking up icons.
+/// 
+/// ```c
+/// GtkIconTheme *icon_theme;
+/// GtkIconPaintable *icon;
+/// GdkPaintable *paintable;
+/// 
+/// icon_theme = gtk_icon_theme_get_for_display (gtk_widget_get_display (my_widget));
+/// icon = gtk_icon_theme_lookup_icon (icon_theme,
+///                                    "my-icon-name", // icon name
+///                                    48, // icon size
+///                                    1,  // scale
+///                                    0,  // flags);
+/// paintable = GDK_PAINTABLE (icon);
+/// // Use the paintable
+/// g_object_unref (icon);
+/// ```
+///
+/// The `IconThemeRef` type acts as a lightweight Swift reference to an underlying `GtkIconTheme` instance.
+/// It exposes methods that can operate on this data type through `IconThemeProtocol` conformance.
+/// Use `IconThemeRef` only as an `unowned` reference to an existing `GtkIconTheme` instance.
+///
+public struct IconThemeRef: IconThemeProtocol, GWeakCapturing {
+        /// Untyped pointer to the underlying `GtkIconTheme` instance.
+    /// For type-safe access, use the generated, typed pointer `icon_theme_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension IconThemeRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkIconTheme>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkIconTheme>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkIconTheme>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkIconTheme>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `IconThemeProtocol`
+    @inlinable init<T: IconThemeProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// This factory is syntactic sugar for setting weak pointers wrapped in `GWeak<T>`
+    @inlinable static func unowned<T: IconThemeProtocol>(_ other: T) -> IconThemeRef { IconThemeRef(other) }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+        /// Creates a new icon theme object.
+    /// 
+    /// Icon theme objects are used to lookup up an icon by name
+    /// in a particular icon theme. Usually, you’ll want to use
+    /// [func`Gtk.IconTheme.get_for_display`] rather than creating
+    /// a new icon theme object for scratch.
+    @inlinable init() {
+            let result = gtk_icon_theme_new()
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+    /// Gets the icon theme object associated with `display`.
+    /// 
+    /// If this function has not previously been called for the given
+    /// display, a new icon theme object will be created and associated
+    /// with the display. Icon theme objects are fairly expensive to create,
+    /// so using this function is usually a better choice than calling
+    /// [ctor`Gtk.IconTheme.new`] and setting the display yourself; by using
+    /// this function a single icon theme object will be shared between users.
+    @inlinable static func getFor<GdkDisplayT: Gdk.DisplayProtocol>(display: GdkDisplayT) -> IconThemeRef! {
+            let result = gtk_icon_theme_get_for_display(display.display_ptr)
+        guard let rv = IconThemeRef(gconstpointer: gconstpointer(result)) else { return nil }
+        return rv
+    }
+}
+
+/// `GtkIconTheme` provides a facility for loading themed icons.
+/// 
+/// The main reason for using a name rather than simply providing a filename
+/// is to allow different icons to be used depending on what “icon theme” is
+/// selected by the user. The operation of icon themes on Linux and Unix
+/// follows the [Icon Theme Specification](http://www.freedesktop.org/Standards/icon-theme-spec)
+/// There is a fallback icon theme, named `hicolor`, where applications
+/// should install their icons, but additional icon themes can be installed
+/// as operating system vendors and users choose.
+/// 
+/// In many cases, named themes are used indirectly, via [class`Gtk.Image`]
+/// rather than directly, but looking up icons directly is also simple. The
+/// `GtkIconTheme` object acts as a database of all the icons in the current
+/// theme. You can create new `GtkIconTheme` objects, but it’s much more
+/// efficient to use the standard icon theme of the `GtkWidget` so that the
+/// icon information is shared with other people looking up icons.
+/// 
+/// ```c
+/// GtkIconTheme *icon_theme;
+/// GtkIconPaintable *icon;
+/// GdkPaintable *paintable;
+/// 
+/// icon_theme = gtk_icon_theme_get_for_display (gtk_widget_get_display (my_widget));
+/// icon = gtk_icon_theme_lookup_icon (icon_theme,
+///                                    "my-icon-name", // icon name
+///                                    48, // icon size
+///                                    1,  // scale
+///                                    0,  // flags);
+/// paintable = GDK_PAINTABLE (icon);
+/// // Use the paintable
+/// g_object_unref (icon);
+/// ```
+///
+/// The `IconTheme` type acts as a reference-counted owner of an underlying `GtkIconTheme` instance.
+/// It provides the methods that can operate on this data type through `IconThemeProtocol` conformance.
+/// Use `IconTheme` as a strong reference or owner of a `GtkIconTheme` instance.
+///
+open class IconTheme: GLibObject.Object, IconThemeProtocol {
+        /// Designated initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconTheme` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafeMutablePointer<GtkIconTheme>) {
+        super.init(cPointer: op)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconTheme` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafePointer<GtkIconTheme>) {
+        super.init(raw: UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: op)))
+    }
+
+    /// Optional initialiser from a non-mutating `gpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconTheme` instance.
+    /// - Parameter op: gpointer to the underlying object
+    @inlinable override public init!(gpointer op: gpointer?) {
+        guard let p = UnsafeMutableRawPointer(op) else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a non-mutating `gconstpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconTheme` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable override public init!(gconstpointer op: gconstpointer?) {
+        guard let p = op else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconTheme` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafePointer<GtkIconTheme>?) {
+        guard let p = UnsafeMutablePointer(mutating: op) else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Optional initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconTheme` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafeMutablePointer<GtkIconTheme>?) {
+        guard let p = op else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Designated initialiser from the underlying `C` data type.
+    /// Will retain `GtkIconTheme`.
+    /// i.e., ownership is transferred to the `IconTheme` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(retaining op: UnsafeMutablePointer<GtkIconTheme>) {
+        super.init(retainingCPointer: op)
+    }
+
+    /// Reference intialiser for a related type that implements `IconThemeProtocol`
+    /// Will retain `GtkIconTheme`.
+    /// - Parameter other: an instance of a related type that implements `IconThemeProtocol`
+    @inlinable public init<T: IconThemeProtocol>(iconTheme other: T) {
+        super.init(retainingRaw: other.ptr)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(cPointer p: UnsafeMutablePointer<T>) {
+        super.init(cPointer: p)
+    }
+
+    /// Unsafe typed, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(retainingCPointer cPointer: UnsafeMutablePointer<T>) {
+        super.init(retainingCPointer: cPointer)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    /// - Parameter p: raw pointer to the underlying object
+    @inlinable override public init(raw p: UnsafeRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    @inlinable override public init(retainingRaw raw: UnsafeRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    /// - Parameter p: mutable raw pointer to the underlying object
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    /// - Parameter raw: mutable raw pointer to the underlying object
+    @inlinable required public init(retainingRaw raw: UnsafeMutableRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(opaquePointer p: OpaquePointer) {
+        super.init(opaquePointer: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconThemeProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(retainingOpaquePointer p: OpaquePointer) {
+        super.init(retainingOpaquePointer: p)
+    }
+
+    /// Creates a new icon theme object.
+    /// 
+    /// Icon theme objects are used to lookup up an icon by name
+    /// in a particular icon theme. Usually, you’ll want to use
+    /// [func`Gtk.IconTheme.get_for_display`] rather than creating
+    /// a new icon theme object for scratch.
+    @inlinable public init() {
+            let result = gtk_icon_theme_new()
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Gets the icon theme object associated with `display`.
+    /// 
+    /// If this function has not previously been called for the given
+    /// display, a new icon theme object will be created and associated
+    /// with the display. Icon theme objects are fairly expensive to create,
+    /// so using this function is usually a better choice than calling
+    /// [ctor`Gtk.IconTheme.new`] and setting the display yourself; by using
+    /// this function a single icon theme object will be shared between users.
+    @inlinable public static func getFor<GdkDisplayT: Gdk.DisplayProtocol>(display: GdkDisplayT) -> IconTheme! {
+            let result = gtk_icon_theme_get_for_display(display.display_ptr)
+        guard let rv = IconTheme(gconstpointer: gconstpointer(result)) else { return nil }
+            if typeIsA(type: rv.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = rv.refSink() } 
+return rv
+    }
+
+}
+
+public enum IconThemePropertyName: String, PropertyNameProtocol {
+    /// The display that this icon theme object is attached to.
+    case display = "display"
+    /// The icon names that are supported by the icon theme.
+    case iconNames = "icon-names"
+    /// Resource paths that will be looked at when looking for icons,
+    /// similar to search paths.
+    /// 
+    /// The resources are considered as part of the hicolor icon theme
+    /// and must be located in subdirectories that are defined in the
+    /// hicolor icon theme, such as ``path`/16x16/actions/run.png`.
+    /// Icons that are directly placed in the resource path instead
+    /// of a subdirectory are also considered as ultimate fallback.
+    case resourcePath = "resource-path"
+    /// The search path for this icon theme.
+    /// 
+    /// When looking for icons, GTK will search for a subdirectory of
+    /// one or more of the directories in the search path with the same
+    /// name as the icon theme containing an index.theme file. (Themes
+    /// from multiple of the path elements are combined to allow themes
+    /// to be extended by adding icons in the user’s home directory.)
+    case searchPath = "search-path"
+    /// The name of the icon theme that is being used.
+    /// 
+    /// Unless set to a different value, this will be the value of
+    /// the `GtkSettings:gtk-icon-theme-name` property of the `GtkSettings`
+    /// object associated to the display of the icontheme object.
+    case themeName = "theme-name"
+}
+
+public extension IconThemeProtocol {
+    /// Bind a `IconThemePropertyName` source property to a given target object.
+    /// - Parameter source_property: the source property to bind
+    /// - Parameter target: the target object to bind to
+    /// - Parameter target_property: the target property to bind to
+    /// - Parameter flags: the flags to pass to the `Binding`
+    /// - Parameter transform_from: `ValueTransformer` to use for forward transformation
+    /// - Parameter transform_to: `ValueTransformer` to use for backwards transformation
+    /// - Returns: binding reference or `nil` in case of an error
+    @discardableResult @inlinable func bind<Q: PropertyNameProtocol, T: GLibObject.ObjectProtocol>(property source_property: IconThemePropertyName, to target: T, _ target_property: Q, flags f: BindingFlags = .default, transformFrom transform_from: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }, transformTo transform_to: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }) -> BindingRef! {
+        func _bind(_ source: UnsafePointer<gchar>, to t: T, _ target_property: UnsafePointer<gchar>, flags f: BindingFlags = .default, holder: BindingClosureHolder, transformFrom transform_from: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean, transformTo transform_to: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean) -> BindingRef! {
+            let holder = UnsafeMutableRawPointer(Unmanaged.passRetained(holder).toOpaque())
+            let from = unsafeBitCast(transform_from, to: BindingTransformFunc.self)
+            let to   = unsafeBitCast(transform_to,   to: BindingTransformFunc.self)
+            let rv = GLibObject.ObjectRef(raw: ptr).bindPropertyFull(sourceProperty: source, target: t, targetProperty: target_property, flags: f, transformTo: to, transformFrom: from, userData: holder) {
+                if let swift = UnsafeRawPointer($0) {
+                    let holder = Unmanaged<GLibObject.SignalHandlerClosureHolder>.fromOpaque(swift)
+                    holder.release()
+                }
+            }
+            return rv.map { BindingRef($0) }
+        }
+
+        let rv = _bind(source_property.name, to: target, target_property.name, flags: f, holder: BindingClosureHolder(transform_from, transform_to), transformFrom: {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_from(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }) {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_to(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }
+        return rv
+    }
+
+    /// Get the value of a IconTheme property
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func get(property: IconThemePropertyName) -> GLibObject.Value {
+        let v = GLibObject.Value()
+        g_object_get_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+        return v
+    }
+
+    /// Set the value of a IconTheme property.
+    /// *Note* that this will only have an effect on properties that are writable and not construct-only!
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func set(property: IconThemePropertyName, value v: GLibObject.Value) {
+        g_object_set_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+    }
+}
+
+public enum IconThemeSignalName: String, SignalNameProtocol {
+    /// Emitted when the icon theme changes.
+    /// 
+    /// This can happen becuase current icon theme is switched or
+    /// because GTK detects that a change has occurred in the
+    /// contents of the current icon theme.
+    case changed = "changed"
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    case notify = "notify"
+    /// The display that this icon theme object is attached to.
+    case notifyDisplay = "notify::display"
+    /// The icon names that are supported by the icon theme.
+    case notifyIconNames = "notify::icon-names"
+    /// Resource paths that will be looked at when looking for icons,
+    /// similar to search paths.
+    /// 
+    /// The resources are considered as part of the hicolor icon theme
+    /// and must be located in subdirectories that are defined in the
+    /// hicolor icon theme, such as ``path`/16x16/actions/run.png`.
+    /// Icons that are directly placed in the resource path instead
+    /// of a subdirectory are also considered as ultimate fallback.
+    case notifyResourcePath = "notify::resource-path"
+    /// The search path for this icon theme.
+    /// 
+    /// When looking for icons, GTK will search for a subdirectory of
+    /// one or more of the directories in the search path with the same
+    /// name as the icon theme containing an index.theme file. (Themes
+    /// from multiple of the path elements are combined to allow themes
+    /// to be extended by adding icons in the user’s home directory.)
+    case notifySearchPath = "notify::search-path"
+    /// The name of the icon theme that is being used.
+    /// 
+    /// Unless set to a different value, this will be the value of
+    /// the `GtkSettings:gtk-icon-theme-name` property of the `GtkSettings`
+    /// object associated to the display of the icontheme object.
+    case notifyThemeName = "notify::theme-name"
+}
+
+// MARK: IconTheme signals
+public extension IconThemeProtocol {
+    /// Connect a Swift signal handler to the given, typed `IconThemeSignalName` signal
+    /// - Parameters:
+    ///   - signal: The signal to connect
+    ///   - flags: The connection flags to use
+    ///   - data: A pointer to user data to provide to the callback
+    ///   - destroyData: A `GClosureNotify` C function to destroy the data pointed to by `userData`
+    ///   - handler: The Swift signal handler (function or callback) to invoke on the given signal
+    /// - Returns: The signal handler ID (always greater than 0 for successful connections)
+    @inlinable @discardableResult func connect(signal s: IconThemeSignalName, flags f: ConnectFlags = ConnectFlags(0), handler h: @escaping SignalHandler) -> Int {
+        connect(s, flags: f, handler: h)
+    }
+    
+    
+    /// Connect a C signal handler to the given, typed `IconThemeSignalName` signal
+    /// - Parameters:
+    ///   - signal: The signal to connect
+    ///   - flags: The connection flags to use
+    ///   - data: A pointer to user data to provide to the callback
+    ///   - destroyData: A `GClosureNotify` C function to destroy the data pointed to by `userData`
+    ///   - signalHandler: The C function to be called on the given signal
+    /// - Returns: The signal handler ID (always greater than 0 for successful connections)
+    @inlinable @discardableResult func connect(signal s: IconThemeSignalName, flags f: ConnectFlags = ConnectFlags(0), data userData: gpointer!, destroyData destructor: GClosureNotify? = nil, signalHandler h: @escaping GCallback) -> Int {
+        connectSignal(s, flags: f, data: userData, destroyData: destructor, handler: h)
+    }
+    
+    
+    /// Emitted when the icon theme changes.
+    /// 
+    /// This can happen becuase current icon theme is switched or
+    /// because GTK detects that a change has occurred in the
+    /// contents of the current icon theme.
+    /// - Note: This represents the underlying `changed` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `changed` signal is emitted
+    @discardableResult @inlinable func onChanged(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconThemeRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconThemeRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer) -> Void = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconThemeRef(raw: unownedSelf)))
+            return output
+        }
+        return connect(
+            signal: .changed,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `changed` signal for using the `connect(signal:)` methods
+    static var changedSignal: IconThemeSignalName { .changed }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::display` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyDisplay` signal is emitted
+    @discardableResult @inlinable func onNotifyDisplay(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconThemeRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconThemeRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconThemeRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyDisplay,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::display` signal for using the `connect(signal:)` methods
+    static var notifyDisplaySignal: IconThemeSignalName { .notifyDisplay }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::icon-names` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyIconNames` signal is emitted
+    @discardableResult @inlinable func onNotifyIconNames(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconThemeRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconThemeRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconThemeRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyIconNames,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::icon-names` signal for using the `connect(signal:)` methods
+    static var notifyIconNamesSignal: IconThemeSignalName { .notifyIconNames }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::resource-path` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyResourcePath` signal is emitted
+    @discardableResult @inlinable func onNotifyResourcePath(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconThemeRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconThemeRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconThemeRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyResourcePath,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::resource-path` signal for using the `connect(signal:)` methods
+    static var notifyResourcePathSignal: IconThemeSignalName { .notifyResourcePath }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::search-path` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifySearchPath` signal is emitted
+    @discardableResult @inlinable func onNotifySearchPath(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconThemeRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconThemeRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconThemeRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifySearchPath,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::search-path` signal for using the `connect(signal:)` methods
+    static var notifySearchPathSignal: IconThemeSignalName { .notifySearchPath }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::theme-name` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyThemeName` signal is emitted
+    @discardableResult @inlinable func onNotifyThemeName(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconThemeRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconThemeRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconThemeRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyThemeName,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::theme-name` signal for using the `connect(signal:)` methods
+    static var notifyThemeNameSignal: IconThemeSignalName { .notifyThemeName }
+    
+}
+
+// MARK: IconTheme Class: IconThemeProtocol extension (methods and fields)
+public extension IconThemeProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkIconTheme` instance.
+    @inlinable var icon_theme_ptr: UnsafeMutablePointer<GtkIconTheme>! { return ptr?.assumingMemoryBound(to: GtkIconTheme.self) }
+
+    /// Adds a resource path that will be looked at when looking
+    /// for icons, similar to search paths.
+    /// 
+    /// See [method`Gtk.IconTheme.set_resource_path`].
+    /// 
+    /// This function should be used to make application-specific icons
+    /// available as part of the icon theme.
+    @inlinable func addResource(path: UnsafePointer<CChar>!) {
+        
+        gtk_icon_theme_add_resource_path(icon_theme_ptr, path)
+        
+    }
+
+    /// Appends a directory to the search path.
+    /// 
+    /// See [method`Gtk.IconTheme.set_search_path`].
+    @inlinable func addSearch(path: UnsafePointer<CChar>!) {
+        
+        gtk_icon_theme_add_search_path(icon_theme_ptr, path)
+        
+    }
+
+    /// Returns the display that the `GtkIconTheme` object was
+    /// created for.
+    @inlinable func getDisplay() -> Gdk.DisplayRef! {
+        let result = gtk_icon_theme_get_display(icon_theme_ptr)
+        let rv = Gdk.DisplayRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Lists the names of icons in the current icon theme.
+    @inlinable func getIconNames() -> UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>! {
+        let result = gtk_icon_theme_get_icon_names(icon_theme_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Returns an array of integers describing the sizes at which
+    /// the icon is available without scaling.
+    /// 
+    /// A size of -1 means that the icon is available in a scalable
+    /// format. The array is zero-terminated.
+    @inlinable func getIconSizes(iconName: UnsafePointer<CChar>!) -> UnsafeMutablePointer<CInt>! {
+        let result = gtk_icon_theme_get_icon_sizes(icon_theme_ptr, iconName)
+        let rv = result
+        return rv
+    }
+
+    /// Gets the current resource path.
+    /// 
+    /// See [method`Gtk.IconTheme.set_resource_path`].
+    @inlinable func getResourcePath() -> UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>! {
+        let result = gtk_icon_theme_get_resource_path(icon_theme_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Gets the current search path.
+    /// 
+    /// See [method`Gtk.IconTheme.set_search_path`].
+    @inlinable func getSearchPath() -> UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>! {
+        let result = gtk_icon_theme_get_search_path(icon_theme_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Gets the current icon theme name.
+    /// 
+    /// Returns (transfer full): the current icon theme name,
+    @inlinable func getThemeName() -> String! {
+        let result = gtk_icon_theme_get_theme_name(icon_theme_ptr)
+        let rv = result.map({ String(cString: $0) })
+        return rv
+    }
+
+    /// Checks whether an icon theme includes an icon
+    /// for a particular `GIcon`.
+    @inlinable func has<GioIconT: GIO.IconProtocol>(gicon: GioIconT) -> Bool {
+        let result = gtk_icon_theme_has_gicon(icon_theme_ptr, gicon.icon_ptr)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Checks whether an icon theme includes an icon
+    /// for a particular name.
+    @inlinable func hasIcon(iconName: UnsafePointer<CChar>!) -> Bool {
+        let result = gtk_icon_theme_has_icon(icon_theme_ptr, iconName)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Looks up a icon for a desired size and window scale.
+    /// 
+    /// The icon can then be rendered by using it as a `GdkPaintable`,
+    /// or you can get information such as the filename and size.
+    @inlinable func lookupByGicon<GioIconT: GIO.IconProtocol>(icon: GioIconT, size: Int, scale: Int, direction: GtkTextDirection, flags: IconLookupFlags) -> IconPaintableRef! {
+        let result = gtk_icon_theme_lookup_by_gicon(icon_theme_ptr, icon.icon_ptr, gint(size), gint(scale), direction, flags.value)
+        let rv = IconPaintableRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Looks up a named icon for a desired size and window scale,
+    /// returning a `GtkIconPaintable`.
+    /// 
+    /// The icon can then be rendered by using it as a `GdkPaintable`,
+    /// or you can get information such as the filename and size.
+    /// 
+    /// If the available `icon_name` is not available and `fallbacks` are
+    /// provided, they will be tried in order.
+    /// 
+    /// If no matching icon is found, then a paintable that renders the
+    /// "missing icon" icon is returned. If you need to do something else
+    /// for missing icons you need to use [method`Gtk.IconTheme.has_icon`].
+    /// 
+    /// Note that you probably want to listen for icon theme changes and
+    /// update the icon. This is usually done by overriding the
+    /// `GtkWidgetClass.css-changed()` function.
+    @inlinable func lookupIcon(iconName: UnsafePointer<CChar>!, fallbacks: UnsafeMutablePointer<UnsafePointer<CChar>?>! = nil, size: Int, scale: Int, direction: GtkTextDirection, flags: IconLookupFlags) -> IconPaintableRef! {
+        let result = gtk_icon_theme_lookup_icon(icon_theme_ptr, iconName, fallbacks, gint(size), gint(scale), direction, flags.value)
+        let rv = IconPaintableRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Sets the resource paths that will be looked at when
+    /// looking for icons, similar to search paths.
+    /// 
+    /// The resources are considered as part of the hicolor icon theme
+    /// and must be located in subdirectories that are defined in the
+    /// hicolor icon theme, such as ``path`/16x16/actions/run.png`
+    /// or ``path`/scalable/actions/run.svg`.
+    /// 
+    /// Icons that are directly placed in the resource path instead
+    /// of a subdirectory are also considered as ultimate fallback,
+    /// but they are treated like unthemed icons.
+    @inlinable func setResource(path: UnsafePointer<UnsafePointer<CChar>?>! = nil) {
+        
+        gtk_icon_theme_set_resource_path(icon_theme_ptr, path)
+        
+    }
+
+    /// Sets the search path for the icon theme object.
+    /// 
+    /// When looking for an icon theme, GTK will search for a subdirectory
+    /// of one or more of the directories in `path` with the same name
+    /// as the icon theme containing an index.theme file. (Themes from
+    /// multiple of the path elements are combined to allow themes to be
+    /// extended by adding icons in the user’s home directory.)
+    /// 
+    /// In addition if an icon found isn’t found either in the current
+    /// icon theme or the default icon theme, and an image file with
+    /// the right name is found directly in one of the elements of
+    /// `path`, then that image will be used for the icon name.
+    /// (This is legacy feature, and new icons should be put
+    /// into the fallback icon theme, which is called hicolor,
+    /// rather than directly on the icon path.)
+    @inlinable func setSearch(path: UnsafePointer<UnsafePointer<CChar>?>! = nil) {
+        
+        gtk_icon_theme_set_search_path(icon_theme_ptr, path)
+        
+    }
+
+    /// Sets the name of the icon theme that the `GtkIconTheme` object uses
+    /// overriding system configuration.
+    /// 
+    /// This function cannot be called on the icon theme objects returned
+    /// from [func`Gtk.IconTheme.get_for_display`].
+    @inlinable func set(themeName: UnsafePointer<CChar>? = nil) {
+        
+        gtk_icon_theme_set_theme_name(icon_theme_ptr, themeName)
+        
+    }
+    /// The display that this icon theme object is attached to.
+    @inlinable var display: Gdk.DisplayRef! {
+        /// Returns the display that the `GtkIconTheme` object was
+        /// created for.
+        get {
+            let result = gtk_icon_theme_get_display(icon_theme_ptr)
+        let rv = Gdk.DisplayRef(gconstpointer: gconstpointer(result))
+            return rv
+        }
+    }
+
+    /// Lists the names of icons in the current icon theme.
+    @inlinable var iconNames: UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>! {
+        /// Lists the names of icons in the current icon theme.
+        get {
+            let result = gtk_icon_theme_get_icon_names(icon_theme_ptr)
+        let rv = result
+            return rv
+        }
+    }
+
+    /// Gets the current resource path.
+    /// 
+    /// See [method`Gtk.IconTheme.set_resource_path`].
+    @inlinable var resourcePath: UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>! {
+        /// Gets the current resource path.
+        /// 
+        /// See [method`Gtk.IconTheme.set_resource_path`].
+        get {
+            let result = gtk_icon_theme_get_resource_path(icon_theme_ptr)
+        let rv = result
+            return rv
+        }
+        /// Sets the resource paths that will be looked at when
+        /// looking for icons, similar to search paths.
+        /// 
+        /// The resources are considered as part of the hicolor icon theme
+        /// and must be located in subdirectories that are defined in the
+        /// hicolor icon theme, such as ``path`/16x16/actions/run.png`
+        /// or ``path`/scalable/actions/run.svg`.
+        /// 
+        /// Icons that are directly placed in the resource path instead
+        /// of a subdirectory are also considered as ultimate fallback,
+        /// but they are treated like unthemed icons.
+        nonmutating set {
+            gtk_icon_theme_set_resource_path(icon_theme_ptr, unsafeBitCast(newValue, to: UnsafePointer<UnsafePointer<CChar>?>.self))
+        }
+    }
+
+    /// Gets the current search path.
+    /// 
+    /// See [method`Gtk.IconTheme.set_search_path`].
+    @inlinable var searchPath: UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>! {
+        /// Gets the current search path.
+        /// 
+        /// See [method`Gtk.IconTheme.set_search_path`].
+        get {
+            let result = gtk_icon_theme_get_search_path(icon_theme_ptr)
+        let rv = result
+            return rv
+        }
+        /// Sets the search path for the icon theme object.
+        /// 
+        /// When looking for an icon theme, GTK will search for a subdirectory
+        /// of one or more of the directories in `path` with the same name
+        /// as the icon theme containing an index.theme file. (Themes from
+        /// multiple of the path elements are combined to allow themes to be
+        /// extended by adding icons in the user’s home directory.)
+        /// 
+        /// In addition if an icon found isn’t found either in the current
+        /// icon theme or the default icon theme, and an image file with
+        /// the right name is found directly in one of the elements of
+        /// `path`, then that image will be used for the icon name.
+        /// (This is legacy feature, and new icons should be put
+        /// into the fallback icon theme, which is called hicolor,
+        /// rather than directly on the icon path.)
+        nonmutating set {
+            gtk_icon_theme_set_search_path(icon_theme_ptr, unsafeBitCast(newValue, to: UnsafePointer<UnsafePointer<CChar>?>.self))
+        }
+    }
+
+    /// Gets the current icon theme name.
+    /// 
+    /// Returns (transfer full): the current icon theme name,
+    @inlinable var themeName: String! {
+        /// Gets the current icon theme name.
+        /// 
+        /// Returns (transfer full): the current icon theme name,
+        get {
+            let result = gtk_icon_theme_get_theme_name(icon_theme_ptr)
+        let rv = result.map({ String(cString: $0) })
+            return rv
+        }
+        /// Sets the name of the icon theme that the `GtkIconTheme` object uses
+        /// overriding system configuration.
+        /// 
+        /// This function cannot be called on the icon theme objects returned
+        /// from [func`Gtk.IconTheme.get_for_display`].
+        nonmutating set {
+            gtk_icon_theme_set_theme_name(icon_theme_ptr, newValue)
+        }
+    }
+
+
+}
+
+
+
+// MARK: - IconView Class
+
+/// `GtkIconView` is a widget which displays data in a grid of icons.
+/// 
+/// `GtkIconView` provides an alternative view on a `GtkTreeModel`.
+/// It displays the model as a grid of icons with labels. Like
+/// [class`Gtk.TreeView`], it allows to select one or multiple items
+/// (depending on the selection mode, see [method`Gtk.IconView.set_selection_mode`]).
+/// In addition to selection with the arrow keys, `GtkIconView` supports
+/// rubberband selection, which is controlled by dragging the pointer.
+/// 
+/// Note that if the tree model is backed by an actual tree store (as
+/// opposed to a flat list where the mapping to icons is obvious),
+/// `GtkIconView` will only display the first level of the tree and
+/// ignore the tree’s branches.
+/// 
+/// # CSS nodes
+/// 
+/// ```
+/// iconview.view
+/// ╰── [rubberband]
+/// ```
+/// 
+/// `GtkIconView` has a single CSS node with name iconview and style class .view.
+/// For rubberband selection, a subnode with name rubberband is used.
+///
+/// The `IconViewProtocol` protocol exposes the methods and properties of an underlying `GtkIconView` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `IconView`.
+/// Alternatively, use `IconViewRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol IconViewProtocol: WidgetProtocol, CellLayoutProtocol, ScrollableProtocol {
+        /// Untyped pointer to the underlying `GtkIconView` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkIconView` instance.
+    var icon_view_ptr: UnsafeMutablePointer<GtkIconView>! { get }
+
+    /// Required Initialiser for types conforming to `IconViewProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+/// `GtkIconView` is a widget which displays data in a grid of icons.
+/// 
+/// `GtkIconView` provides an alternative view on a `GtkTreeModel`.
+/// It displays the model as a grid of icons with labels. Like
+/// [class`Gtk.TreeView`], it allows to select one or multiple items
+/// (depending on the selection mode, see [method`Gtk.IconView.set_selection_mode`]).
+/// In addition to selection with the arrow keys, `GtkIconView` supports
+/// rubberband selection, which is controlled by dragging the pointer.
+/// 
+/// Note that if the tree model is backed by an actual tree store (as
+/// opposed to a flat list where the mapping to icons is obvious),
+/// `GtkIconView` will only display the first level of the tree and
+/// ignore the tree’s branches.
+/// 
+/// # CSS nodes
+/// 
+/// ```
+/// iconview.view
+/// ╰── [rubberband]
+/// ```
+/// 
+/// `GtkIconView` has a single CSS node with name iconview and style class .view.
+/// For rubberband selection, a subnode with name rubberband is used.
+///
+/// The `IconViewRef` type acts as a lightweight Swift reference to an underlying `GtkIconView` instance.
+/// It exposes methods that can operate on this data type through `IconViewProtocol` conformance.
+/// Use `IconViewRef` only as an `unowned` reference to an existing `GtkIconView` instance.
+///
+public struct IconViewRef: IconViewProtocol, GWeakCapturing {
+        /// Untyped pointer to the underlying `GtkIconView` instance.
+    /// For type-safe access, use the generated, typed pointer `icon_view_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension IconViewRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkIconView>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkIconView>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkIconView>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkIconView>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `IconViewProtocol`
+    @inlinable init<T: IconViewProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// This factory is syntactic sugar for setting weak pointers wrapped in `GWeak<T>`
+    @inlinable static func unowned<T: IconViewProtocol>(_ other: T) -> IconViewRef { IconViewRef(other) }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+        /// Creates a new `GtkIconView` widget
+    @inlinable init() {
+            let result = gtk_icon_view_new()
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+
+    /// Creates a new `GtkIconView` widget using the
+    /// specified `area` to layout cells inside the icons.
+    @inlinable init<CellAreaT: CellAreaProtocol>(area: CellAreaT) {
+            let result = gtk_icon_view_new_with_area(area.cell_area_ptr)
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+
+    /// Creates a new `GtkIconView` widget with the model `model`.
+    @inlinable init<TreeModelT: TreeModelProtocol>(model: TreeModelT) {
+            let result = gtk_icon_view_new_with_model(model.tree_model_ptr)
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+    /// Creates a new `GtkIconView` widget using the
+    /// specified `area` to layout cells inside the icons.
+    @inlinable static func newWith<CellAreaT: CellAreaProtocol>(area: CellAreaT) -> WidgetRef! {
+            let result = gtk_icon_view_new_with_area(area.cell_area_ptr)
+        guard let rv = WidgetRef(gconstpointer: gconstpointer(result)) else { return nil }
+        return rv
+    }
+
+    /// Creates a new `GtkIconView` widget with the model `model`.
+    @inlinable static func newWith<TreeModelT: TreeModelProtocol>(model: TreeModelT) -> WidgetRef! {
+            let result = gtk_icon_view_new_with_model(model.tree_model_ptr)
+        guard let rv = WidgetRef(gconstpointer: gconstpointer(result)) else { return nil }
+        return rv
+    }
+}
+
+/// `GtkIconView` is a widget which displays data in a grid of icons.
+/// 
+/// `GtkIconView` provides an alternative view on a `GtkTreeModel`.
+/// It displays the model as a grid of icons with labels. Like
+/// [class`Gtk.TreeView`], it allows to select one or multiple items
+/// (depending on the selection mode, see [method`Gtk.IconView.set_selection_mode`]).
+/// In addition to selection with the arrow keys, `GtkIconView` supports
+/// rubberband selection, which is controlled by dragging the pointer.
+/// 
+/// Note that if the tree model is backed by an actual tree store (as
+/// opposed to a flat list where the mapping to icons is obvious),
+/// `GtkIconView` will only display the first level of the tree and
+/// ignore the tree’s branches.
+/// 
+/// # CSS nodes
+/// 
+/// ```
+/// iconview.view
+/// ╰── [rubberband]
+/// ```
+/// 
+/// `GtkIconView` has a single CSS node with name iconview and style class .view.
+/// For rubberband selection, a subnode with name rubberband is used.
+///
+/// The `IconView` type acts as a reference-counted owner of an underlying `GtkIconView` instance.
+/// It provides the methods that can operate on this data type through `IconViewProtocol` conformance.
+/// Use `IconView` as a strong reference or owner of a `GtkIconView` instance.
+///
+open class IconView: Widget, IconViewProtocol {
+        /// Designated initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconView` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafeMutablePointer<GtkIconView>) {
+        super.init(cPointer: op)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconView` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafePointer<GtkIconView>) {
+        super.init(raw: UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: op)))
+    }
+
+    /// Optional initialiser from a non-mutating `gpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconView` instance.
+    /// - Parameter op: gpointer to the underlying object
+    @inlinable override public init!(gpointer op: gpointer?) {
+        guard let p = UnsafeMutableRawPointer(op) else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a non-mutating `gconstpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconView` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable override public init!(gconstpointer op: gconstpointer?) {
+        guard let p = op else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconView` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafePointer<GtkIconView>?) {
+        guard let p = UnsafeMutablePointer(mutating: op) else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Optional initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `IconView` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafeMutablePointer<GtkIconView>?) {
+        guard let p = op else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Designated initialiser from the underlying `C` data type.
+    /// Will retain `GtkIconView`.
+    /// i.e., ownership is transferred to the `IconView` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(retaining op: UnsafeMutablePointer<GtkIconView>) {
+        super.init(retainingCPointer: op)
+    }
+
+    /// Reference intialiser for a related type that implements `IconViewProtocol`
+    /// Will retain `GtkIconView`.
+    /// - Parameter other: an instance of a related type that implements `IconViewProtocol`
+    @inlinable public init<T: IconViewProtocol>(iconView other: T) {
+        super.init(retainingRaw: other.ptr)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(cPointer p: UnsafeMutablePointer<T>) {
+        super.init(cPointer: p)
+    }
+
+    /// Unsafe typed, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(retainingCPointer cPointer: UnsafeMutablePointer<T>) {
+        super.init(retainingCPointer: cPointer)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    /// - Parameter p: raw pointer to the underlying object
+    @inlinable override public init(raw p: UnsafeRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    @inlinable override public init(retainingRaw raw: UnsafeRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    /// - Parameter p: mutable raw pointer to the underlying object
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    /// - Parameter raw: mutable raw pointer to the underlying object
+    @inlinable required public init(retainingRaw raw: UnsafeMutableRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(opaquePointer p: OpaquePointer) {
+        super.init(opaquePointer: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `IconViewProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(retainingOpaquePointer p: OpaquePointer) {
+        super.init(retainingOpaquePointer: p)
+    }
+
+    /// Creates a new `GtkIconView` widget
+    @inlinable public init() {
+            let result = gtk_icon_view_new()
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a new `GtkIconView` widget using the
+    /// specified `area` to layout cells inside the icons.
+    @inlinable public init<CellAreaT: CellAreaProtocol>(area: CellAreaT) {
+            let result = gtk_icon_view_new_with_area(area.cell_area_ptr)
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a new `GtkIconView` widget with the model `model`.
+    @inlinable public init<TreeModelT: TreeModelProtocol>(model: TreeModelT) {
+            let result = gtk_icon_view_new_with_model(model.tree_model_ptr)
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a new `GtkIconView` widget using the
+    /// specified `area` to layout cells inside the icons.
+    @inlinable public static func newWith<CellAreaT: CellAreaProtocol>(area: CellAreaT) -> Widget! {
+            let result = gtk_icon_view_new_with_area(area.cell_area_ptr)
+        guard let rv = Widget(gconstpointer: gconstpointer(result)) else { return nil }
+            if typeIsA(type: rv.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = rv.refSink() } 
+return rv
+    }
+
+    /// Creates a new `GtkIconView` widget with the model `model`.
+    @inlinable public static func newWith<TreeModelT: TreeModelProtocol>(model: TreeModelT) -> Widget! {
+            let result = gtk_icon_view_new_with_model(model.tree_model_ptr)
+        guard let rv = Widget(gconstpointer: gconstpointer(result)) else { return nil }
+            if typeIsA(type: rv.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = rv.refSink() } 
+return rv
+    }
+
+}
+
+public enum IconViewPropertyName: String, PropertyNameProtocol {
+    /// The activate-on-single-click property specifies whether the "item-activated" signal
+    /// will be emitted after a single click.
+    case activateOnSingleClick = "activate-on-single-click"
+    /// Whether the widget or any of its descendents can accept
+    /// the input focus.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case canFocus = "can-focus"
+    /// Whether the widget can receive pointer events.
+    case canTarget = "can-target"
+    /// The `GtkCellArea` used to layout cell renderers for this view.
+    /// 
+    /// If no area is specified when creating the icon view with `gtk_icon_view_new_with_area()`
+    /// a `GtkCellAreaBox` will be used.
+    case cellArea = "cell-area"
+    /// The column-spacing property specifies the space which is inserted between
+    /// the columns of the icon view.
+    case columnSpacing = "column-spacing"
+    /// The columns property contains the number of the columns in which the
+    /// items should be displayed. If it is -1, the number of columns will
+    /// be chosen automatically to fill the available area.
+    case columns = "columns"
+    /// A list of css classes applied to this widget.
+    case cssClasses = "css-classes"
+    /// The name of this widget in the CSS tree.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case cssName = "css-name"
+    /// The cursor used by `widget`.
+    case cursor = "cursor"
+    /// Whether the widget should grab focus when it is clicked with the mouse.
+    /// 
+    /// This property is only relevant for widgets that can take focus.
+    case focusOnClick = "focus-on-click"
+    /// Whether this widget itself will accept the input focus.
+    case focusable = "focusable"
+    /// How to distribute horizontal space if widget gets extra space.
+    case halign = "halign"
+    /// Whether the widget is the default widget.
+    case hasDefault = "has-default"
+    /// Whether the widget has the input focus.
+    case hasFocus = "has-focus"
+    /// Enables or disables the emission of the `query-tooltip` signal on `widget`.
+    /// 
+    /// A value of `true` indicates that `widget` can have a tooltip, in this case
+    /// the widget will be queried using [signal`Gtk.Widget::query-tooltip`] to
+    /// determine whether it will provide a tooltip or not.
+    case hasTooltip = "has-tooltip"
+    /// Override for height request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case heightRequest = "height-request"
+    /// Whether to expand horizontally.
+    case hexpand = "hexpand"
+    /// Whether to use the `hexpand` property.
+    case hexpandSet = "hexpand-set"
+    /// The item-orientation property specifies how the cells (i.e. the icon and
+    /// the text) of the item are positioned relative to each other.
+    case itemOrientation = "item-orientation"
+    /// The item-padding property specifies the padding around each
+    /// of the icon view's item.
+    case itemPadding = "item-padding"
+    /// The item-width property specifies the width to use for each item.
+    /// If it is set to -1, the icon view will automatically determine a
+    /// suitable item size.
+    case itemWidth = "item-width"
+    /// The `GtkLayoutManager` instance to use to compute the preferred size
+    /// of the widget, and allocate its children.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case layoutManager = "layout-manager"
+    /// The margin property specifies the space which is inserted
+    /// at the edges of the icon view.
+    case margin = "margin"
+    /// Margin on bottom side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginBottom = "margin-bottom"
+    /// Margin on end of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginEnd = "margin-end"
+    /// Margin on start of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginStart = "margin-start"
+    /// Margin on top side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginTop = "margin-top"
+    /// The `markup-column` property contains the number of the model column
+    /// containing markup information to be displayed. The markup column must be
+    /// of type `G_TYPE_STRING`. If this property and the :text-column property
+    /// are both set to column numbers, it overrides the text column.
+    /// If both are set to -1, no texts are displayed.
+    case markupColumn = "markup-column"
+    case model = "model"
+    /// The name of the widget.
+    case name = "name"
+    /// The requested opacity of the widget.
+    case opacity = "opacity"
+    /// How content outside the widget's content area is treated.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case overflow = "overflow"
+    /// The parent widget of this widget.
+    case parent = "parent"
+    /// The `pixbuf-column` property contains the number of the model column
+    /// containing the pixbufs which are displayed. The pixbuf column must be
+    /// of type `GDK_TYPE_PIXBUF`. Setting this property to -1 turns off the
+    /// display of pixbufs.
+    case pixbufColumn = "pixbuf-column"
+    /// Whether the widget will receive the default action when it is focused.
+    case receivesDefault = "receives-default"
+    /// The reorderable property specifies if the items can be reordered
+    /// by DND.
+    case reorderable = "reorderable"
+    /// The `GtkRoot` widget of the widget tree containing this widget.
+    /// 
+    /// This will be `nil` if the widget is not contained in a root widget.
+    case root = "root"
+    /// The row-spacing property specifies the space which is inserted between
+    /// the rows of the icon view.
+    case rowSpacing = "row-spacing"
+    /// The scale factor of the widget.
+    case scaleFactor = "scale-factor"
+    /// The `selection-mode` property specifies the selection mode of
+    /// icon view. If the mode is `GTK_SELECTION_MULTIPLE`, rubberband selection
+    /// is enabled, for the other modes, only keyboard selection is possible.
+    case selectionMode = "selection-mode"
+    /// Whether the widget responds to input.
+    case sensitive = "sensitive"
+    /// The spacing property specifies the space which is inserted between
+    /// the cells (i.e. the icon and the text) of an item.
+    case spacing = "spacing"
+    /// The `text-column` property contains the number of the model column
+    /// containing the texts which are displayed. The text column must be
+    /// of type `G_TYPE_STRING`. If this property and the :markup-column
+    /// property are both set to -1, no texts are displayed.
+    case textColumn = "text-column"
+    case tooltipColumn = "tooltip-column"
+    /// Sets the text of tooltip to be the given string, which is marked up
+    /// with Pango markup.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_markup`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case tooltipMarkup = "tooltip-markup"
+    /// Sets the text of tooltip to be the given string.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_text`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case tooltipText = "tooltip-text"
+    /// How to distribute vertical space if widget gets extra space.
+    case valign = "valign"
+    /// Whether to expand vertically.
+    case vexpand = "vexpand"
+    /// Whether to use the `vexpand` property.
+    case vexpandSet = "vexpand-set"
+    /// Whether the widget is visible.
+    case visible = "visible"
+    /// Override for width request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case widthRequest = "width-request"
+}
+
+public extension IconViewProtocol {
+    /// Bind a `IconViewPropertyName` source property to a given target object.
+    /// - Parameter source_property: the source property to bind
+    /// - Parameter target: the target object to bind to
+    /// - Parameter target_property: the target property to bind to
+    /// - Parameter flags: the flags to pass to the `Binding`
+    /// - Parameter transform_from: `ValueTransformer` to use for forward transformation
+    /// - Parameter transform_to: `ValueTransformer` to use for backwards transformation
+    /// - Returns: binding reference or `nil` in case of an error
+    @discardableResult @inlinable func bind<Q: PropertyNameProtocol, T: GLibObject.ObjectProtocol>(property source_property: IconViewPropertyName, to target: T, _ target_property: Q, flags f: BindingFlags = .default, transformFrom transform_from: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }, transformTo transform_to: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }) -> BindingRef! {
+        func _bind(_ source: UnsafePointer<gchar>, to t: T, _ target_property: UnsafePointer<gchar>, flags f: BindingFlags = .default, holder: BindingClosureHolder, transformFrom transform_from: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean, transformTo transform_to: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean) -> BindingRef! {
+            let holder = UnsafeMutableRawPointer(Unmanaged.passRetained(holder).toOpaque())
+            let from = unsafeBitCast(transform_from, to: BindingTransformFunc.self)
+            let to   = unsafeBitCast(transform_to,   to: BindingTransformFunc.self)
+            let rv = GLibObject.ObjectRef(raw: ptr).bindPropertyFull(sourceProperty: source, target: t, targetProperty: target_property, flags: f, transformTo: to, transformFrom: from, userData: holder) {
+                if let swift = UnsafeRawPointer($0) {
+                    let holder = Unmanaged<GLibObject.SignalHandlerClosureHolder>.fromOpaque(swift)
+                    holder.release()
+                }
+            }
+            return rv.map { BindingRef($0) }
+        }
+
+        let rv = _bind(source_property.name, to: target, target_property.name, flags: f, holder: BindingClosureHolder(transform_from, transform_to), transformFrom: {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_from(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }) {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_to(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }
+        return rv
+    }
+
+    /// Get the value of a IconView property
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func get(property: IconViewPropertyName) -> GLibObject.Value {
+        let v = GLibObject.Value()
+        g_object_get_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+        return v
+    }
+
+    /// Set the value of a IconView property.
+    /// *Note* that this will only have an effect on properties that are writable and not construct-only!
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func set(property: IconViewPropertyName, value v: GLibObject.Value) {
+        g_object_set_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+    }
+}
+
+public enum IconViewSignalName: String, SignalNameProtocol {
+    /// A [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user activates the currently
+    /// focused item.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control activation
+    /// programmatically.
+    /// 
+    /// The default bindings for this signal are Space, Return and Enter.
+    case activateCursorItem = "activate-cursor-item"
+    /// Signals that all holders of a reference to the widget should release
+    /// the reference that they hold.
+    /// 
+    /// May result in finalization of the widget if all references are released.
+    /// 
+    /// This signal is not suitable for saving widget state.
+    case destroy = "destroy"
+    /// Emitted when the text direction of a widget changes.
+    case directionChanged = "direction-changed"
+    /// Emitted when `widget` is hidden.
+    case hide = "hide"
+    /// The `item-activated` signal is emitted when the method
+    /// `gtk_icon_view_item_activated()` is called, when the user double
+    /// clicks an item with the "activate-on-single-click" property set
+    /// to `false`, or when the user single clicks an item when the
+    /// "activate-on-single-click" property set to `true`. It is also
+    /// emitted when a non-editable item is selected and one of the keys:
+    /// Space, Return or Enter is pressed.
+    case itemActivated = "item-activated"
+    /// Emitted if keyboard navigation fails.
+    /// 
+    /// See [method`Gtk.Widget.keynav_failed`] for details.
+    case keynavFailed = "keynav-failed"
+    /// Emitted when `widget` is going to be mapped.
+    /// 
+    /// A widget is mapped when the widget is visible (which is controlled with
+    /// [property`Gtk.Widget:visible`]) and all its parents up to the toplevel widget
+    /// are also visible.
+    /// 
+    /// The `map` signal can be used to determine whether a widget will be drawn,
+    /// for instance it can resume an animation that was stopped during the
+    /// emission of [signal`Gtk.Widget::unmap`].
+    case map = "map"
+    /// Emitted when a widget is activated via a mnemonic.
+    /// 
+    /// The default handler for this signal activates `widget` if `group_cycling`
+    /// is `false`, or just makes `widget` grab focus if `group_cycling` is `true`.
+    case mnemonicActivate = "mnemonic-activate"
+    /// The `move-cursor` signal is a
+    /// [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user initiates a cursor movement.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control the cursor
+    /// programmatically.
+    /// 
+    /// The default bindings for this signal include
+    /// - Arrow keys which move by individual steps
+    /// - Home/End keys which move to the first/last item
+    /// - PageUp/PageDown which move by "pages"
+    /// All of these will extend the selection when combined with
+    /// the Shift modifier.
+    case moveCursor = "move-cursor"
+    /// Emitted when the focus is moved.
+    case moveFocus = "move-focus"
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    case notify = "notify"
+    /// Emitted when the widgets tooltip is about to be shown.
+    /// 
+    /// This happens when the [property`Gtk.Widget:has-tooltip`] property
+    /// is `true` and the hover timeout has expired with the cursor hovering
+    /// "above" `widget`; or emitted when `widget` got focus in keyboard mode.
+    /// 
+    /// Using the given coordinates, the signal handler should determine
+    /// whether a tooltip should be shown for `widget`. If this is the case
+    /// `true` should be returned, `false` otherwise.  Note that if
+    /// `keyboard_mode` is `true`, the values of `x` and `y` are undefined and
+    /// should not be used.
+    /// 
+    /// The signal handler is free to manipulate `tooltip` with the therefore
+    /// destined function calls.
+    case queryTooltip = "query-tooltip"
+    /// Emitted when `widget` is associated with a `GdkSurface`.
+    /// 
+    /// This means that [method`Gtk.Widget.realize`] has been called
+    /// or the widget has been mapped (that is, it is going to be drawn).
+    case realize = "realize"
+    /// A [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user selects all items.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control selection
+    /// programmatically.
+    /// 
+    /// The default binding for this signal is Ctrl-a.
+    case selectAll = "select-all"
+    /// A [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user selects the item that is currently
+    /// focused.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control selection
+    /// programmatically.
+    /// 
+    /// There is no default binding for this signal.
+    case selectCursorItem = "select-cursor-item"
+    /// The `selection-changed` signal is emitted when the selection
+    /// (i.e. the set of selected items) changes.
+    case selectionChanged = "selection-changed"
+    /// Emitted when `widget` is shown.
+    case show = "show"
+    /// Emitted when the widget state changes.
+    /// 
+    /// See [method`Gtk.Widget.get_state_flags`].
+    case stateFlagsChanged = "state-flags-changed"
+    /// A [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user toggles whether the currently
+    /// focused item is selected or not. The exact effect of this
+    /// depend on the selection mode.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control selection
+    /// programmatically.
+    /// 
+    /// There is no default binding for this signal is Ctrl-Space.
+    case toggleCursorItem = "toggle-cursor-item"
+    /// Emitted when `widget` is going to be unmapped.
+    /// 
+    /// A widget is unmapped when either it or any of its parents up to the
+    /// toplevel widget have been set as hidden.
+    /// 
+    /// As `unmap` indicates that a widget will not be shown any longer,
+    /// it can be used to, for example, stop an animation on the widget.
+    case unmap = "unmap"
+    /// Emitted when the `GdkSurface` associated with `widget` is destroyed.
+    /// 
+    /// This means that [method`Gtk.Widget.unrealize`] has been called
+    /// or the widget has been unmapped (that is, it is going to be hidden).
+    case unrealize = "unrealize"
+    /// A [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user unselects all items.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control selection
+    /// programmatically.
+    /// 
+    /// The default binding for this signal is Ctrl-Shift-a.
+    case unselectAll = "unselect-all"
+    /// The activate-on-single-click property specifies whether the "item-activated" signal
+    /// will be emitted after a single click.
+    case notifyActivateOnSingleClick = "notify::activate-on-single-click"
+    /// Whether the widget or any of its descendents can accept
+    /// the input focus.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyCanFocus = "notify::can-focus"
+    /// Whether the widget can receive pointer events.
+    case notifyCanTarget = "notify::can-target"
+    /// The `GtkCellArea` used to layout cell renderers for this view.
+    /// 
+    /// If no area is specified when creating the icon view with `gtk_icon_view_new_with_area()`
+    /// a `GtkCellAreaBox` will be used.
+    case notifyCellArea = "notify::cell-area"
+    /// The column-spacing property specifies the space which is inserted between
+    /// the columns of the icon view.
+    case notifyColumnSpacing = "notify::column-spacing"
+    /// The columns property contains the number of the columns in which the
+    /// items should be displayed. If it is -1, the number of columns will
+    /// be chosen automatically to fill the available area.
+    case notifyColumns = "notify::columns"
+    /// A list of css classes applied to this widget.
+    case notifyCssClasses = "notify::css-classes"
+    /// The name of this widget in the CSS tree.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyCssName = "notify::css-name"
+    /// The cursor used by `widget`.
+    case notifyCursor = "notify::cursor"
+    /// Whether the widget should grab focus when it is clicked with the mouse.
+    /// 
+    /// This property is only relevant for widgets that can take focus.
+    case notifyFocusOnClick = "notify::focus-on-click"
+    /// Whether this widget itself will accept the input focus.
+    case notifyFocusable = "notify::focusable"
+    /// How to distribute horizontal space if widget gets extra space.
+    case notifyHalign = "notify::halign"
+    /// Whether the widget is the default widget.
+    case notifyHasDefault = "notify::has-default"
+    /// Whether the widget has the input focus.
+    case notifyHasFocus = "notify::has-focus"
+    /// Enables or disables the emission of the `query-tooltip` signal on `widget`.
+    /// 
+    /// A value of `true` indicates that `widget` can have a tooltip, in this case
+    /// the widget will be queried using [signal`Gtk.Widget::query-tooltip`] to
+    /// determine whether it will provide a tooltip or not.
+    case notifyHasTooltip = "notify::has-tooltip"
+    /// Override for height request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case notifyHeightRequest = "notify::height-request"
+    /// Whether to expand horizontally.
+    case notifyHexpand = "notify::hexpand"
+    /// Whether to use the `hexpand` property.
+    case notifyHexpandSet = "notify::hexpand-set"
+    /// The item-orientation property specifies how the cells (i.e. the icon and
+    /// the text) of the item are positioned relative to each other.
+    case notifyItemOrientation = "notify::item-orientation"
+    /// The item-padding property specifies the padding around each
+    /// of the icon view's item.
+    case notifyItemPadding = "notify::item-padding"
+    /// The item-width property specifies the width to use for each item.
+    /// If it is set to -1, the icon view will automatically determine a
+    /// suitable item size.
+    case notifyItemWidth = "notify::item-width"
+    /// The `GtkLayoutManager` instance to use to compute the preferred size
+    /// of the widget, and allocate its children.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyLayoutManager = "notify::layout-manager"
+    /// The margin property specifies the space which is inserted
+    /// at the edges of the icon view.
+    case notifyMargin = "notify::margin"
+    /// Margin on bottom side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginBottom = "notify::margin-bottom"
+    /// Margin on end of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginEnd = "notify::margin-end"
+    /// Margin on start of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginStart = "notify::margin-start"
+    /// Margin on top side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginTop = "notify::margin-top"
+    /// The `markup-column` property contains the number of the model column
+    /// containing markup information to be displayed. The markup column must be
+    /// of type `G_TYPE_STRING`. If this property and the :text-column property
+    /// are both set to column numbers, it overrides the text column.
+    /// If both are set to -1, no texts are displayed.
+    case notifyMarkupColumn = "notify::markup-column"
+    case notifyModel = "notify::model"
+    /// The name of the widget.
+    case notifyName = "notify::name"
+    /// The requested opacity of the widget.
+    case notifyOpacity = "notify::opacity"
+    /// How content outside the widget's content area is treated.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyOverflow = "notify::overflow"
+    /// The parent widget of this widget.
+    case notifyParent = "notify::parent"
+    /// The `pixbuf-column` property contains the number of the model column
+    /// containing the pixbufs which are displayed. The pixbuf column must be
+    /// of type `GDK_TYPE_PIXBUF`. Setting this property to -1 turns off the
+    /// display of pixbufs.
+    case notifyPixbufColumn = "notify::pixbuf-column"
+    /// Whether the widget will receive the default action when it is focused.
+    case notifyReceivesDefault = "notify::receives-default"
+    /// The reorderable property specifies if the items can be reordered
+    /// by DND.
+    case notifyReorderable = "notify::reorderable"
+    /// The `GtkRoot` widget of the widget tree containing this widget.
+    /// 
+    /// This will be `nil` if the widget is not contained in a root widget.
+    case notifyRoot = "notify::root"
+    /// The row-spacing property specifies the space which is inserted between
+    /// the rows of the icon view.
+    case notifyRowSpacing = "notify::row-spacing"
+    /// The scale factor of the widget.
+    case notifyScaleFactor = "notify::scale-factor"
+    /// The `selection-mode` property specifies the selection mode of
+    /// icon view. If the mode is `GTK_SELECTION_MULTIPLE`, rubberband selection
+    /// is enabled, for the other modes, only keyboard selection is possible.
+    case notifySelectionMode = "notify::selection-mode"
+    /// Whether the widget responds to input.
+    case notifySensitive = "notify::sensitive"
+    /// The spacing property specifies the space which is inserted between
+    /// the cells (i.e. the icon and the text) of an item.
+    case notifySpacing = "notify::spacing"
+    /// The `text-column` property contains the number of the model column
+    /// containing the texts which are displayed. The text column must be
+    /// of type `G_TYPE_STRING`. If this property and the :markup-column
+    /// property are both set to -1, no texts are displayed.
+    case notifyTextColumn = "notify::text-column"
+    case notifyTooltipColumn = "notify::tooltip-column"
+    /// Sets the text of tooltip to be the given string, which is marked up
+    /// with Pango markup.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_markup`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case notifyTooltipMarkup = "notify::tooltip-markup"
+    /// Sets the text of tooltip to be the given string.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_text`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case notifyTooltipText = "notify::tooltip-text"
+    /// How to distribute vertical space if widget gets extra space.
+    case notifyValign = "notify::valign"
+    /// Whether to expand vertically.
+    case notifyVexpand = "notify::vexpand"
+    /// Whether to use the `vexpand` property.
+    case notifyVexpandSet = "notify::vexpand-set"
+    /// Whether the widget is visible.
+    case notifyVisible = "notify::visible"
+    /// Override for width request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case notifyWidthRequest = "notify::width-request"
+}
+
+// MARK: IconView signals
+public extension IconViewProtocol {
+    /// Connect a Swift signal handler to the given, typed `IconViewSignalName` signal
+    /// - Parameters:
+    ///   - signal: The signal to connect
+    ///   - flags: The connection flags to use
+    ///   - data: A pointer to user data to provide to the callback
+    ///   - destroyData: A `GClosureNotify` C function to destroy the data pointed to by `userData`
+    ///   - handler: The Swift signal handler (function or callback) to invoke on the given signal
+    /// - Returns: The signal handler ID (always greater than 0 for successful connections)
+    @inlinable @discardableResult func connect(signal s: IconViewSignalName, flags f: ConnectFlags = ConnectFlags(0), handler h: @escaping SignalHandler) -> Int {
+        connect(s, flags: f, handler: h)
+    }
+    
+    
+    /// Connect a C signal handler to the given, typed `IconViewSignalName` signal
+    /// - Parameters:
+    ///   - signal: The signal to connect
+    ///   - flags: The connection flags to use
+    ///   - data: A pointer to user data to provide to the callback
+    ///   - destroyData: A `GClosureNotify` C function to destroy the data pointed to by `userData`
+    ///   - signalHandler: The C function to be called on the given signal
+    /// - Returns: The signal handler ID (always greater than 0 for successful connections)
+    @inlinable @discardableResult func connect(signal s: IconViewSignalName, flags f: ConnectFlags = ConnectFlags(0), data userData: gpointer!, destroyData destructor: GClosureNotify? = nil, signalHandler h: @escaping GCallback) -> Int {
+        connectSignal(s, flags: f, data: userData, destroyData: destructor, handler: h)
+    }
+    
+    
+    /// A [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user activates the currently
+    /// focused item.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control activation
+    /// programmatically.
+    /// 
+    /// The default bindings for this signal are Space, Return and Enter.
+    /// - Note: This represents the underlying `activate-cursor-item` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `activateCursorItem` signal is emitted
+    @discardableResult @inlinable func onActivateCursorItem(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef) -> Bool ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef), Bool>
+        let cCallback: @convention(c) (gpointer, gpointer) -> gboolean = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output = holder.call((IconViewRef(raw: unownedSelf)))
+            return gboolean((output) ? 1 : 0)
+        }
+        return connect(
+            signal: .activateCursorItem,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `activate-cursor-item` signal for using the `connect(signal:)` methods
+    static var activateCursorItemSignal: IconViewSignalName { .activateCursorItem }
+    
+    /// The `item-activated` signal is emitted when the method
+    /// `gtk_icon_view_item_activated()` is called, when the user double
+    /// clicks an item with the "activate-on-single-click" property set
+    /// to `false`, or when the user single clicks an item when the
+    /// "activate-on-single-click" property set to `true`. It is also
+    /// emitted when a non-editable item is selected and one of the keys:
+    /// Space, Return or Enter is pressed.
+    /// - Note: This represents the underlying `item-activated` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter path: the `GtkTreePath` for the activated item
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `itemActivated` signal is emitted
+    @discardableResult @inlinable func onItemActivated(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ path: TreePathRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, TreePathRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), TreePathRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .itemActivated,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `item-activated` signal for using the `connect(signal:)` methods
+    static var itemActivatedSignal: IconViewSignalName { .itemActivated }
+    
+    /// The `move-cursor` signal is a
+    /// [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user initiates a cursor movement.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control the cursor
+    /// programmatically.
+    /// 
+    /// The default bindings for this signal include
+    /// - Arrow keys which move by individual steps
+    /// - Home/End keys which move to the first/last item
+    /// - PageUp/PageDown which move by "pages"
+    /// All of these will extend the selection when combined with
+    /// the Shift modifier.
+    /// - Note: This represents the underlying `move-cursor` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter step: the granularity of the move, as a `GtkMovementStep`
+    /// - Parameter count: the number of `step` units to move
+    /// - Parameter extend: whether to extend the selection
+    /// - Parameter modify: whether to modify the selection
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `moveCursor` signal is emitted
+    @discardableResult @inlinable func onMoveCursor(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ step: MovementStep, _ count: Int, _ extend: Bool, _ modify: Bool) -> Bool ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, MovementStep, Int, Bool, Bool), Bool>
+        let cCallback: @convention(c) (gpointer, UInt32, gint, gboolean, gboolean, gpointer) -> gboolean = { unownedSelf, arg1, arg2, arg3, arg4, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output = holder.call((IconViewRef(raw: unownedSelf), MovementStep(arg1), Int(arg2), ((arg3) != 0), ((arg4) != 0)))
+            return gboolean((output) ? 1 : 0)
+        }
+        return connect(
+            signal: .moveCursor,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `move-cursor` signal for using the `connect(signal:)` methods
+    static var moveCursorSignal: IconViewSignalName { .moveCursor }
+    
+    /// A [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user selects all items.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control selection
+    /// programmatically.
+    /// 
+    /// The default binding for this signal is Ctrl-a.
+    /// - Note: This represents the underlying `select-all` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `selectAll` signal is emitted
+    @discardableResult @inlinable func onSelectAll(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer) -> Void = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf)))
+            return output
+        }
+        return connect(
+            signal: .selectAll,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `select-all` signal for using the `connect(signal:)` methods
+    static var selectAllSignal: IconViewSignalName { .selectAll }
+    
+    /// A [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user selects the item that is currently
+    /// focused.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control selection
+    /// programmatically.
+    /// 
+    /// There is no default binding for this signal.
+    /// - Note: This represents the underlying `select-cursor-item` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `selectCursorItem` signal is emitted
+    @discardableResult @inlinable func onSelectCursorItem(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer) -> Void = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf)))
+            return output
+        }
+        return connect(
+            signal: .selectCursorItem,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `select-cursor-item` signal for using the `connect(signal:)` methods
+    static var selectCursorItemSignal: IconViewSignalName { .selectCursorItem }
+    
+    /// The `selection-changed` signal is emitted when the selection
+    /// (i.e. the set of selected items) changes.
+    /// - Note: This represents the underlying `selection-changed` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `selectionChanged` signal is emitted
+    @discardableResult @inlinable func onSelectionChanged(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer) -> Void = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf)))
+            return output
+        }
+        return connect(
+            signal: .selectionChanged,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `selection-changed` signal for using the `connect(signal:)` methods
+    static var selectionChangedSignal: IconViewSignalName { .selectionChanged }
+    
+    /// A [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user toggles whether the currently
+    /// focused item is selected or not. The exact effect of this
+    /// depend on the selection mode.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control selection
+    /// programmatically.
+    /// 
+    /// There is no default binding for this signal is Ctrl-Space.
+    /// - Note: This represents the underlying `toggle-cursor-item` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `toggleCursorItem` signal is emitted
+    @discardableResult @inlinable func onToggleCursorItem(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer) -> Void = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf)))
+            return output
+        }
+        return connect(
+            signal: .toggleCursorItem,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `toggle-cursor-item` signal for using the `connect(signal:)` methods
+    static var toggleCursorItemSignal: IconViewSignalName { .toggleCursorItem }
+    
+    /// A [keybinding signal](#class@Gtk.SignalAction)
+    /// which gets emitted when the user unselects all items.
+    /// 
+    /// Applications should not connect to it, but may emit it with
+    /// `g_signal_emit_by_name()` if they need to control selection
+    /// programmatically.
+    /// 
+    /// The default binding for this signal is Ctrl-Shift-a.
+    /// - Note: This represents the underlying `unselect-all` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `unselectAll` signal is emitted
+    @discardableResult @inlinable func onUnselectAll(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer) -> Void = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf)))
+            return output
+        }
+        return connect(
+            signal: .unselectAll,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `unselect-all` signal for using the `connect(signal:)` methods
+    static var unselectAllSignal: IconViewSignalName { .unselectAll }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::activate-on-single-click` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyActivateOnSingleClick` signal is emitted
+    @discardableResult @inlinable func onNotifyActivateOnSingleClick(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyActivateOnSingleClick,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::activate-on-single-click` signal for using the `connect(signal:)` methods
+    static var notifyActivateOnSingleClickSignal: IconViewSignalName { .notifyActivateOnSingleClick }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::cell-area` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyCellArea` signal is emitted
+    @discardableResult @inlinable func onNotifyCellArea(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyCellArea,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::cell-area` signal for using the `connect(signal:)` methods
+    static var notifyCellAreaSignal: IconViewSignalName { .notifyCellArea }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::column-spacing` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyColumnSpacing` signal is emitted
+    @discardableResult @inlinable func onNotifyColumnSpacing(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyColumnSpacing,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::column-spacing` signal for using the `connect(signal:)` methods
+    static var notifyColumnSpacingSignal: IconViewSignalName { .notifyColumnSpacing }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::columns` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyColumns` signal is emitted
+    @discardableResult @inlinable func onNotifyColumns(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyColumns,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::columns` signal for using the `connect(signal:)` methods
+    static var notifyColumnsSignal: IconViewSignalName { .notifyColumns }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::item-orientation` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyItemOrientation` signal is emitted
+    @discardableResult @inlinable func onNotifyItemOrientation(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyItemOrientation,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::item-orientation` signal for using the `connect(signal:)` methods
+    static var notifyItemOrientationSignal: IconViewSignalName { .notifyItemOrientation }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::item-padding` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyItemPadding` signal is emitted
+    @discardableResult @inlinable func onNotifyItemPadding(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyItemPadding,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::item-padding` signal for using the `connect(signal:)` methods
+    static var notifyItemPaddingSignal: IconViewSignalName { .notifyItemPadding }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::item-width` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyItemWidth` signal is emitted
+    @discardableResult @inlinable func onNotifyItemWidth(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyItemWidth,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::item-width` signal for using the `connect(signal:)` methods
+    static var notifyItemWidthSignal: IconViewSignalName { .notifyItemWidth }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::margin` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyMargin` signal is emitted
+    @discardableResult @inlinable func onNotifyMargin(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyMargin,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::margin` signal for using the `connect(signal:)` methods
+    static var notifyMarginSignal: IconViewSignalName { .notifyMargin }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::markup-column` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyMarkupColumn` signal is emitted
+    @discardableResult @inlinable func onNotifyMarkupColumn(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyMarkupColumn,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::markup-column` signal for using the `connect(signal:)` methods
+    static var notifyMarkupColumnSignal: IconViewSignalName { .notifyMarkupColumn }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::model` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyModel` signal is emitted
+    @discardableResult @inlinable func onNotifyModel(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyModel,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::model` signal for using the `connect(signal:)` methods
+    static var notifyModelSignal: IconViewSignalName { .notifyModel }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::pixbuf-column` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyPixbufColumn` signal is emitted
+    @discardableResult @inlinable func onNotifyPixbufColumn(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyPixbufColumn,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::pixbuf-column` signal for using the `connect(signal:)` methods
+    static var notifyPixbufColumnSignal: IconViewSignalName { .notifyPixbufColumn }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::reorderable` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyReorderable` signal is emitted
+    @discardableResult @inlinable func onNotifyReorderable(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyReorderable,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::reorderable` signal for using the `connect(signal:)` methods
+    static var notifyReorderableSignal: IconViewSignalName { .notifyReorderable }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::row-spacing` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyRowSpacing` signal is emitted
+    @discardableResult @inlinable func onNotifyRowSpacing(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyRowSpacing,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::row-spacing` signal for using the `connect(signal:)` methods
+    static var notifyRowSpacingSignal: IconViewSignalName { .notifyRowSpacing }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::selection-mode` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifySelectionMode` signal is emitted
+    @discardableResult @inlinable func onNotifySelectionMode(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifySelectionMode,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::selection-mode` signal for using the `connect(signal:)` methods
+    static var notifySelectionModeSignal: IconViewSignalName { .notifySelectionMode }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::spacing` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifySpacing` signal is emitted
+    @discardableResult @inlinable func onNotifySpacing(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifySpacing,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::spacing` signal for using the `connect(signal:)` methods
+    static var notifySpacingSignal: IconViewSignalName { .notifySpacing }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::text-column` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyTextColumn` signal is emitted
+    @discardableResult @inlinable func onNotifyTextColumn(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyTextColumn,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::text-column` signal for using the `connect(signal:)` methods
+    static var notifyTextColumnSignal: IconViewSignalName { .notifyTextColumn }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::tooltip-column` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyTooltipColumn` signal is emitted
+    @discardableResult @inlinable func onNotifyTooltipColumn(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: IconViewRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(IconViewRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((IconViewRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyTooltipColumn,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::tooltip-column` signal for using the `connect(signal:)` methods
+    static var notifyTooltipColumnSignal: IconViewSignalName { .notifyTooltipColumn }
+    
+}
+
+// MARK: IconView Class: IconViewProtocol extension (methods and fields)
+public extension IconViewProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkIconView` instance.
+    @inlinable var icon_view_ptr: UnsafeMutablePointer<GtkIconView>! { return ptr?.assumingMemoryBound(to: GtkIconView.self) }
+
+    /// Creates a `GdkPaintable` representation of the item at `path`.
+    /// This image is used for a drag icon.
+    @inlinable func createDragIcon<TreePathT: TreePathProtocol>(path: TreePathT) -> Gdk.PaintableRef! {
+        let result = gtk_icon_view_create_drag_icon(icon_view_ptr, path.tree_path_ptr)
+        let rv = Gdk.PaintableRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Turns `icon_view` into a drop destination for automatic DND. Calling this
+    /// method sets `GtkIconView`:reorderable to `false`.
+    @inlinable func enableModelDragDest<GdkContentFormatsT: Gdk.ContentFormatsProtocol>(formats: GdkContentFormatsT, actions: Gdk.DragAction) {
+        
+        gtk_icon_view_enable_model_drag_dest(icon_view_ptr, formats.content_formats_ptr, actions.value)
+        
+    }
+
+    /// Turns `icon_view` into a drag source for automatic DND. Calling this
+    /// method sets `GtkIconView`:reorderable to `false`.
+    @inlinable func enableModelDragSource<GdkContentFormatsT: Gdk.ContentFormatsProtocol>(startButtonMask: Gdk.ModifierType, formats: GdkContentFormatsT, actions: Gdk.DragAction) {
+        
+        gtk_icon_view_enable_model_drag_source(icon_view_ptr, startButtonMask.value, formats.content_formats_ptr, actions.value)
+        
+    }
+
+    /// Gets the setting set by `gtk_icon_view_set_activate_on_single_click()`.
+    @inlinable func getActivateOnSingleClick() -> Bool {
+        let result = gtk_icon_view_get_activate_on_single_click(icon_view_ptr)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Fills the bounding rectangle in widget coordinates for the cell specified by
+    /// `path` and `cell`. If `cell` is `nil` the main cell area is used.
+    /// 
+    /// This function is only valid if `icon_view` is realized.
+    @inlinable func getCellRect<GdkRectangleT: Gdk.RectangleProtocol, TreePathT: TreePathProtocol>(path: TreePathT, cell: CellRendererRef? = nil, rect: GdkRectangleT) -> Bool {
+            let result = gtk_icon_view_get_cell_rect(icon_view_ptr, path.tree_path_ptr, cell?.cell_renderer_ptr, rect.rectangle_ptr)
+        let rv = ((result) != 0)
+            return rv
+    }
+    /// Fills the bounding rectangle in widget coordinates for the cell specified by
+    /// `path` and `cell`. If `cell` is `nil` the main cell area is used.
+    /// 
+    /// This function is only valid if `icon_view` is realized.
+    @inlinable func getCellRect<CellRendererT: CellRendererProtocol, GdkRectangleT: Gdk.RectangleProtocol, TreePathT: TreePathProtocol>(path: TreePathT, cell: CellRendererT?, rect: GdkRectangleT) -> Bool {
+        let result = gtk_icon_view_get_cell_rect(icon_view_ptr, path.tree_path_ptr, cell?.cell_renderer_ptr, rect.rectangle_ptr)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Returns the value of the `column-spacing` property.
+    @inlinable func getColumnSpacing() -> Int {
+        let result = gtk_icon_view_get_column_spacing(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Returns the value of the `columns` property.
+    @inlinable func getColumns() -> Int {
+        let result = gtk_icon_view_get_columns(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Fills in `path` and `cell` with the current cursor path and cell.
+    /// If the cursor isn’t currently set, then *`path` will be `nil`.
+    /// If no cell currently has focus, then *`cell` will be `nil`.
+    /// 
+    /// The returned `GtkTreePath` must be freed with `gtk_tree_path_free()`.
+    @inlinable func getCursor(path: UnsafeMutablePointer<UnsafeMutablePointer<GtkTreePath>?>! = nil, cell: UnsafeMutablePointer<UnsafeMutablePointer<GtkCellRenderer>?>! = nil) -> Bool {
+        let result = gtk_icon_view_get_cursor(icon_view_ptr, path, cell)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Determines the destination item for a given position.
+    @inlinable func getDestItemAtPos(dragX: Int, dragY: Int, path: UnsafeMutablePointer<UnsafeMutablePointer<GtkTreePath>?>! = nil, pos: UnsafeMutablePointer<GtkIconViewDropPosition>! = nil) -> Bool {
+        let result = gtk_icon_view_get_dest_item_at_pos(icon_view_ptr, gint(dragX), gint(dragY), path, pos)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Gets information about the item that is highlighted for feedback.
+    @inlinable func getDragDestItem(path: UnsafeMutablePointer<UnsafeMutablePointer<GtkTreePath>?>? = nil, pos: UnsafeMutablePointer<GtkIconViewDropPosition>! = nil) {
+        
+        gtk_icon_view_get_drag_dest_item(icon_view_ptr, path, pos)
+        
+    }
+
+    /// Gets the path and cell for the icon at the given position.
+    @inlinable func getItemAtPos(x: Int, y: Int, path: UnsafeMutablePointer<UnsafeMutablePointer<GtkTreePath>?>! = nil, cell: UnsafeMutablePointer<UnsafeMutablePointer<GtkCellRenderer>?>! = nil) -> Bool {
+        let result = gtk_icon_view_get_item_at_pos(icon_view_ptr, gint(x), gint(y), path, cell)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Gets the column in which the item `path` is currently
+    /// displayed. Column numbers start at 0.
+    @inlinable func getItemColumn<TreePathT: TreePathProtocol>(path: TreePathT) -> Int {
+        let result = gtk_icon_view_get_item_column(icon_view_ptr, path.tree_path_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Returns the value of the `item-orientation` property which determines
+    /// whether the labels are drawn beside the icons instead of below.
+    @inlinable func getItemOrientation() -> GtkOrientation {
+        let result = gtk_icon_view_get_item_orientation(icon_view_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Returns the value of the `item-padding` property.
+    @inlinable func getItemPadding() -> Int {
+        let result = gtk_icon_view_get_item_padding(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Gets the row in which the item `path` is currently
+    /// displayed. Row numbers start at 0.
+    @inlinable func getItemRow<TreePathT: TreePathProtocol>(path: TreePathT) -> Int {
+        let result = gtk_icon_view_get_item_row(icon_view_ptr, path.tree_path_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Returns the value of the `item-width` property.
+    @inlinable func getItemWidth() -> Int {
+        let result = gtk_icon_view_get_item_width(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Returns the value of the `margin` property.
+    @inlinable func getMargin() -> Int {
+        let result = gtk_icon_view_get_margin(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Returns the column with markup text for `icon_view`.
+    @inlinable func getMarkupColumn() -> Int {
+        let result = gtk_icon_view_get_markup_column(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Returns the model the `GtkIconView` is based on.  Returns `nil` if the
+    /// model is unset.
+    @inlinable func getModel() -> TreeModelRef! {
+        let result = gtk_icon_view_get_model(icon_view_ptr)
+        let rv = TreeModelRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Gets the path for the icon at the given position.
+    @inlinable func getPathAtPos(x: Int, y: Int) -> TreePathRef! {
+        let result = gtk_icon_view_get_path_at_pos(icon_view_ptr, gint(x), gint(y))
+        let rv = TreePathRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Returns the column with pixbufs for `icon_view`.
+    @inlinable func getPixbufColumn() -> Int {
+        let result = gtk_icon_view_get_pixbuf_column(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Retrieves whether the user can reorder the list via drag-and-drop.
+    /// See `gtk_icon_view_set_reorderable()`.
+    @inlinable func getReorderable() -> Bool {
+        let result = gtk_icon_view_get_reorderable(icon_view_ptr)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Returns the value of the `row-spacing` property.
+    @inlinable func getRowSpacing() -> Int {
+        let result = gtk_icon_view_get_row_spacing(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Creates a list of paths of all selected items. Additionally, if you are
+    /// planning on modifying the model after calling this function, you may
+    /// want to convert the returned list into a list of `GtkTreeRowReferences`.
+    /// To do this, you can use `gtk_tree_row_reference_new()`.
+    /// 
+    /// To free the return value, use `g_list_free_full`:
+    /// (C Language Example):
+    /// ```C
+    /// GtkWidget *icon_view = gtk_icon_view_new ();
+    /// // Use icon_view
+    /// 
+    /// GList *list = gtk_icon_view_get_selected_items (GTK_ICON_VIEW (icon_view));
+    /// 
+    /// // use list
+    /// 
+    /// g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+    /// ```
+    /// 
+    @inlinable func getSelectedItems() -> GLib.ListRef! {
+        let result = gtk_icon_view_get_selected_items(icon_view_ptr)
+        let rv = GLib.ListRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Gets the selection mode of the `icon_view`.
+    @inlinable func getSelectionMode() -> GtkSelectionMode {
+        let result = gtk_icon_view_get_selection_mode(icon_view_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Returns the value of the `spacing` property.
+    @inlinable func getSpacing() -> Int {
+        let result = gtk_icon_view_get_spacing(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Returns the column with text for `icon_view`.
+    @inlinable func getTextColumn() -> Int {
+        let result = gtk_icon_view_get_text_column(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Returns the column of `icon_view`’s model which is being used for
+    /// displaying tooltips on `icon_view`’s rows.
+    @inlinable func getTooltipColumn() -> Int {
+        let result = gtk_icon_view_get_tooltip_column(icon_view_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// This function is supposed to be used in a `GtkWidget`query-tooltip``
+    /// signal handler for `GtkIconView`. The `x`, `y` and `keyboard_tip` values
+    /// which are received in the signal handler, should be passed to this
+    /// function without modification.
+    /// 
+    /// The return value indicates whether there is an icon view item at the given
+    /// coordinates (`true`) or not (`false`) for mouse tooltips. For keyboard
+    /// tooltips the item returned will be the cursor item. When `true`, then any of
+    /// `model`, `path` and `iter` which have been provided will be set to point to
+    /// that row and the corresponding model.
+    @inlinable func getTooltipContext(x: Int, y: Int, keyboardTip: Bool, model: UnsafeMutablePointer<UnsafeMutablePointer<GtkTreeModel>?>! = nil, path: UnsafeMutablePointer<UnsafeMutablePointer<GtkTreePath>?>! = nil, iter: TreeIterRef? = nil) -> Bool {
+            let result = gtk_icon_view_get_tooltip_context(icon_view_ptr, gint(x), gint(y), gboolean((keyboardTip) ? 1 : 0), model, path, iter?.tree_iter_ptr)
+        let rv = ((result) != 0)
+            return rv
+    }
+    /// This function is supposed to be used in a `GtkWidget`query-tooltip``
+    /// signal handler for `GtkIconView`. The `x`, `y` and `keyboard_tip` values
+    /// which are received in the signal handler, should be passed to this
+    /// function without modification.
+    /// 
+    /// The return value indicates whether there is an icon view item at the given
+    /// coordinates (`true`) or not (`false`) for mouse tooltips. For keyboard
+    /// tooltips the item returned will be the cursor item. When `true`, then any of
+    /// `model`, `path` and `iter` which have been provided will be set to point to
+    /// that row and the corresponding model.
+    @inlinable func getTooltipContext<TreeIterT: TreeIterProtocol>(x: Int, y: Int, keyboardTip: Bool, model: UnsafeMutablePointer<UnsafeMutablePointer<GtkTreeModel>?>! = nil, path: UnsafeMutablePointer<UnsafeMutablePointer<GtkTreePath>?>! = nil, iter: TreeIterT?) -> Bool {
+        let result = gtk_icon_view_get_tooltip_context(icon_view_ptr, gint(x), gint(y), gboolean((keyboardTip) ? 1 : 0), model, path, iter?.tree_iter_ptr)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Sets `start_path` and `end_path` to be the first and last visible path.
+    /// Note that there may be invisible paths in between.
+    /// 
+    /// Both paths should be freed with `gtk_tree_path_free()` after use.
+    @inlinable func getVisibleRange(startPath: UnsafeMutablePointer<UnsafeMutablePointer<GtkTreePath>?>! = nil, endPath: UnsafeMutablePointer<UnsafeMutablePointer<GtkTreePath>?>! = nil) -> Bool {
+        let result = gtk_icon_view_get_visible_range(icon_view_ptr, startPath, endPath)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Activates the item determined by `path`.
+    @inlinable func itemActivated<TreePathT: TreePathProtocol>(path: TreePathT) {
+        
+        gtk_icon_view_item_activated(icon_view_ptr, path.tree_path_ptr)
+        
+    }
+
+    /// Returns `true` if the icon pointed to by `path` is currently
+    /// selected. If `path` does not point to a valid location, `false` is returned.
+    @inlinable func pathIsSelected<TreePathT: TreePathProtocol>(path: TreePathT) -> Bool {
+        let result = gtk_icon_view_path_is_selected(icon_view_ptr, path.tree_path_ptr)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Moves the alignments of `icon_view` to the position specified by `path`.
+    /// `row_align` determines where the row is placed, and `col_align` determines
+    /// where `column` is placed.  Both are expected to be between 0.0 and 1.0.
+    /// 0.0 means left/top alignment, 1.0 means right/bottom alignment, 0.5 means
+    /// center.
+    /// 
+    /// If `use_align` is `false`, then the alignment arguments are ignored, and the
+    /// tree does the minimum amount of work to scroll the item onto the screen.
+    /// This means that the item will be scrolled to the edge closest to its current
+    /// position.  If the item is currently visible on the screen, nothing is done.
+    /// 
+    /// This function only works if the model is set, and `path` is a valid row on
+    /// the model. If the model changes before the `icon_view` is realized, the
+    /// centered path will be modified to reflect this change.
+    @inlinable func scrollTo<TreePathT: TreePathProtocol>(path: TreePathT, useAlign: Bool, rowAlign: CFloat, colAlign: CFloat) {
+        
+        gtk_icon_view_scroll_to_path(icon_view_ptr, path.tree_path_ptr, gboolean((useAlign) ? 1 : 0), rowAlign, colAlign)
+        
+    }
+
+    /// Selects all the icons. `icon_view` must has its selection mode set
+    /// to `GTK_SELECTION_MULTIPLE`.
+    @inlinable func selectAll() {
+        
+        gtk_icon_view_select_all(icon_view_ptr)
+        
+    }
+
+    /// Selects the row at `path`.
+    @inlinable func select<TreePathT: TreePathProtocol>(path: TreePathT) {
+        
+        gtk_icon_view_select_path(icon_view_ptr, path.tree_path_ptr)
+        
+    }
+
+    /// Calls a function for each selected icon. Note that the model or
+    /// selection cannot be modified from within this function.
+    @inlinable func selectedForeach(`func`: GtkIconViewForeachFunc?, data: gpointer? = nil) {
+        
+        gtk_icon_view_selected_foreach(icon_view_ptr, `func`, data)
+        
+    }
+
+    /// Causes the `GtkIconView``item-activated` signal to be emitted on
+    /// a single click instead of a double click.
+    @inlinable func setActivateOnSingleClick(single: Bool) {
+        
+        gtk_icon_view_set_activate_on_single_click(icon_view_ptr, gboolean((single) ? 1 : 0))
+        
+    }
+
+    /// Sets the `column-spacing` property which specifies the space
+    /// which is inserted between the columns of the icon view.
+    @inlinable func set(columnSpacing: Int) {
+        
+        gtk_icon_view_set_column_spacing(icon_view_ptr, gint(columnSpacing))
+        
+    }
+
+    /// Sets the `columns` property which determines in how
+    /// many columns the icons are arranged. If `columns` is
+    /// -1, the number of columns will be chosen automatically
+    /// to fill the available area.
+    @inlinable func set(columns: Int) {
+        
+        gtk_icon_view_set_columns(icon_view_ptr, gint(columns))
+        
+    }
+
+    /// Sets the current keyboard focus to be at `path`, and selects it.  This is
+    /// useful when you want to focus the user’s attention on a particular item.
+    /// If `cell` is not `nil`, then focus is given to the cell specified by
+    /// it. Additionally, if `start_editing` is `true`, then editing should be
+    /// started in the specified cell.
+    /// 
+    /// This function is often followed by `gtk_widget_grab_focus
+    /// (icon_view)` in order to give keyboard focus to the widget.
+    /// Please note that editing can only happen when the widget is realized.
+    @inlinable func setCursor<TreePathT: TreePathProtocol>(path: TreePathT, cell: CellRendererRef? = nil, startEditing: Bool) {
+            
+        gtk_icon_view_set_cursor(icon_view_ptr, path.tree_path_ptr, cell?.cell_renderer_ptr, gboolean((startEditing) ? 1 : 0))
+            
+    }
+    /// Sets the current keyboard focus to be at `path`, and selects it.  This is
+    /// useful when you want to focus the user’s attention on a particular item.
+    /// If `cell` is not `nil`, then focus is given to the cell specified by
+    /// it. Additionally, if `start_editing` is `true`, then editing should be
+    /// started in the specified cell.
+    /// 
+    /// This function is often followed by `gtk_widget_grab_focus
+    /// (icon_view)` in order to give keyboard focus to the widget.
+    /// Please note that editing can only happen when the widget is realized.
+    @inlinable func setCursor<CellRendererT: CellRendererProtocol, TreePathT: TreePathProtocol>(path: TreePathT, cell: CellRendererT?, startEditing: Bool) {
+        
+        gtk_icon_view_set_cursor(icon_view_ptr, path.tree_path_ptr, cell?.cell_renderer_ptr, gboolean((startEditing) ? 1 : 0))
+        
+    }
+
+    /// Sets the item that is highlighted for feedback.
+    @inlinable func setDragDestItem(path: TreePathRef? = nil, pos: GtkIconViewDropPosition) {
+            
+        gtk_icon_view_set_drag_dest_item(icon_view_ptr, path?.tree_path_ptr, pos)
+            
+    }
+    /// Sets the item that is highlighted for feedback.
+    @inlinable func setDragDestItem<TreePathT: TreePathProtocol>(path: TreePathT?, pos: GtkIconViewDropPosition) {
+        
+        gtk_icon_view_set_drag_dest_item(icon_view_ptr, path?.tree_path_ptr, pos)
+        
+    }
+
+    /// Sets the `item-orientation` property which determines whether the labels
+    /// are drawn beside the icons instead of below.
+    @inlinable func setItem(orientation: GtkOrientation) {
+        
+        gtk_icon_view_set_item_orientation(icon_view_ptr, orientation)
+        
+    }
+
+    /// Sets the `GtkIconView`:item-padding property which specifies the padding
+    /// around each of the icon view’s items.
+    @inlinable func set(itemPadding: Int) {
+        
+        gtk_icon_view_set_item_padding(icon_view_ptr, gint(itemPadding))
+        
+    }
+
+    /// Sets the `item-width` property which specifies the width
+    /// to use for each item. If it is set to -1, the icon view will
+    /// automatically determine a suitable item size.
+    @inlinable func set(itemWidth: Int) {
+        
+        gtk_icon_view_set_item_width(icon_view_ptr, gint(itemWidth))
+        
+    }
+
+    /// Sets the `margin` property which specifies the space
+    /// which is inserted at the top, bottom, left and right
+    /// of the icon view.
+    @inlinable func set(margin: Int) {
+        
+        gtk_icon_view_set_margin(icon_view_ptr, gint(margin))
+        
+    }
+
+    /// Sets the column with markup information for `icon_view` to be
+    /// `column`. The markup column must be of type `G_TYPE_STRING`.
+    /// If the markup column is set to something, it overrides
+    /// the text column set by `gtk_icon_view_set_text_column()`.
+    @inlinable func setMarkup(column: Int) {
+        
+        gtk_icon_view_set_markup_column(icon_view_ptr, gint(column))
+        
+    }
+
+    /// Sets the model for a `GtkIconView`.
+    /// If the `icon_view` already has a model set, it will remove
+    /// it before setting the new model.  If `model` is `nil`, then
+    /// it will unset the old model.
+    @inlinable func set(model: TreeModelRef? = nil) {
+            
+        gtk_icon_view_set_model(icon_view_ptr, model?.tree_model_ptr)
+            
+    }
+    /// Sets the model for a `GtkIconView`.
+    /// If the `icon_view` already has a model set, it will remove
+    /// it before setting the new model.  If `model` is `nil`, then
+    /// it will unset the old model.
+    @inlinable func set<TreeModelT: TreeModelProtocol>(model: TreeModelT?) {
+        
+        gtk_icon_view_set_model(icon_view_ptr, model?.tree_model_ptr)
+        
+    }
+
+    /// Sets the column with pixbufs for `icon_view` to be `column`. The pixbuf
+    /// column must be of type `GDK_TYPE_PIXBUF`
+    @inlinable func setPixbuf(column: Int) {
+        
+        gtk_icon_view_set_pixbuf_column(icon_view_ptr, gint(column))
+        
+    }
+
+    /// This function is a convenience function to allow you to reorder models that
+    /// support the `GtkTreeDragSourceIface` and the `GtkTreeDragDestIface`. Both
+    /// `GtkTreeStore` and `GtkListStore` support these. If `reorderable` is `true`, then
+    /// the user can reorder the model by dragging and dropping rows.  The
+    /// developer can listen to these changes by connecting to the model's
+    /// row_inserted and row_deleted signals. The reordering is implemented by setting up
+    /// the icon view as a drag source and destination. Therefore, drag and
+    /// drop can not be used in a reorderable view for any other purpose.
+    /// 
+    /// This function does not give you any degree of control over the order -- any
+    /// reordering is allowed.  If more control is needed, you should probably
+    /// handle drag and drop manually.
+    @inlinable func set(reorderable: Bool) {
+        
+        gtk_icon_view_set_reorderable(icon_view_ptr, gboolean((reorderable) ? 1 : 0))
+        
+    }
+
+    /// Sets the `row-spacing` property which specifies the space
+    /// which is inserted between the rows of the icon view.
+    @inlinable func set(rowSpacing: Int) {
+        
+        gtk_icon_view_set_row_spacing(icon_view_ptr, gint(rowSpacing))
+        
+    }
+
+    /// Sets the selection mode of the `icon_view`.
+    @inlinable func setSelection(mode: GtkSelectionMode) {
+        
+        gtk_icon_view_set_selection_mode(icon_view_ptr, mode)
+        
+    }
+
+    /// Sets the `spacing` property which specifies the space
+    /// which is inserted between the cells (i.e. the icon and
+    /// the text) of an item.
+    @inlinable func set(spacing: Int) {
+        
+        gtk_icon_view_set_spacing(icon_view_ptr, gint(spacing))
+        
+    }
+
+    /// Sets the column with text for `icon_view` to be `column`. The text
+    /// column must be of type `G_TYPE_STRING`.
+    @inlinable func setText(column: Int) {
+        
+        gtk_icon_view_set_text_column(icon_view_ptr, gint(column))
+        
+    }
+
+    /// Sets the tip area of `tooltip` to the area which `cell` occupies in
+    /// the item pointed to by `path`. See also `gtk_tooltip_set_tip_area()`.
+    /// 
+    /// See also `gtk_icon_view_set_tooltip_column()` for a simpler alternative.
+    @inlinable func setTooltipCell<TooltipT: TooltipProtocol, TreePathT: TreePathProtocol>(tooltip: TooltipT, path: TreePathT, cell: CellRendererRef? = nil) {
+            
+        gtk_icon_view_set_tooltip_cell(icon_view_ptr, tooltip.tooltip_ptr, path.tree_path_ptr, cell?.cell_renderer_ptr)
+            
+    }
+    /// Sets the tip area of `tooltip` to the area which `cell` occupies in
+    /// the item pointed to by `path`. See also `gtk_tooltip_set_tip_area()`.
+    /// 
+    /// See also `gtk_icon_view_set_tooltip_column()` for a simpler alternative.
+    @inlinable func setTooltipCell<CellRendererT: CellRendererProtocol, TooltipT: TooltipProtocol, TreePathT: TreePathProtocol>(tooltip: TooltipT, path: TreePathT, cell: CellRendererT?) {
+        
+        gtk_icon_view_set_tooltip_cell(icon_view_ptr, tooltip.tooltip_ptr, path.tree_path_ptr, cell?.cell_renderer_ptr)
+        
+    }
+
+    /// If you only plan to have simple (text-only) tooltips on full items, you
+    /// can use this function to have `GtkIconView` handle these automatically
+    /// for you. `column` should be set to the column in `icon_view`’s model
+    /// containing the tooltip texts, or -1 to disable this feature.
+    /// 
+    /// When enabled, `GtkWidget:has-tooltip` will be set to `true` and
+    /// `icon_view` will connect a `GtkWidget`query-tooltip`` signal handler.
+    /// 
+    /// Note that the signal handler sets the text with `gtk_tooltip_set_markup()`,
+    /// so &, &lt;, etc have to be escaped in the text.
+    @inlinable func setTooltip(column: Int) {
+        
+        gtk_icon_view_set_tooltip_column(icon_view_ptr, gint(column))
+        
+    }
+
+    /// Sets the tip area of `tooltip` to be the area covered by the item at `path`.
+    /// See also `gtk_icon_view_set_tooltip_column()` for a simpler alternative.
+    /// See also `gtk_tooltip_set_tip_area()`.
+    @inlinable func setTooltipItem<TooltipT: TooltipProtocol, TreePathT: TreePathProtocol>(tooltip: TooltipT, path: TreePathT) {
+        
+        gtk_icon_view_set_tooltip_item(icon_view_ptr, tooltip.tooltip_ptr, path.tree_path_ptr)
+        
+    }
+
+    /// Unselects all the icons.
+    @inlinable func unselectAll() {
+        
+        gtk_icon_view_unselect_all(icon_view_ptr)
+        
+    }
+
+    /// Unselects the row at `path`.
+    @inlinable func unselect<TreePathT: TreePathProtocol>(path: TreePathT) {
+        
+        gtk_icon_view_unselect_path(icon_view_ptr, path.tree_path_ptr)
+        
+    }
+
+    /// Undoes the effect of `gtk_icon_view_enable_model_drag_dest()`. Calling this
+    /// method sets `GtkIconView`:reorderable to `false`.
+    @inlinable func unsetModelDragDest() {
+        
+        gtk_icon_view_unset_model_drag_dest(icon_view_ptr)
+        
+    }
+
+    /// Undoes the effect of `gtk_icon_view_enable_model_drag_source()`. Calling this
+    /// method sets `GtkIconView`:reorderable to `false`.
+    @inlinable func unsetModelDragSource() {
+        
+        gtk_icon_view_unset_model_drag_source(icon_view_ptr)
+        
+    }
+    /// Gets the setting set by `gtk_icon_view_set_activate_on_single_click()`.
+    @inlinable var activateOnSingleClick: Bool {
+        /// Gets the setting set by `gtk_icon_view_set_activate_on_single_click()`.
+        get {
+            let result = gtk_icon_view_get_activate_on_single_click(icon_view_ptr)
+        let rv = ((result) != 0)
+            return rv
+        }
+        /// Causes the `GtkIconView``item-activated` signal to be emitted on
+        /// a single click instead of a double click.
+        nonmutating set {
+            gtk_icon_view_set_activate_on_single_click(icon_view_ptr, gboolean((newValue) ? 1 : 0))
+        }
+    }
+
+    /// Returns the value of the `column-spacing` property.
+    @inlinable var columnSpacing: Int {
+        /// Returns the value of the `column-spacing` property.
+        get {
+            let result = gtk_icon_view_get_column_spacing(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `column-spacing` property which specifies the space
+        /// which is inserted between the columns of the icon view.
+        nonmutating set {
+            gtk_icon_view_set_column_spacing(icon_view_ptr, gint(newValue))
+        }
+    }
+
+    /// The columns property contains the number of the columns in which the
+    /// items should be displayed. If it is -1, the number of columns will
+    /// be chosen automatically to fill the available area.
+    @inlinable var columns: Int {
+        /// Returns the value of the `columns` property.
+        get {
+            let result = gtk_icon_view_get_columns(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `columns` property which determines in how
+        /// many columns the icons are arranged. If `columns` is
+        /// -1, the number of columns will be chosen automatically
+        /// to fill the available area.
+        nonmutating set {
+            gtk_icon_view_set_columns(icon_view_ptr, gint(newValue))
+        }
+    }
+
+    /// Returns the value of the `item-orientation` property which determines
+    /// whether the labels are drawn beside the icons instead of below.
+    @inlinable var itemOrientation: GtkOrientation {
+        /// Returns the value of the `item-orientation` property which determines
+        /// whether the labels are drawn beside the icons instead of below.
+        get {
+            let result = gtk_icon_view_get_item_orientation(icon_view_ptr)
+        let rv = result
+            return rv
+        }
+        /// Sets the `item-orientation` property which determines whether the labels
+        /// are drawn beside the icons instead of below.
+        nonmutating set {
+            gtk_icon_view_set_item_orientation(icon_view_ptr, newValue)
+        }
+    }
+
+    /// Returns the value of the `item-padding` property.
+    @inlinable var itemPadding: Int {
+        /// Returns the value of the `item-padding` property.
+        get {
+            let result = gtk_icon_view_get_item_padding(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `GtkIconView`:item-padding property which specifies the padding
+        /// around each of the icon view’s items.
+        nonmutating set {
+            gtk_icon_view_set_item_padding(icon_view_ptr, gint(newValue))
+        }
+    }
+
+    /// Returns the value of the `item-width` property.
+    @inlinable var itemWidth: Int {
+        /// Returns the value of the `item-width` property.
+        get {
+            let result = gtk_icon_view_get_item_width(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `item-width` property which specifies the width
+        /// to use for each item. If it is set to -1, the icon view will
+        /// automatically determine a suitable item size.
+        nonmutating set {
+            gtk_icon_view_set_item_width(icon_view_ptr, gint(newValue))
+        }
+    }
+
+    /// The margin property specifies the space which is inserted
+    /// at the edges of the icon view.
+    @inlinable var margin: Int {
+        /// Returns the value of the `margin` property.
+        get {
+            let result = gtk_icon_view_get_margin(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `margin` property which specifies the space
+        /// which is inserted at the top, bottom, left and right
+        /// of the icon view.
+        nonmutating set {
+            gtk_icon_view_set_margin(icon_view_ptr, gint(newValue))
+        }
+    }
+
+    /// Returns the column with markup text for `icon_view`.
+    @inlinable var markupColumn: Int {
+        /// Returns the column with markup text for `icon_view`.
+        get {
+            let result = gtk_icon_view_get_markup_column(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the column with markup information for `icon_view` to be
+        /// `column`. The markup column must be of type `G_TYPE_STRING`.
+        /// If the markup column is set to something, it overrides
+        /// the text column set by `gtk_icon_view_set_text_column()`.
+        nonmutating set {
+            gtk_icon_view_set_markup_column(icon_view_ptr, gint(newValue))
+        }
+    }
+
+    @inlinable var model: TreeModelRef! {
+        /// Returns the model the `GtkIconView` is based on.  Returns `nil` if the
+        /// model is unset.
+        get {
+            let result = gtk_icon_view_get_model(icon_view_ptr)
+        let rv = TreeModelRef(gconstpointer: gconstpointer(result))
+            return rv
+        }
+        /// Sets the model for a `GtkIconView`.
+        /// If the `icon_view` already has a model set, it will remove
+        /// it before setting the new model.  If `model` is `nil`, then
+        /// it will unset the old model.
+        nonmutating set {
+            gtk_icon_view_set_model(icon_view_ptr, UnsafeMutablePointer<GtkTreeModel>(newValue?.tree_model_ptr))
+        }
+    }
+
+    /// Returns the column with pixbufs for `icon_view`.
+    @inlinable var pixbufColumn: Int {
+        /// Returns the column with pixbufs for `icon_view`.
+        get {
+            let result = gtk_icon_view_get_pixbuf_column(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the column with pixbufs for `icon_view` to be `column`. The pixbuf
+        /// column must be of type `GDK_TYPE_PIXBUF`
+        nonmutating set {
+            gtk_icon_view_set_pixbuf_column(icon_view_ptr, gint(newValue))
+        }
+    }
+
+    /// The reorderable property specifies if the items can be reordered
+    /// by DND.
+    @inlinable var reorderable: Bool {
+        /// Retrieves whether the user can reorder the list via drag-and-drop.
+        /// See `gtk_icon_view_set_reorderable()`.
+        get {
+            let result = gtk_icon_view_get_reorderable(icon_view_ptr)
+        let rv = ((result) != 0)
+            return rv
+        }
+        /// This function is a convenience function to allow you to reorder models that
+        /// support the `GtkTreeDragSourceIface` and the `GtkTreeDragDestIface`. Both
+        /// `GtkTreeStore` and `GtkListStore` support these. If `reorderable` is `true`, then
+        /// the user can reorder the model by dragging and dropping rows.  The
+        /// developer can listen to these changes by connecting to the model's
+        /// row_inserted and row_deleted signals. The reordering is implemented by setting up
+        /// the icon view as a drag source and destination. Therefore, drag and
+        /// drop can not be used in a reorderable view for any other purpose.
+        /// 
+        /// This function does not give you any degree of control over the order -- any
+        /// reordering is allowed.  If more control is needed, you should probably
+        /// handle drag and drop manually.
+        nonmutating set {
+            gtk_icon_view_set_reorderable(icon_view_ptr, gboolean((newValue) ? 1 : 0))
+        }
+    }
+
+    /// Returns the value of the `row-spacing` property.
+    @inlinable var rowSpacing: Int {
+        /// Returns the value of the `row-spacing` property.
+        get {
+            let result = gtk_icon_view_get_row_spacing(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `row-spacing` property which specifies the space
+        /// which is inserted between the rows of the icon view.
+        nonmutating set {
+            gtk_icon_view_set_row_spacing(icon_view_ptr, gint(newValue))
+        }
+    }
+
+    /// Creates a list of paths of all selected items. Additionally, if you are
+    /// planning on modifying the model after calling this function, you may
+    /// want to convert the returned list into a list of `GtkTreeRowReferences`.
+    /// To do this, you can use `gtk_tree_row_reference_new()`.
+    /// 
+    /// To free the return value, use `g_list_free_full`:
+    /// (C Language Example):
+    /// ```C
+    /// GtkWidget *icon_view = gtk_icon_view_new ();
+    /// // Use icon_view
+    /// 
+    /// GList *list = gtk_icon_view_get_selected_items (GTK_ICON_VIEW (icon_view));
+    /// 
+    /// // use list
+    /// 
+    /// g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+    /// ```
+    /// 
+    @inlinable var selectedItems: GLib.ListRef! {
+        /// Creates a list of paths of all selected items. Additionally, if you are
+        /// planning on modifying the model after calling this function, you may
+        /// want to convert the returned list into a list of `GtkTreeRowReferences`.
+        /// To do this, you can use `gtk_tree_row_reference_new()`.
+        /// 
+        /// To free the return value, use `g_list_free_full`:
+        /// (C Language Example):
+        /// ```C
+        /// GtkWidget *icon_view = gtk_icon_view_new ();
+        /// // Use icon_view
+        /// 
+        /// GList *list = gtk_icon_view_get_selected_items (GTK_ICON_VIEW (icon_view));
+        /// 
+        /// // use list
+        /// 
+        /// g_list_free_full (list, (GDestroyNotify) gtk_tree_path_free);
+        /// ```
+        /// 
+        get {
+            let result = gtk_icon_view_get_selected_items(icon_view_ptr)
+        let rv = GLib.ListRef(gconstpointer: gconstpointer(result))
+            return rv
+        }
+    }
+
+    /// Gets the selection mode of the `icon_view`.
+    @inlinable var selectionMode: GtkSelectionMode {
+        /// Gets the selection mode of the `icon_view`.
+        get {
+            let result = gtk_icon_view_get_selection_mode(icon_view_ptr)
+        let rv = result
+            return rv
+        }
+        /// Sets the selection mode of the `icon_view`.
+        nonmutating set {
+            gtk_icon_view_set_selection_mode(icon_view_ptr, newValue)
+        }
+    }
+
+    /// The spacing property specifies the space which is inserted between
+    /// the cells (i.e. the icon and the text) of an item.
+    @inlinable var spacing: Int {
+        /// Returns the value of the `spacing` property.
+        get {
+            let result = gtk_icon_view_get_spacing(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `spacing` property which specifies the space
+        /// which is inserted between the cells (i.e. the icon and
+        /// the text) of an item.
+        nonmutating set {
+            gtk_icon_view_set_spacing(icon_view_ptr, gint(newValue))
+        }
+    }
+
+    /// Returns the column with text for `icon_view`.
+    @inlinable var textColumn: Int {
+        /// Returns the column with text for `icon_view`.
+        get {
+            let result = gtk_icon_view_get_text_column(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the column with text for `icon_view` to be `column`. The text
+        /// column must be of type `G_TYPE_STRING`.
+        nonmutating set {
+            gtk_icon_view_set_text_column(icon_view_ptr, gint(newValue))
+        }
+    }
+
+    /// Returns the column of `icon_view`’s model which is being used for
+    /// displaying tooltips on `icon_view`’s rows.
+    @inlinable var tooltipColumn: Int {
+        /// Returns the column of `icon_view`’s model which is being used for
+        /// displaying tooltips on `icon_view`’s rows.
+        get {
+            let result = gtk_icon_view_get_tooltip_column(icon_view_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// If you only plan to have simple (text-only) tooltips on full items, you
+        /// can use this function to have `GtkIconView` handle these automatically
+        /// for you. `column` should be set to the column in `icon_view`’s model
+        /// containing the tooltip texts, or -1 to disable this feature.
+        /// 
+        /// When enabled, `GtkWidget:has-tooltip` will be set to `true` and
+        /// `icon_view` will connect a `GtkWidget`query-tooltip`` signal handler.
+        /// 
+        /// Note that the signal handler sets the text with `gtk_tooltip_set_markup()`,
+        /// so &, &lt;, etc have to be escaped in the text.
+        nonmutating set {
+            gtk_icon_view_set_tooltip_column(icon_view_ptr, gint(newValue))
+        }
+    }
+
+
+}
+
+
+
+// MARK: - Image Class
+
+/// The `GtkImage` widget displays an image.
+/// 
+/// ![An example GtkImage](image.png)
+/// 
+/// Various kinds of object can be displayed as an image; most typically,
+/// you would load a `GdkTexture` from a file, using the convenience function
+/// [ctor`Gtk.Image.new_from_file`], for instance:
+/// 
+/// ```c
+/// GtkWidget *image = gtk_image_new_from_file ("myfile.png");
+/// ```
+/// 
+/// If the file isn’t loaded successfully, the image will contain a
+/// “broken image” icon similar to that used in many web browsers.
+/// 
+/// If you want to handle errors in loading the file yourself,
+/// for example by displaying an error message, then load the image with
+/// [ctor`Gdk.Texture.new_from_file`], then create the `GtkImage` with
+/// [ctor`Gtk.Image.new_from_paintable`].
+/// 
+/// Sometimes an application will want to avoid depending on external data
+/// files, such as image files. See the documentation of `GResource` inside
+/// GIO, for details. In this case, [property`Gtk.Image:resource`],
+/// [ctor`Gtk.Image.new_from_resource`], and [method`Gtk.Image.set_from_resource`]
+/// should be used.
+/// 
+/// `GtkImage` displays its image as an icon, with a size that is determined
+/// by the application. See [class`Gtk.Picture`] if you want to show an image
+/// at is actual size.
+/// 
+/// ## CSS nodes
+/// 
+/// `GtkImage` has a single CSS node with the name `image`. The style classes
+/// `.normal-icons` or `.large-icons` may appear, depending on the
+/// [property`Gtk.Image:icon-size`] property.
+/// 
+/// ## Accessibility
+/// 
+/// `GtkImage` uses the `GTK_ACCESSIBLE_ROLE_IMG` role.
+///
+/// The `ImageProtocol` protocol exposes the methods and properties of an underlying `GtkImage` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `Image`.
+/// Alternatively, use `ImageRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol ImageProtocol: WidgetProtocol {
+        /// Untyped pointer to the underlying `GtkImage` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkImage` instance.
+    var image_ptr: UnsafeMutablePointer<GtkImage>! { get }
+
+    /// Required Initialiser for types conforming to `ImageProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+/// The `GtkImage` widget displays an image.
+/// 
+/// ![An example GtkImage](image.png)
+/// 
+/// Various kinds of object can be displayed as an image; most typically,
+/// you would load a `GdkTexture` from a file, using the convenience function
+/// [ctor`Gtk.Image.new_from_file`], for instance:
+/// 
+/// ```c
+/// GtkWidget *image = gtk_image_new_from_file ("myfile.png");
+/// ```
+/// 
+/// If the file isn’t loaded successfully, the image will contain a
+/// “broken image” icon similar to that used in many web browsers.
+/// 
+/// If you want to handle errors in loading the file yourself,
+/// for example by displaying an error message, then load the image with
+/// [ctor`Gdk.Texture.new_from_file`], then create the `GtkImage` with
+/// [ctor`Gtk.Image.new_from_paintable`].
+/// 
+/// Sometimes an application will want to avoid depending on external data
+/// files, such as image files. See the documentation of `GResource` inside
+/// GIO, for details. In this case, [property`Gtk.Image:resource`],
+/// [ctor`Gtk.Image.new_from_resource`], and [method`Gtk.Image.set_from_resource`]
+/// should be used.
+/// 
+/// `GtkImage` displays its image as an icon, with a size that is determined
+/// by the application. See [class`Gtk.Picture`] if you want to show an image
+/// at is actual size.
+/// 
+/// ## CSS nodes
+/// 
+/// `GtkImage` has a single CSS node with the name `image`. The style classes
+/// `.normal-icons` or `.large-icons` may appear, depending on the
+/// [property`Gtk.Image:icon-size`] property.
+/// 
+/// ## Accessibility
+/// 
+/// `GtkImage` uses the `GTK_ACCESSIBLE_ROLE_IMG` role.
+///
+/// The `ImageRef` type acts as a lightweight Swift reference to an underlying `GtkImage` instance.
+/// It exposes methods that can operate on this data type through `ImageProtocol` conformance.
+/// Use `ImageRef` only as an `unowned` reference to an existing `GtkImage` instance.
+///
+public struct ImageRef: ImageProtocol, GWeakCapturing {
+        /// Untyped pointer to the underlying `GtkImage` instance.
+    /// For type-safe access, use the generated, typed pointer `image_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension ImageRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkImage>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkImage>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkImage>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkImage>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `ImageProtocol`
+    @inlinable init<T: ImageProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// This factory is syntactic sugar for setting weak pointers wrapped in `GWeak<T>`
+    @inlinable static func unowned<T: ImageProtocol>(_ other: T) -> ImageRef { ImageRef(other) }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+        /// Creates a new empty `GtkImage` widget.
+    @inlinable init() {
+            let result = gtk_image_new()
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+
+    /// Creates a new `GtkImage` displaying the file `filename`.
+    /// 
+    /// If the file isn’t found or can’t be loaded, the resulting `GtkImage`
+    /// will display a “broken image” icon. This function never returns `nil`,
+    /// it always returns a valid `GtkImage` widget.
+    /// 
+    /// If you need to detect failures to load the file, use
+    /// [ctor`Gdk.Texture.new_from_file`] to load the file yourself,
+    /// then create the `GtkImage` from the texture.
+    /// 
+    /// The storage type (see [method`Gtk.Image.get_storage_type`])
+    /// of the returned image is not defined, it will be whatever
+    /// is appropriate for displaying the file.
+    @inlinable init(file filename: UnsafePointer<CChar>!) {
+            let result = gtk_image_new_from_file(filename)
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+
+    /// Creates a `GtkImage` displaying an icon from the current icon theme.
+    /// 
+    /// If the icon name isn’t known, a “broken image” icon will be
+    /// displayed instead. If the current icon theme is changed, the icon
+    /// will be updated appropriately.
+    @inlinable init<GioIconT: GIO.IconProtocol>(gicon icon: GioIconT) {
+            let result = gtk_image_new_from_gicon(icon.icon_ptr)
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+
+    /// Creates a `GtkImage` displaying an icon from the current icon theme.
+    /// 
+    /// If the icon name isn’t known, a “broken image” icon will be
+    /// displayed instead. If the current icon theme is changed, the icon
+    /// will be updated appropriately.
+    @inlinable init(iconName iconName: UnsafePointer<CChar>? = nil) {
+            let result = gtk_image_new_from_icon_name(iconName)
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+
+    /// Creates a new `GtkImage` displaying `paintable`.
+    /// 
+    /// The `GtkImage` does not assume a reference to the paintable; you still
+    /// need to unref it if you own references. `GtkImage` will add its own
+    /// reference rather than adopting yours.
+    /// 
+    /// The `GtkImage` will track changes to the `paintable` and update
+    /// its size and contents in response to it.
+    @inlinable init<GdkPaintableT: Gdk.PaintableProtocol>(paintable: GdkPaintableT?) {
+            let result = gtk_image_new_from_paintable(paintable?.paintable_ptr)
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+
+    /// Creates a new `GtkImage` displaying `pixbuf`.
+    /// 
+    /// The `GtkImage` does not assume a reference to the pixbuf; you still
+    /// need to unref it if you own references. `GtkImage` will add its own
+    /// reference rather than adopting yours.
+    /// 
+    /// This is a helper for [ctor`Gtk.Image.new_from_paintable`], and you can't
+    /// get back the exact pixbuf once this is called, only a texture.
+    /// 
+    /// Note that this function just creates an `GtkImage` from the pixbuf.
+    /// The `GtkImage` created will not react to state changes. Should you
+    /// want that, you should use [ctor`Gtk.Image.new_from_icon_name`].
+    @inlinable init<GdkPixbufPixbufT: GdkPixBuf.PixbufProtocol>(pixbuf: GdkPixbufPixbufT?) {
+            let result = gtk_image_new_from_pixbuf(pixbuf?.pixbuf_ptr)
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+
+    /// Creates a new `GtkImage` displaying the resource file `resource_path`.
+    /// 
+    /// If the file isn’t found or can’t be loaded, the resulting `GtkImage` will
+    /// display a “broken image” icon. This function never returns `nil`,
+    /// it always returns a valid `GtkImage` widget.
+    /// 
+    /// If you need to detect failures to load the file, use
+    /// [ctor`GdkPixbuf.Pixbuf.new_from_file`] to load the file yourself,
+    /// then create the `GtkImage` from the pixbuf.
+    /// 
+    /// The storage type (see [method`Gtk.Image.get_storage_type`]) of
+    /// the returned image is not defined, it will be whatever is
+    /// appropriate for displaying the file.
+    @inlinable init(resource resourcePath: UnsafePointer<CChar>!) {
+            let result = gtk_image_new_from_resource(resourcePath)
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+    /// Creates a new `GtkImage` displaying the file `filename`.
+    /// 
+    /// If the file isn’t found or can’t be loaded, the resulting `GtkImage`
+    /// will display a “broken image” icon. This function never returns `nil`,
+    /// it always returns a valid `GtkImage` widget.
+    /// 
+    /// If you need to detect failures to load the file, use
+    /// [ctor`Gdk.Texture.new_from_file`] to load the file yourself,
+    /// then create the `GtkImage` from the texture.
+    /// 
+    /// The storage type (see [method`Gtk.Image.get_storage_type`])
+    /// of the returned image is not defined, it will be whatever
+    /// is appropriate for displaying the file.
+    @inlinable static func newFrom(file filename: UnsafePointer<CChar>!) -> WidgetRef! {
+            let result = gtk_image_new_from_file(filename)
+        guard let rv = WidgetRef(gconstpointer: gconstpointer(result)) else { return nil }
+        return rv
+    }
+
+    /// Creates a `GtkImage` displaying an icon from the current icon theme.
+    /// 
+    /// If the icon name isn’t known, a “broken image” icon will be
+    /// displayed instead. If the current icon theme is changed, the icon
+    /// will be updated appropriately.
+    @inlinable static func newFromG<GioIconT: GIO.IconProtocol>(gicon icon: GioIconT) -> WidgetRef! {
+            let result = gtk_image_new_from_gicon(icon.icon_ptr)
+        guard let rv = WidgetRef(gconstpointer: gconstpointer(result)) else { return nil }
+        return rv
+    }
+
+    /// Creates a `GtkImage` displaying an icon from the current icon theme.
+    /// 
+    /// If the icon name isn’t known, a “broken image” icon will be
+    /// displayed instead. If the current icon theme is changed, the icon
+    /// will be updated appropriately.
+    @inlinable static func newFrom(iconName iconName: UnsafePointer<CChar>? = nil) -> WidgetRef! {
+            let result = gtk_image_new_from_icon_name(iconName)
+        guard let rv = WidgetRef(gconstpointer: gconstpointer(result)) else { return nil }
+        return rv
+    }
+
+    /// Creates a new `GtkImage` displaying `paintable`.
+    /// 
+    /// The `GtkImage` does not assume a reference to the paintable; you still
+    /// need to unref it if you own references. `GtkImage` will add its own
+    /// reference rather than adopting yours.
+    /// 
+    /// The `GtkImage` will track changes to the `paintable` and update
+    /// its size and contents in response to it.
+    @inlinable static func newFrom<GdkPaintableT: Gdk.PaintableProtocol>(paintable: GdkPaintableT?) -> WidgetRef! {
+            let result = gtk_image_new_from_paintable(paintable?.paintable_ptr)
+        guard let rv = WidgetRef(gconstpointer: gconstpointer(result)) else { return nil }
+        return rv
+    }
+
+    /// Creates a new `GtkImage` displaying `pixbuf`.
+    /// 
+    /// The `GtkImage` does not assume a reference to the pixbuf; you still
+    /// need to unref it if you own references. `GtkImage` will add its own
+    /// reference rather than adopting yours.
+    /// 
+    /// This is a helper for [ctor`Gtk.Image.new_from_paintable`], and you can't
+    /// get back the exact pixbuf once this is called, only a texture.
+    /// 
+    /// Note that this function just creates an `GtkImage` from the pixbuf.
+    /// The `GtkImage` created will not react to state changes. Should you
+    /// want that, you should use [ctor`Gtk.Image.new_from_icon_name`].
+    @inlinable static func newFrom<GdkPixbufPixbufT: GdkPixBuf.PixbufProtocol>(pixbuf: GdkPixbufPixbufT?) -> WidgetRef! {
+            let result = gtk_image_new_from_pixbuf(pixbuf?.pixbuf_ptr)
+        guard let rv = WidgetRef(gconstpointer: gconstpointer(result)) else { return nil }
+        return rv
+    }
+
+    /// Creates a new `GtkImage` displaying the resource file `resource_path`.
+    /// 
+    /// If the file isn’t found or can’t be loaded, the resulting `GtkImage` will
+    /// display a “broken image” icon. This function never returns `nil`,
+    /// it always returns a valid `GtkImage` widget.
+    /// 
+    /// If you need to detect failures to load the file, use
+    /// [ctor`GdkPixbuf.Pixbuf.new_from_file`] to load the file yourself,
+    /// then create the `GtkImage` from the pixbuf.
+    /// 
+    /// The storage type (see [method`Gtk.Image.get_storage_type`]) of
+    /// the returned image is not defined, it will be whatever is
+    /// appropriate for displaying the file.
+    @inlinable static func newFrom(resource resourcePath: UnsafePointer<CChar>!) -> WidgetRef! {
+            let result = gtk_image_new_from_resource(resourcePath)
+        guard let rv = WidgetRef(gconstpointer: gconstpointer(result)) else { return nil }
+        return rv
+    }
+}
+
+/// The `GtkImage` widget displays an image.
+/// 
+/// ![An example GtkImage](image.png)
+/// 
+/// Various kinds of object can be displayed as an image; most typically,
+/// you would load a `GdkTexture` from a file, using the convenience function
+/// [ctor`Gtk.Image.new_from_file`], for instance:
+/// 
+/// ```c
+/// GtkWidget *image = gtk_image_new_from_file ("myfile.png");
+/// ```
+/// 
+/// If the file isn’t loaded successfully, the image will contain a
+/// “broken image” icon similar to that used in many web browsers.
+/// 
+/// If you want to handle errors in loading the file yourself,
+/// for example by displaying an error message, then load the image with
+/// [ctor`Gdk.Texture.new_from_file`], then create the `GtkImage` with
+/// [ctor`Gtk.Image.new_from_paintable`].
+/// 
+/// Sometimes an application will want to avoid depending on external data
+/// files, such as image files. See the documentation of `GResource` inside
+/// GIO, for details. In this case, [property`Gtk.Image:resource`],
+/// [ctor`Gtk.Image.new_from_resource`], and [method`Gtk.Image.set_from_resource`]
+/// should be used.
+/// 
+/// `GtkImage` displays its image as an icon, with a size that is determined
+/// by the application. See [class`Gtk.Picture`] if you want to show an image
+/// at is actual size.
+/// 
+/// ## CSS nodes
+/// 
+/// `GtkImage` has a single CSS node with the name `image`. The style classes
+/// `.normal-icons` or `.large-icons` may appear, depending on the
+/// [property`Gtk.Image:icon-size`] property.
+/// 
+/// ## Accessibility
+/// 
+/// `GtkImage` uses the `GTK_ACCESSIBLE_ROLE_IMG` role.
+///
+/// The `Image` type acts as a reference-counted owner of an underlying `GtkImage` instance.
+/// It provides the methods that can operate on this data type through `ImageProtocol` conformance.
+/// Use `Image` as a strong reference or owner of a `GtkImage` instance.
+///
+open class Image: Widget, ImageProtocol {
+        /// Designated initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Image` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafeMutablePointer<GtkImage>) {
+        super.init(cPointer: op)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Image` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafePointer<GtkImage>) {
+        super.init(raw: UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: op)))
+    }
+
+    /// Optional initialiser from a non-mutating `gpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Image` instance.
+    /// - Parameter op: gpointer to the underlying object
+    @inlinable override public init!(gpointer op: gpointer?) {
+        guard let p = UnsafeMutableRawPointer(op) else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a non-mutating `gconstpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Image` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable override public init!(gconstpointer op: gconstpointer?) {
+        guard let p = op else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Image` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafePointer<GtkImage>?) {
+        guard let p = UnsafeMutablePointer(mutating: op) else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Optional initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Image` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafeMutablePointer<GtkImage>?) {
+        guard let p = op else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Designated initialiser from the underlying `C` data type.
+    /// Will retain `GtkImage`.
+    /// i.e., ownership is transferred to the `Image` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(retaining op: UnsafeMutablePointer<GtkImage>) {
+        super.init(retainingCPointer: op)
+    }
+
+    /// Reference intialiser for a related type that implements `ImageProtocol`
+    /// Will retain `GtkImage`.
+    /// - Parameter other: an instance of a related type that implements `ImageProtocol`
+    @inlinable public init<T: ImageProtocol>(image other: T) {
+        super.init(retainingRaw: other.ptr)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(cPointer p: UnsafeMutablePointer<T>) {
+        super.init(cPointer: p)
+    }
+
+    /// Unsafe typed, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(retainingCPointer cPointer: UnsafeMutablePointer<T>) {
+        super.init(retainingCPointer: cPointer)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    /// - Parameter p: raw pointer to the underlying object
+    @inlinable override public init(raw p: UnsafeRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    @inlinable override public init(retainingRaw raw: UnsafeRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    /// - Parameter p: mutable raw pointer to the underlying object
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    /// - Parameter raw: mutable raw pointer to the underlying object
+    @inlinable required public init(retainingRaw raw: UnsafeMutableRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(opaquePointer p: OpaquePointer) {
+        super.init(opaquePointer: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `ImageProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(retainingOpaquePointer p: OpaquePointer) {
+        super.init(retainingOpaquePointer: p)
+    }
+
+    /// Creates a new empty `GtkImage` widget.
+    @inlinable public init() {
+            let result = gtk_image_new()
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a new `GtkImage` displaying the file `filename`.
+    /// 
+    /// If the file isn’t found or can’t be loaded, the resulting `GtkImage`
+    /// will display a “broken image” icon. This function never returns `nil`,
+    /// it always returns a valid `GtkImage` widget.
+    /// 
+    /// If you need to detect failures to load the file, use
+    /// [ctor`Gdk.Texture.new_from_file`] to load the file yourself,
+    /// then create the `GtkImage` from the texture.
+    /// 
+    /// The storage type (see [method`Gtk.Image.get_storage_type`])
+    /// of the returned image is not defined, it will be whatever
+    /// is appropriate for displaying the file.
+    @inlinable public init(file filename: UnsafePointer<CChar>!) {
+            let result = gtk_image_new_from_file(filename)
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a `GtkImage` displaying an icon from the current icon theme.
+    /// 
+    /// If the icon name isn’t known, a “broken image” icon will be
+    /// displayed instead. If the current icon theme is changed, the icon
+    /// will be updated appropriately.
+    @inlinable public init<GioIconT: GIO.IconProtocol>(gicon icon: GioIconT) {
+            let result = gtk_image_new_from_gicon(icon.icon_ptr)
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a `GtkImage` displaying an icon from the current icon theme.
+    /// 
+    /// If the icon name isn’t known, a “broken image” icon will be
+    /// displayed instead. If the current icon theme is changed, the icon
+    /// will be updated appropriately.
+    @inlinable public init(iconName iconName: UnsafePointer<CChar>? = nil) {
+            let result = gtk_image_new_from_icon_name(iconName)
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a new `GtkImage` displaying `paintable`.
+    /// 
+    /// The `GtkImage` does not assume a reference to the paintable; you still
+    /// need to unref it if you own references. `GtkImage` will add its own
+    /// reference rather than adopting yours.
+    /// 
+    /// The `GtkImage` will track changes to the `paintable` and update
+    /// its size and contents in response to it.
+    @inlinable public init<GdkPaintableT: Gdk.PaintableProtocol>(paintable: GdkPaintableT?) {
+            let result = gtk_image_new_from_paintable(paintable?.paintable_ptr)
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a new `GtkImage` displaying `pixbuf`.
+    /// 
+    /// The `GtkImage` does not assume a reference to the pixbuf; you still
+    /// need to unref it if you own references. `GtkImage` will add its own
+    /// reference rather than adopting yours.
+    /// 
+    /// This is a helper for [ctor`Gtk.Image.new_from_paintable`], and you can't
+    /// get back the exact pixbuf once this is called, only a texture.
+    /// 
+    /// Note that this function just creates an `GtkImage` from the pixbuf.
+    /// The `GtkImage` created will not react to state changes. Should you
+    /// want that, you should use [ctor`Gtk.Image.new_from_icon_name`].
+    @inlinable public init<GdkPixbufPixbufT: GdkPixBuf.PixbufProtocol>(pixbuf: GdkPixbufPixbufT?) {
+            let result = gtk_image_new_from_pixbuf(pixbuf?.pixbuf_ptr)
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a new `GtkImage` displaying the resource file `resource_path`.
+    /// 
+    /// If the file isn’t found or can’t be loaded, the resulting `GtkImage` will
+    /// display a “broken image” icon. This function never returns `nil`,
+    /// it always returns a valid `GtkImage` widget.
+    /// 
+    /// If you need to detect failures to load the file, use
+    /// [ctor`GdkPixbuf.Pixbuf.new_from_file`] to load the file yourself,
+    /// then create the `GtkImage` from the pixbuf.
+    /// 
+    /// The storage type (see [method`Gtk.Image.get_storage_type`]) of
+    /// the returned image is not defined, it will be whatever is
+    /// appropriate for displaying the file.
+    @inlinable public init(resource resourcePath: UnsafePointer<CChar>!) {
+            let result = gtk_image_new_from_resource(resourcePath)
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+    /// Creates a new `GtkImage` displaying the file `filename`.
+    /// 
+    /// If the file isn’t found or can’t be loaded, the resulting `GtkImage`
+    /// will display a “broken image” icon. This function never returns `nil`,
+    /// it always returns a valid `GtkImage` widget.
+    /// 
+    /// If you need to detect failures to load the file, use
+    /// [ctor`Gdk.Texture.new_from_file`] to load the file yourself,
+    /// then create the `GtkImage` from the texture.
+    /// 
+    /// The storage type (see [method`Gtk.Image.get_storage_type`])
+    /// of the returned image is not defined, it will be whatever
+    /// is appropriate for displaying the file.
+    @inlinable public static func newFrom(file filename: UnsafePointer<CChar>!) -> Widget! {
+            let result = gtk_image_new_from_file(filename)
+        guard let rv = Widget(gconstpointer: gconstpointer(result)) else { return nil }
+            if typeIsA(type: rv.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = rv.refSink() } 
+return rv
+    }
+
+    /// Creates a `GtkImage` displaying an icon from the current icon theme.
+    /// 
+    /// If the icon name isn’t known, a “broken image” icon will be
+    /// displayed instead. If the current icon theme is changed, the icon
+    /// will be updated appropriately.
+    @inlinable public static func newFromG<GioIconT: GIO.IconProtocol>(gicon icon: GioIconT) -> Widget! {
+            let result = gtk_image_new_from_gicon(icon.icon_ptr)
+        guard let rv = Widget(gconstpointer: gconstpointer(result)) else { return nil }
+            if typeIsA(type: rv.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = rv.refSink() } 
+return rv
+    }
+
+    /// Creates a `GtkImage` displaying an icon from the current icon theme.
+    /// 
+    /// If the icon name isn’t known, a “broken image” icon will be
+    /// displayed instead. If the current icon theme is changed, the icon
+    /// will be updated appropriately.
+    @inlinable public static func newFrom(iconName iconName: UnsafePointer<CChar>? = nil) -> Widget! {
+            let result = gtk_image_new_from_icon_name(iconName)
+        guard let rv = Widget(gconstpointer: gconstpointer(result)) else { return nil }
+            if typeIsA(type: rv.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = rv.refSink() } 
+return rv
+    }
+
+    /// Creates a new `GtkImage` displaying `paintable`.
+    /// 
+    /// The `GtkImage` does not assume a reference to the paintable; you still
+    /// need to unref it if you own references. `GtkImage` will add its own
+    /// reference rather than adopting yours.
+    /// 
+    /// The `GtkImage` will track changes to the `paintable` and update
+    /// its size and contents in response to it.
+    @inlinable public static func newFrom<GdkPaintableT: Gdk.PaintableProtocol>(paintable: GdkPaintableT?) -> Widget! {
+            let result = gtk_image_new_from_paintable(paintable?.paintable_ptr)
+        guard let rv = Widget(gconstpointer: gconstpointer(result)) else { return nil }
+            if typeIsA(type: rv.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = rv.refSink() } 
+return rv
+    }
+
+    /// Creates a new `GtkImage` displaying `pixbuf`.
+    /// 
+    /// The `GtkImage` does not assume a reference to the pixbuf; you still
+    /// need to unref it if you own references. `GtkImage` will add its own
+    /// reference rather than adopting yours.
+    /// 
+    /// This is a helper for [ctor`Gtk.Image.new_from_paintable`], and you can't
+    /// get back the exact pixbuf once this is called, only a texture.
+    /// 
+    /// Note that this function just creates an `GtkImage` from the pixbuf.
+    /// The `GtkImage` created will not react to state changes. Should you
+    /// want that, you should use [ctor`Gtk.Image.new_from_icon_name`].
+    @inlinable public static func newFrom<GdkPixbufPixbufT: GdkPixBuf.PixbufProtocol>(pixbuf: GdkPixbufPixbufT?) -> Widget! {
+            let result = gtk_image_new_from_pixbuf(pixbuf?.pixbuf_ptr)
+        guard let rv = Widget(gconstpointer: gconstpointer(result)) else { return nil }
+            if typeIsA(type: rv.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = rv.refSink() } 
+return rv
+    }
+
+    /// Creates a new `GtkImage` displaying the resource file `resource_path`.
+    /// 
+    /// If the file isn’t found or can’t be loaded, the resulting `GtkImage` will
+    /// display a “broken image” icon. This function never returns `nil`,
+    /// it always returns a valid `GtkImage` widget.
+    /// 
+    /// If you need to detect failures to load the file, use
+    /// [ctor`GdkPixbuf.Pixbuf.new_from_file`] to load the file yourself,
+    /// then create the `GtkImage` from the pixbuf.
+    /// 
+    /// The storage type (see [method`Gtk.Image.get_storage_type`]) of
+    /// the returned image is not defined, it will be whatever is
+    /// appropriate for displaying the file.
+    @inlinable public static func newFrom(resource resourcePath: UnsafePointer<CChar>!) -> Widget! {
+            let result = gtk_image_new_from_resource(resourcePath)
+        guard let rv = Widget(gconstpointer: gconstpointer(result)) else { return nil }
+            if typeIsA(type: rv.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = rv.refSink() } 
+return rv
+    }
+
+}
+
+public enum ImagePropertyName: String, PropertyNameProtocol {
+    /// Whether the widget or any of its descendents can accept
+    /// the input focus.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case canFocus = "can-focus"
+    /// Whether the widget can receive pointer events.
+    case canTarget = "can-target"
+    /// A list of css classes applied to this widget.
+    case cssClasses = "css-classes"
+    /// The name of this widget in the CSS tree.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case cssName = "css-name"
+    /// The cursor used by `widget`.
+    case cursor = "cursor"
+    /// The `GFile to display.
+    case file = "file"
+    /// Whether the widget should grab focus when it is clicked with the mouse.
+    /// 
+    /// This property is only relevant for widgets that can take focus.
+    case focusOnClick = "focus-on-click"
+    /// Whether this widget itself will accept the input focus.
+    case focusable = "focusable"
+    /// The `GIcon` displayed in the GtkImage.
+    /// 
+    /// For themed icons, If the icon theme is changed, the image will be updated
+    /// automatically.
+    case gicon = "gicon"
+    /// How to distribute horizontal space if widget gets extra space.
+    case halign = "halign"
+    /// Whether the widget is the default widget.
+    case hasDefault = "has-default"
+    /// Whether the widget has the input focus.
+    case hasFocus = "has-focus"
+    /// Enables or disables the emission of the `query-tooltip` signal on `widget`.
+    /// 
+    /// A value of `true` indicates that `widget` can have a tooltip, in this case
+    /// the widget will be queried using [signal`Gtk.Widget::query-tooltip`] to
+    /// determine whether it will provide a tooltip or not.
+    case hasTooltip = "has-tooltip"
+    /// Override for height request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case heightRequest = "height-request"
+    /// Whether to expand horizontally.
+    case hexpand = "hexpand"
+    /// Whether to use the `hexpand` property.
+    case hexpandSet = "hexpand-set"
+    /// The name of the icon in the icon theme.
+    /// 
+    /// If the icon theme is changed, the image will be updated automatically.
+    case iconName = "icon-name"
+    /// The symbolic size to display icons at.
+    case iconSize = "icon-size"
+    /// The `GtkLayoutManager` instance to use to compute the preferred size
+    /// of the widget, and allocate its children.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case layoutManager = "layout-manager"
+    /// Margin on bottom side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginBottom = "margin-bottom"
+    /// Margin on end of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginEnd = "margin-end"
+    /// Margin on start of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginStart = "margin-start"
+    /// Margin on top side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginTop = "margin-top"
+    /// The name of the widget.
+    case name = "name"
+    /// The requested opacity of the widget.
+    case opacity = "opacity"
+    /// How content outside the widget's content area is treated.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case overflow = "overflow"
+    /// The `GdkPaintable` to display.
+    case paintable = "paintable"
+    /// The parent widget of this widget.
+    case parent = "parent"
+    /// The size in pixels to display icons at.
+    /// 
+    /// If set to a value != -1, this property overrides the
+    /// [property`Gtk.Image:icon-size`] property for images of type
+    /// `GTK_IMAGE_ICON_NAME`.
+    case pixelSize = "pixel-size"
+    /// Whether the widget will receive the default action when it is focused.
+    case receivesDefault = "receives-default"
+    /// A path to a resource file to display.
+    case resource = "resource"
+    /// The `GtkRoot` widget of the widget tree containing this widget.
+    /// 
+    /// This will be `nil` if the widget is not contained in a root widget.
+    case root = "root"
+    /// The scale factor of the widget.
+    case scaleFactor = "scale-factor"
+    /// Whether the widget responds to input.
+    case sensitive = "sensitive"
+    /// The representation being used for image data.
+    case storageType = "storage-type"
+    /// Sets the text of tooltip to be the given string, which is marked up
+    /// with Pango markup.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_markup`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case tooltipMarkup = "tooltip-markup"
+    /// Sets the text of tooltip to be the given string.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_text`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case tooltipText = "tooltip-text"
+    /// Whether the icon displayed in the `GtkImage` will use
+    /// standard icon names fallback.
+    /// 
+    /// The value of this property is only relevant for images of type
+    /// `GTK_IMAGE_ICON_NAME` and `GTK_IMAGE_GICON`.
+    case useFallback = "use-fallback"
+    /// How to distribute vertical space if widget gets extra space.
+    case valign = "valign"
+    /// Whether to expand vertically.
+    case vexpand = "vexpand"
+    /// Whether to use the `vexpand` property.
+    case vexpandSet = "vexpand-set"
+    /// Whether the widget is visible.
+    case visible = "visible"
+    /// Override for width request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case widthRequest = "width-request"
+}
+
+public extension ImageProtocol {
+    /// Bind a `ImagePropertyName` source property to a given target object.
+    /// - Parameter source_property: the source property to bind
+    /// - Parameter target: the target object to bind to
+    /// - Parameter target_property: the target property to bind to
+    /// - Parameter flags: the flags to pass to the `Binding`
+    /// - Parameter transform_from: `ValueTransformer` to use for forward transformation
+    /// - Parameter transform_to: `ValueTransformer` to use for backwards transformation
+    /// - Returns: binding reference or `nil` in case of an error
+    @discardableResult @inlinable func bind<Q: PropertyNameProtocol, T: GLibObject.ObjectProtocol>(property source_property: ImagePropertyName, to target: T, _ target_property: Q, flags f: BindingFlags = .default, transformFrom transform_from: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }, transformTo transform_to: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }) -> BindingRef! {
+        func _bind(_ source: UnsafePointer<gchar>, to t: T, _ target_property: UnsafePointer<gchar>, flags f: BindingFlags = .default, holder: BindingClosureHolder, transformFrom transform_from: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean, transformTo transform_to: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean) -> BindingRef! {
+            let holder = UnsafeMutableRawPointer(Unmanaged.passRetained(holder).toOpaque())
+            let from = unsafeBitCast(transform_from, to: BindingTransformFunc.self)
+            let to   = unsafeBitCast(transform_to,   to: BindingTransformFunc.self)
+            let rv = GLibObject.ObjectRef(raw: ptr).bindPropertyFull(sourceProperty: source, target: t, targetProperty: target_property, flags: f, transformTo: to, transformFrom: from, userData: holder) {
+                if let swift = UnsafeRawPointer($0) {
+                    let holder = Unmanaged<GLibObject.SignalHandlerClosureHolder>.fromOpaque(swift)
+                    holder.release()
+                }
+            }
+            return rv.map { BindingRef($0) }
+        }
+
+        let rv = _bind(source_property.name, to: target, target_property.name, flags: f, holder: BindingClosureHolder(transform_from, transform_to), transformFrom: {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_from(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }) {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_to(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }
+        return rv
+    }
+
+    /// Get the value of a Image property
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func get(property: ImagePropertyName) -> GLibObject.Value {
+        let v = GLibObject.Value()
+        g_object_get_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+        return v
+    }
+
+    /// Set the value of a Image property.
+    /// *Note* that this will only have an effect on properties that are writable and not construct-only!
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func set(property: ImagePropertyName, value v: GLibObject.Value) {
+        g_object_set_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+    }
+}
+
+public enum ImageSignalName: String, SignalNameProtocol {
+    /// Signals that all holders of a reference to the widget should release
+    /// the reference that they hold.
+    /// 
+    /// May result in finalization of the widget if all references are released.
+    /// 
+    /// This signal is not suitable for saving widget state.
+    case destroy = "destroy"
+    /// Emitted when the text direction of a widget changes.
+    case directionChanged = "direction-changed"
+    /// Emitted when `widget` is hidden.
+    case hide = "hide"
+    /// Emitted if keyboard navigation fails.
+    /// 
+    /// See [method`Gtk.Widget.keynav_failed`] for details.
+    case keynavFailed = "keynav-failed"
+    /// Emitted when `widget` is going to be mapped.
+    /// 
+    /// A widget is mapped when the widget is visible (which is controlled with
+    /// [property`Gtk.Widget:visible`]) and all its parents up to the toplevel widget
+    /// are also visible.
+    /// 
+    /// The `map` signal can be used to determine whether a widget will be drawn,
+    /// for instance it can resume an animation that was stopped during the
+    /// emission of [signal`Gtk.Widget::unmap`].
+    case map = "map"
+    /// Emitted when a widget is activated via a mnemonic.
+    /// 
+    /// The default handler for this signal activates `widget` if `group_cycling`
+    /// is `false`, or just makes `widget` grab focus if `group_cycling` is `true`.
+    case mnemonicActivate = "mnemonic-activate"
+    /// Emitted when the focus is moved.
+    case moveFocus = "move-focus"
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    case notify = "notify"
+    /// Emitted when the widgets tooltip is about to be shown.
+    /// 
+    /// This happens when the [property`Gtk.Widget:has-tooltip`] property
+    /// is `true` and the hover timeout has expired with the cursor hovering
+    /// "above" `widget`; or emitted when `widget` got focus in keyboard mode.
+    /// 
+    /// Using the given coordinates, the signal handler should determine
+    /// whether a tooltip should be shown for `widget`. If this is the case
+    /// `true` should be returned, `false` otherwise.  Note that if
+    /// `keyboard_mode` is `true`, the values of `x` and `y` are undefined and
+    /// should not be used.
+    /// 
+    /// The signal handler is free to manipulate `tooltip` with the therefore
+    /// destined function calls.
+    case queryTooltip = "query-tooltip"
+    /// Emitted when `widget` is associated with a `GdkSurface`.
+    /// 
+    /// This means that [method`Gtk.Widget.realize`] has been called
+    /// or the widget has been mapped (that is, it is going to be drawn).
+    case realize = "realize"
+    /// Emitted when `widget` is shown.
+    case show = "show"
+    /// Emitted when the widget state changes.
+    /// 
+    /// See [method`Gtk.Widget.get_state_flags`].
+    case stateFlagsChanged = "state-flags-changed"
+    /// Emitted when `widget` is going to be unmapped.
+    /// 
+    /// A widget is unmapped when either it or any of its parents up to the
+    /// toplevel widget have been set as hidden.
+    /// 
+    /// As `unmap` indicates that a widget will not be shown any longer,
+    /// it can be used to, for example, stop an animation on the widget.
+    case unmap = "unmap"
+    /// Emitted when the `GdkSurface` associated with `widget` is destroyed.
+    /// 
+    /// This means that [method`Gtk.Widget.unrealize`] has been called
+    /// or the widget has been unmapped (that is, it is going to be hidden).
+    case unrealize = "unrealize"
+    /// Whether the widget or any of its descendents can accept
+    /// the input focus.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyCanFocus = "notify::can-focus"
+    /// Whether the widget can receive pointer events.
+    case notifyCanTarget = "notify::can-target"
+    /// A list of css classes applied to this widget.
+    case notifyCssClasses = "notify::css-classes"
+    /// The name of this widget in the CSS tree.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyCssName = "notify::css-name"
+    /// The cursor used by `widget`.
+    case notifyCursor = "notify::cursor"
+    /// The `GFile to display.
+    case notifyFile = "notify::file"
+    /// Whether the widget should grab focus when it is clicked with the mouse.
+    /// 
+    /// This property is only relevant for widgets that can take focus.
+    case notifyFocusOnClick = "notify::focus-on-click"
+    /// Whether this widget itself will accept the input focus.
+    case notifyFocusable = "notify::focusable"
+    /// The `GIcon` displayed in the GtkImage.
+    /// 
+    /// For themed icons, If the icon theme is changed, the image will be updated
+    /// automatically.
+    case notifyGicon = "notify::gicon"
+    /// How to distribute horizontal space if widget gets extra space.
+    case notifyHalign = "notify::halign"
+    /// Whether the widget is the default widget.
+    case notifyHasDefault = "notify::has-default"
+    /// Whether the widget has the input focus.
+    case notifyHasFocus = "notify::has-focus"
+    /// Enables or disables the emission of the `query-tooltip` signal on `widget`.
+    /// 
+    /// A value of `true` indicates that `widget` can have a tooltip, in this case
+    /// the widget will be queried using [signal`Gtk.Widget::query-tooltip`] to
+    /// determine whether it will provide a tooltip or not.
+    case notifyHasTooltip = "notify::has-tooltip"
+    /// Override for height request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case notifyHeightRequest = "notify::height-request"
+    /// Whether to expand horizontally.
+    case notifyHexpand = "notify::hexpand"
+    /// Whether to use the `hexpand` property.
+    case notifyHexpandSet = "notify::hexpand-set"
+    /// The name of the icon in the icon theme.
+    /// 
+    /// If the icon theme is changed, the image will be updated automatically.
+    case notifyIconName = "notify::icon-name"
+    /// The symbolic size to display icons at.
+    case notifyIconSize = "notify::icon-size"
+    /// The `GtkLayoutManager` instance to use to compute the preferred size
+    /// of the widget, and allocate its children.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyLayoutManager = "notify::layout-manager"
+    /// Margin on bottom side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginBottom = "notify::margin-bottom"
+    /// Margin on end of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginEnd = "notify::margin-end"
+    /// Margin on start of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginStart = "notify::margin-start"
+    /// Margin on top side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginTop = "notify::margin-top"
+    /// The name of the widget.
+    case notifyName = "notify::name"
+    /// The requested opacity of the widget.
+    case notifyOpacity = "notify::opacity"
+    /// How content outside the widget's content area is treated.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyOverflow = "notify::overflow"
+    /// The `GdkPaintable` to display.
+    case notifyPaintable = "notify::paintable"
+    /// The parent widget of this widget.
+    case notifyParent = "notify::parent"
+    /// The size in pixels to display icons at.
+    /// 
+    /// If set to a value != -1, this property overrides the
+    /// [property`Gtk.Image:icon-size`] property for images of type
+    /// `GTK_IMAGE_ICON_NAME`.
+    case notifyPixelSize = "notify::pixel-size"
+    /// Whether the widget will receive the default action when it is focused.
+    case notifyReceivesDefault = "notify::receives-default"
+    /// A path to a resource file to display.
+    case notifyResource = "notify::resource"
+    /// The `GtkRoot` widget of the widget tree containing this widget.
+    /// 
+    /// This will be `nil` if the widget is not contained in a root widget.
+    case notifyRoot = "notify::root"
+    /// The scale factor of the widget.
+    case notifyScaleFactor = "notify::scale-factor"
+    /// Whether the widget responds to input.
+    case notifySensitive = "notify::sensitive"
+    /// The representation being used for image data.
+    case notifyStorageType = "notify::storage-type"
+    /// Sets the text of tooltip to be the given string, which is marked up
+    /// with Pango markup.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_markup`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case notifyTooltipMarkup = "notify::tooltip-markup"
+    /// Sets the text of tooltip to be the given string.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_text`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case notifyTooltipText = "notify::tooltip-text"
+    /// Whether the icon displayed in the `GtkImage` will use
+    /// standard icon names fallback.
+    /// 
+    /// The value of this property is only relevant for images of type
+    /// `GTK_IMAGE_ICON_NAME` and `GTK_IMAGE_GICON`.
+    case notifyUseFallback = "notify::use-fallback"
+    /// How to distribute vertical space if widget gets extra space.
+    case notifyValign = "notify::valign"
+    /// Whether to expand vertically.
+    case notifyVexpand = "notify::vexpand"
+    /// Whether to use the `vexpand` property.
+    case notifyVexpandSet = "notify::vexpand-set"
+    /// Whether the widget is visible.
+    case notifyVisible = "notify::visible"
+    /// Override for width request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case notifyWidthRequest = "notify::width-request"
+}
+
+// MARK: Image has no signals
+// MARK: Image Class: ImageProtocol extension (methods and fields)
+public extension ImageProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkImage` instance.
+    @inlinable var image_ptr: UnsafeMutablePointer<GtkImage>! { return ptr?.assumingMemoryBound(to: GtkImage.self) }
+
+    /// Resets the image to be empty.
+    @inlinable func clear() {
+        
+        gtk_image_clear(image_ptr)
+        
+    }
+
+    /// Gets the `GIcon` being displayed by the `GtkImage`.
+    /// 
+    /// The storage type of the image must be `GTK_IMAGE_EMPTY` or
+    /// `GTK_IMAGE_GICON` (see [method`Gtk.Image.get_storage_type`]).
+    /// The caller of this function does not own a reference to the
+    /// returned `GIcon`.
+    @inlinable func getGicon() -> GIO.IconRef! {
+        let result = gtk_image_get_gicon(image_ptr)
+        let rv = GIO.IconRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Gets the icon name and size being displayed by the `GtkImage`.
+    /// 
+    /// The storage type of the image must be `GTK_IMAGE_EMPTY` or
+    /// `GTK_IMAGE_ICON_NAME` (see [method`Gtk.Image.get_storage_type`]).
+    /// The returned string is owned by the `GtkImage` and should not
+    /// be freed.
+    @inlinable func getIconName() -> String! {
+        let result = gtk_image_get_icon_name(image_ptr)
+        let rv = result.map({ String(cString: $0) })
+        return rv
+    }
+
+    /// Gets the icon size used by the `image` when rendering icons.
+    @inlinable func getIconSize() -> GtkIconSize {
+        let result = gtk_image_get_icon_size(image_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Gets the image `GdkPaintable` being displayed by the `GtkImage`.
+    /// 
+    /// The storage type of the image must be `GTK_IMAGE_EMPTY` or
+    /// `GTK_IMAGE_PAINTABLE` (see [method`Gtk.Image.get_storage_type`]).
+    /// The caller of this function does not own a reference to the
+    /// returned paintable.
+    @inlinable func getPaintable() -> Gdk.PaintableRef! {
+        let result = gtk_image_get_paintable(image_ptr)
+        let rv = Gdk.PaintableRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Gets the pixel size used for named icons.
+    @inlinable func getPixelSize() -> Int {
+        let result = gtk_image_get_pixel_size(image_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Gets the type of representation being used by the `GtkImage`
+    /// to store image data.
+    /// 
+    /// If the `GtkImage` has no image data, the return value will
+    /// be `GTK_IMAGE_EMPTY`.
+    @inlinable func getStorageType() -> GtkImageType {
+        let result = gtk_image_get_storage_type(image_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Sets a `GtkImage` to show a file.
+    /// 
+    /// See [ctor`Gtk.Image.new_from_file`] for details.
+    @inlinable func setFromFile(filename: UnsafePointer<CChar>? = nil) {
+        
+        gtk_image_set_from_file(image_ptr, filename)
+        
+    }
+
+    /// Sets a `GtkImage` to show a `GIcon`.
+    /// 
+    /// See [ctor`Gtk.Image.new_from_gicon`] for details.
+    @inlinable func setFromGicon<GioIconT: GIO.IconProtocol>(icon: GioIconT) {
+        
+        gtk_image_set_from_gicon(image_ptr, icon.icon_ptr)
+        
+    }
+
+    /// Sets a `GtkImage` to show a named icon.
+    /// 
+    /// See [ctor`Gtk.Image.new_from_icon_name`] for details.
+    @inlinable func setFrom(iconName: UnsafePointer<CChar>? = nil) {
+        
+        gtk_image_set_from_icon_name(image_ptr, iconName)
+        
+    }
+
+    /// Sets a `GtkImage` to show a `GdkPaintable`.
+    /// 
+    /// See [ctor`Gtk.Image.new_from_paintable`] for details.
+    @inlinable func setFrom(paintable: Gdk.PaintableRef? = nil) {
+            
+        gtk_image_set_from_paintable(image_ptr, paintable?.paintable_ptr)
+            
+    }
+    /// Sets a `GtkImage` to show a `GdkPaintable`.
+    /// 
+    /// See [ctor`Gtk.Image.new_from_paintable`] for details.
+    @inlinable func setFrom<GdkPaintableT: Gdk.PaintableProtocol>(paintable: GdkPaintableT?) {
+        
+        gtk_image_set_from_paintable(image_ptr, paintable?.paintable_ptr)
+        
+    }
+
+    /// Sets a `GtkImage` to show a `GdkPixbuf`.
+    /// 
+    /// See [ctor`Gtk.Image.new_from_pixbuf`] for details.
+    /// 
+    /// Note: This is a helper for [method`Gtk.Image.set_from_paintable`],
+    /// and you can't get back the exact pixbuf once this is called,
+    /// only a paintable.
+    @inlinable func setFrom(pixbuf: GdkPixBuf.PixbufRef? = nil) {
+            
+        gtk_image_set_from_pixbuf(image_ptr, pixbuf?.pixbuf_ptr)
+            
+    }
+    /// Sets a `GtkImage` to show a `GdkPixbuf`.
+    /// 
+    /// See [ctor`Gtk.Image.new_from_pixbuf`] for details.
+    /// 
+    /// Note: This is a helper for [method`Gtk.Image.set_from_paintable`],
+    /// and you can't get back the exact pixbuf once this is called,
+    /// only a paintable.
+    @inlinable func setFrom<GdkPixbufPixbufT: GdkPixBuf.PixbufProtocol>(pixbuf: GdkPixbufPixbufT?) {
+        
+        gtk_image_set_from_pixbuf(image_ptr, pixbuf?.pixbuf_ptr)
+        
+    }
+
+    /// Sets a `GtkImage` to show a resource.
+    /// 
+    /// See [ctor`Gtk.Image.new_from_resource`] for details.
+    @inlinable func setFromResource(resourcePath: UnsafePointer<CChar>? = nil) {
+        
+        gtk_image_set_from_resource(image_ptr, resourcePath)
+        
+    }
+
+    /// Suggests an icon size to the theme for named icons.
+    @inlinable func set(iconSize: GtkIconSize) {
+        
+        gtk_image_set_icon_size(image_ptr, iconSize)
+        
+    }
+
+    /// Sets the pixel size to use for named icons.
+    /// 
+    /// If the pixel size is set to a value != -1, it is used instead
+    /// of the icon size set by [method`Gtk.Image.set_from_icon_name`].
+    @inlinable func set(pixelSize: Int) {
+        
+        gtk_image_set_pixel_size(image_ptr, gint(pixelSize))
+        
+    }
+    /// The `GIcon` displayed in the GtkImage.
+    /// 
+    /// For themed icons, If the icon theme is changed, the image will be updated
+    /// automatically.
+    @inlinable var gicon: GIO.IconRef! {
+        /// Gets the `GIcon` being displayed by the `GtkImage`.
+        /// 
+        /// The storage type of the image must be `GTK_IMAGE_EMPTY` or
+        /// `GTK_IMAGE_GICON` (see [method`Gtk.Image.get_storage_type`]).
+        /// The caller of this function does not own a reference to the
+        /// returned `GIcon`.
+        get {
+            let result = gtk_image_get_gicon(image_ptr)
+        let rv = GIO.IconRef(gconstpointer: gconstpointer(result))
+            return rv
+        }
+    }
+
+    /// Gets the icon name and size being displayed by the `GtkImage`.
+    /// 
+    /// The storage type of the image must be `GTK_IMAGE_EMPTY` or
+    /// `GTK_IMAGE_ICON_NAME` (see [method`Gtk.Image.get_storage_type`]).
+    /// The returned string is owned by the `GtkImage` and should not
+    /// be freed.
+    @inlinable var iconName: String! {
+        /// Gets the icon name and size being displayed by the `GtkImage`.
+        /// 
+        /// The storage type of the image must be `GTK_IMAGE_EMPTY` or
+        /// `GTK_IMAGE_ICON_NAME` (see [method`Gtk.Image.get_storage_type`]).
+        /// The returned string is owned by the `GtkImage` and should not
+        /// be freed.
+        get {
+            let result = gtk_image_get_icon_name(image_ptr)
+        let rv = result.map({ String(cString: $0) })
+            return rv
+        }
+    }
+
+    /// Gets the icon size used by the `image` when rendering icons.
+    @inlinable var iconSize: GtkIconSize {
+        /// Gets the icon size used by the `image` when rendering icons.
+        get {
+            let result = gtk_image_get_icon_size(image_ptr)
+        let rv = result
+            return rv
+        }
+        /// Suggests an icon size to the theme for named icons.
+        nonmutating set {
+            gtk_image_set_icon_size(image_ptr, newValue)
+        }
+    }
+
+    /// The `GdkPaintable` to display.
+    @inlinable var paintable: Gdk.PaintableRef! {
+        /// Gets the image `GdkPaintable` being displayed by the `GtkImage`.
+        /// 
+        /// The storage type of the image must be `GTK_IMAGE_EMPTY` or
+        /// `GTK_IMAGE_PAINTABLE` (see [method`Gtk.Image.get_storage_type`]).
+        /// The caller of this function does not own a reference to the
+        /// returned paintable.
+        get {
+            let result = gtk_image_get_paintable(image_ptr)
+        let rv = Gdk.PaintableRef(gconstpointer: gconstpointer(result))
+            return rv
+        }
+    }
+
+    /// Gets the pixel size used for named icons.
+    @inlinable var pixelSize: Int {
+        /// Gets the pixel size used for named icons.
+        get {
+            let result = gtk_image_get_pixel_size(image_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the pixel size to use for named icons.
+        /// 
+        /// If the pixel size is set to a value != -1, it is used instead
+        /// of the icon size set by [method`Gtk.Image.set_from_icon_name`].
+        nonmutating set {
+            gtk_image_set_pixel_size(image_ptr, gint(newValue))
+        }
+    }
+
+    /// Gets the type of representation being used by the `GtkImage`
+    /// to store image data.
+    /// 
+    /// If the `GtkImage` has no image data, the return value will
+    /// be `GTK_IMAGE_EMPTY`.
+    @inlinable var storageType: GtkImageType {
+        /// Gets the type of representation being used by the `GtkImage`
+        /// to store image data.
+        /// 
+        /// If the `GtkImage` has no image data, the return value will
+        /// be `GTK_IMAGE_EMPTY`.
+        get {
+            let result = gtk_image_get_storage_type(image_ptr)
+        let rv = result
+            return rv
+        }
+    }
+
+
+}
+
+
+
+// MARK: - InfoBar Class
+
+/// `GtkInfoBar` can be show messages to the user without a dialog.
+/// 
+/// ![An example GtkInfoBar](info-bar.png)
+/// 
+/// It is often temporarily shown at the top or bottom of a document.
+/// In contrast to [class`Gtk.Dialog`], which has an action area at the
+/// bottom, `GtkInfoBar` has an action area at the side.
+/// 
+/// The API of `GtkInfoBar` is very similar to `GtkDialog`, allowing you
+/// to add buttons to the action area with [method`Gtk.InfoBar.add_button`]
+/// or [ctor`Gtk.InfoBar.new_with_buttons`]. The sensitivity of action widgets
+/// can be controlled with [method`Gtk.InfoBar.set_response_sensitive`].
+/// 
+/// To add widgets to the main content area of a `GtkInfoBar`, use
+/// [method`Gtk.InfoBar.add_child`].
+/// 
+/// Similar to [class`Gtk.MessageDialog`], the contents of a `GtkInfoBar`
+/// can by classified as error message, warning, informational message, etc,
+/// by using [method`Gtk.InfoBar.set_message_type`]. GTK may use the message
+/// type to determine how the message is displayed.
+/// 
+/// A simple example for using a `GtkInfoBar`:
+/// ```c
+/// GtkWidget *message_label;
+/// GtkWidget *widget;
+/// GtkWidget *grid;
+/// GtkInfoBar *bar;
+/// 
+/// // set up info bar
+/// widget = gtk_info_bar_new ();
+/// bar = GTK_INFO_BAR (widget);
+/// grid = gtk_grid_new ();
+/// 
+/// message_label = gtk_label_new ("");
+/// gtk_info_bar_add_child (bar, message_label);
+/// gtk_info_bar_add_button (bar,
+///                          `_("_OK")`,
+///                          GTK_RESPONSE_OK);
+/// g_signal_connect (bar,
+///                   "response",
+///                   G_CALLBACK (gtk_widget_hide),
+///                   NULL);
+/// gtk_grid_attach (GTK_GRID (grid),
+///                  widget,
+///                  0, 2, 1, 1);
+/// 
+/// // ...
+/// 
+/// // show an error message
+/// gtk_label_set_text (GTK_LABEL (message_label), "An error occurred!");
+/// gtk_info_bar_set_message_type (bar, GTK_MESSAGE_ERROR);
+/// gtk_widget_show (bar);
+/// ```
+/// 
+/// # GtkInfoBar as GtkBuildable
+/// 
+/// `GtkInfoBar` supports a custom `&lt;action-widgets&gt;` element, which can contain
+/// multiple `&lt;action-widget&gt;` elements. The “response” attribute specifies a
+/// numeric response, and the content of the element is the id of widget
+/// (which should be a child of the dialogs `action_area`).
+/// 
+/// `GtkInfoBar` supports adding action widgets by specifying “action” as
+/// the “type” attribute of a `&lt;child&gt;` element. The widget will be added
+/// either to the action area. The response id has to be associated
+/// with the action widget using the `&lt;action-widgets&gt;` element.
+/// 
+/// # CSS nodes
+/// 
+/// `GtkInfoBar` has a single CSS node with name infobar. The node may get
+/// one of the style classes .info, .warning, .error or .question, depending
+/// on the message type.
+/// If the info bar shows a close button, that button will have the .close
+/// style class applied.
+///
+/// The `InfoBarProtocol` protocol exposes the methods and properties of an underlying `GtkInfoBar` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `InfoBar`.
+/// Alternatively, use `InfoBarRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol InfoBarProtocol: WidgetProtocol {
+        /// Untyped pointer to the underlying `GtkInfoBar` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkInfoBar` instance.
+    var info_bar_ptr: UnsafeMutablePointer<GtkInfoBar>! { get }
+
+    /// Required Initialiser for types conforming to `InfoBarProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+/// `GtkInfoBar` can be show messages to the user without a dialog.
+/// 
+/// ![An example GtkInfoBar](info-bar.png)
+/// 
+/// It is often temporarily shown at the top or bottom of a document.
+/// In contrast to [class`Gtk.Dialog`], which has an action area at the
+/// bottom, `GtkInfoBar` has an action area at the side.
+/// 
+/// The API of `GtkInfoBar` is very similar to `GtkDialog`, allowing you
+/// to add buttons to the action area with [method`Gtk.InfoBar.add_button`]
+/// or [ctor`Gtk.InfoBar.new_with_buttons`]. The sensitivity of action widgets
+/// can be controlled with [method`Gtk.InfoBar.set_response_sensitive`].
+/// 
+/// To add widgets to the main content area of a `GtkInfoBar`, use
+/// [method`Gtk.InfoBar.add_child`].
+/// 
+/// Similar to [class`Gtk.MessageDialog`], the contents of a `GtkInfoBar`
+/// can by classified as error message, warning, informational message, etc,
+/// by using [method`Gtk.InfoBar.set_message_type`]. GTK may use the message
+/// type to determine how the message is displayed.
+/// 
+/// A simple example for using a `GtkInfoBar`:
+/// ```c
+/// GtkWidget *message_label;
+/// GtkWidget *widget;
+/// GtkWidget *grid;
+/// GtkInfoBar *bar;
+/// 
+/// // set up info bar
+/// widget = gtk_info_bar_new ();
+/// bar = GTK_INFO_BAR (widget);
+/// grid = gtk_grid_new ();
+/// 
+/// message_label = gtk_label_new ("");
+/// gtk_info_bar_add_child (bar, message_label);
+/// gtk_info_bar_add_button (bar,
+///                          `_("_OK")`,
+///                          GTK_RESPONSE_OK);
+/// g_signal_connect (bar,
+///                   "response",
+///                   G_CALLBACK (gtk_widget_hide),
+///                   NULL);
+/// gtk_grid_attach (GTK_GRID (grid),
+///                  widget,
+///                  0, 2, 1, 1);
+/// 
+/// // ...
+/// 
+/// // show an error message
+/// gtk_label_set_text (GTK_LABEL (message_label), "An error occurred!");
+/// gtk_info_bar_set_message_type (bar, GTK_MESSAGE_ERROR);
+/// gtk_widget_show (bar);
+/// ```
+/// 
+/// # GtkInfoBar as GtkBuildable
+/// 
+/// `GtkInfoBar` supports a custom `&lt;action-widgets&gt;` element, which can contain
+/// multiple `&lt;action-widget&gt;` elements. The “response” attribute specifies a
+/// numeric response, and the content of the element is the id of widget
+/// (which should be a child of the dialogs `action_area`).
+/// 
+/// `GtkInfoBar` supports adding action widgets by specifying “action” as
+/// the “type” attribute of a `&lt;child&gt;` element. The widget will be added
+/// either to the action area. The response id has to be associated
+/// with the action widget using the `&lt;action-widgets&gt;` element.
+/// 
+/// # CSS nodes
+/// 
+/// `GtkInfoBar` has a single CSS node with name infobar. The node may get
+/// one of the style classes .info, .warning, .error or .question, depending
+/// on the message type.
+/// If the info bar shows a close button, that button will have the .close
+/// style class applied.
+///
+/// The `InfoBarRef` type acts as a lightweight Swift reference to an underlying `GtkInfoBar` instance.
+/// It exposes methods that can operate on this data type through `InfoBarProtocol` conformance.
+/// Use `InfoBarRef` only as an `unowned` reference to an existing `GtkInfoBar` instance.
+///
+public struct InfoBarRef: InfoBarProtocol, GWeakCapturing {
+        /// Untyped pointer to the underlying `GtkInfoBar` instance.
+    /// For type-safe access, use the generated, typed pointer `info_bar_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension InfoBarRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkInfoBar>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkInfoBar>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkInfoBar>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkInfoBar>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `InfoBarProtocol`
+    @inlinable init<T: InfoBarProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// This factory is syntactic sugar for setting weak pointers wrapped in `GWeak<T>`
+    @inlinable static func unowned<T: InfoBarProtocol>(_ other: T) -> InfoBarRef { InfoBarRef(other) }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+        /// Creates a new `GtkInfoBar` object.
+    @inlinable init() {
+            let result = gtk_info_bar_new()
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+
+
+    // *** newWithButtons() is not available because it has a varargs (...) parameter!
+
+
+    // *** newWithButtons() is not available because it has a varargs (...) parameter!
+
+}
+
+/// `GtkInfoBar` can be show messages to the user without a dialog.
+/// 
+/// ![An example GtkInfoBar](info-bar.png)
+/// 
+/// It is often temporarily shown at the top or bottom of a document.
+/// In contrast to [class`Gtk.Dialog`], which has an action area at the
+/// bottom, `GtkInfoBar` has an action area at the side.
+/// 
+/// The API of `GtkInfoBar` is very similar to `GtkDialog`, allowing you
+/// to add buttons to the action area with [method`Gtk.InfoBar.add_button`]
+/// or [ctor`Gtk.InfoBar.new_with_buttons`]. The sensitivity of action widgets
+/// can be controlled with [method`Gtk.InfoBar.set_response_sensitive`].
+/// 
+/// To add widgets to the main content area of a `GtkInfoBar`, use
+/// [method`Gtk.InfoBar.add_child`].
+/// 
+/// Similar to [class`Gtk.MessageDialog`], the contents of a `GtkInfoBar`
+/// can by classified as error message, warning, informational message, etc,
+/// by using [method`Gtk.InfoBar.set_message_type`]. GTK may use the message
+/// type to determine how the message is displayed.
+/// 
+/// A simple example for using a `GtkInfoBar`:
+/// ```c
+/// GtkWidget *message_label;
+/// GtkWidget *widget;
+/// GtkWidget *grid;
+/// GtkInfoBar *bar;
+/// 
+/// // set up info bar
+/// widget = gtk_info_bar_new ();
+/// bar = GTK_INFO_BAR (widget);
+/// grid = gtk_grid_new ();
+/// 
+/// message_label = gtk_label_new ("");
+/// gtk_info_bar_add_child (bar, message_label);
+/// gtk_info_bar_add_button (bar,
+///                          `_("_OK")`,
+///                          GTK_RESPONSE_OK);
+/// g_signal_connect (bar,
+///                   "response",
+///                   G_CALLBACK (gtk_widget_hide),
+///                   NULL);
+/// gtk_grid_attach (GTK_GRID (grid),
+///                  widget,
+///                  0, 2, 1, 1);
+/// 
+/// // ...
+/// 
+/// // show an error message
+/// gtk_label_set_text (GTK_LABEL (message_label), "An error occurred!");
+/// gtk_info_bar_set_message_type (bar, GTK_MESSAGE_ERROR);
+/// gtk_widget_show (bar);
+/// ```
+/// 
+/// # GtkInfoBar as GtkBuildable
+/// 
+/// `GtkInfoBar` supports a custom `&lt;action-widgets&gt;` element, which can contain
+/// multiple `&lt;action-widget&gt;` elements. The “response” attribute specifies a
+/// numeric response, and the content of the element is the id of widget
+/// (which should be a child of the dialogs `action_area`).
+/// 
+/// `GtkInfoBar` supports adding action widgets by specifying “action” as
+/// the “type” attribute of a `&lt;child&gt;` element. The widget will be added
+/// either to the action area. The response id has to be associated
+/// with the action widget using the `&lt;action-widgets&gt;` element.
+/// 
+/// # CSS nodes
+/// 
+/// `GtkInfoBar` has a single CSS node with name infobar. The node may get
+/// one of the style classes .info, .warning, .error or .question, depending
+/// on the message type.
+/// If the info bar shows a close button, that button will have the .close
+/// style class applied.
+///
+/// The `InfoBar` type acts as a reference-counted owner of an underlying `GtkInfoBar` instance.
+/// It provides the methods that can operate on this data type through `InfoBarProtocol` conformance.
+/// Use `InfoBar` as a strong reference or owner of a `GtkInfoBar` instance.
+///
+open class InfoBar: Widget, InfoBarProtocol {
+        /// Designated initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `InfoBar` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafeMutablePointer<GtkInfoBar>) {
+        super.init(cPointer: op)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `InfoBar` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafePointer<GtkInfoBar>) {
+        super.init(raw: UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: op)))
+    }
+
+    /// Optional initialiser from a non-mutating `gpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `InfoBar` instance.
+    /// - Parameter op: gpointer to the underlying object
+    @inlinable override public init!(gpointer op: gpointer?) {
+        guard let p = UnsafeMutableRawPointer(op) else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a non-mutating `gconstpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `InfoBar` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable override public init!(gconstpointer op: gconstpointer?) {
+        guard let p = op else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `InfoBar` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafePointer<GtkInfoBar>?) {
+        guard let p = UnsafeMutablePointer(mutating: op) else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Optional initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `InfoBar` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafeMutablePointer<GtkInfoBar>?) {
+        guard let p = op else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Designated initialiser from the underlying `C` data type.
+    /// Will retain `GtkInfoBar`.
+    /// i.e., ownership is transferred to the `InfoBar` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(retaining op: UnsafeMutablePointer<GtkInfoBar>) {
+        super.init(retainingCPointer: op)
+    }
+
+    /// Reference intialiser for a related type that implements `InfoBarProtocol`
+    /// Will retain `GtkInfoBar`.
+    /// - Parameter other: an instance of a related type that implements `InfoBarProtocol`
+    @inlinable public init<T: InfoBarProtocol>(infoBar other: T) {
+        super.init(retainingRaw: other.ptr)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(cPointer p: UnsafeMutablePointer<T>) {
+        super.init(cPointer: p)
+    }
+
+    /// Unsafe typed, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(retainingCPointer cPointer: UnsafeMutablePointer<T>) {
+        super.init(retainingCPointer: cPointer)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    /// - Parameter p: raw pointer to the underlying object
+    @inlinable override public init(raw p: UnsafeRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    @inlinable override public init(retainingRaw raw: UnsafeRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    /// - Parameter p: mutable raw pointer to the underlying object
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    /// - Parameter raw: mutable raw pointer to the underlying object
+    @inlinable required public init(retainingRaw raw: UnsafeMutableRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(opaquePointer p: OpaquePointer) {
+        super.init(opaquePointer: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InfoBarProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(retainingOpaquePointer p: OpaquePointer) {
+        super.init(retainingOpaquePointer: p)
+    }
+
+    /// Creates a new `GtkInfoBar` object.
+    @inlinable public init() {
+            let result = gtk_info_bar_new()
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+
+    // *** newWithButtons() is not available because it has a varargs (...) parameter!
+
+
+
+    // *** newWithButtons() is not available because it has a varargs (...) parameter!
+
+
+}
+
+public enum InfoBarPropertyName: String, PropertyNameProtocol {
+    /// Whether the widget or any of its descendents can accept
+    /// the input focus.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case canFocus = "can-focus"
+    /// Whether the widget can receive pointer events.
+    case canTarget = "can-target"
+    /// A list of css classes applied to this widget.
+    case cssClasses = "css-classes"
+    /// The name of this widget in the CSS tree.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case cssName = "css-name"
+    /// The cursor used by `widget`.
+    case cursor = "cursor"
+    /// Whether the widget should grab focus when it is clicked with the mouse.
+    /// 
+    /// This property is only relevant for widgets that can take focus.
+    case focusOnClick = "focus-on-click"
+    /// Whether this widget itself will accept the input focus.
+    case focusable = "focusable"
+    /// How to distribute horizontal space if widget gets extra space.
+    case halign = "halign"
+    /// Whether the widget is the default widget.
+    case hasDefault = "has-default"
+    /// Whether the widget has the input focus.
+    case hasFocus = "has-focus"
+    /// Enables or disables the emission of the `query-tooltip` signal on `widget`.
+    /// 
+    /// A value of `true` indicates that `widget` can have a tooltip, in this case
+    /// the widget will be queried using [signal`Gtk.Widget::query-tooltip`] to
+    /// determine whether it will provide a tooltip or not.
+    case hasTooltip = "has-tooltip"
+    /// Override for height request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case heightRequest = "height-request"
+    /// Whether to expand horizontally.
+    case hexpand = "hexpand"
+    /// Whether to use the `hexpand` property.
+    case hexpandSet = "hexpand-set"
+    /// The `GtkLayoutManager` instance to use to compute the preferred size
+    /// of the widget, and allocate its children.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case layoutManager = "layout-manager"
+    /// Margin on bottom side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginBottom = "margin-bottom"
+    /// Margin on end of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginEnd = "margin-end"
+    /// Margin on start of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginStart = "margin-start"
+    /// Margin on top side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginTop = "margin-top"
+    /// The type of the message.
+    /// 
+    /// The type may be used to determine the appearance of the info bar.
+    case messageType = "message-type"
+    /// The name of the widget.
+    case name = "name"
+    /// The requested opacity of the widget.
+    case opacity = "opacity"
+    /// How content outside the widget's content area is treated.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case overflow = "overflow"
+    /// The parent widget of this widget.
+    case parent = "parent"
+    /// Whether the widget will receive the default action when it is focused.
+    case receivesDefault = "receives-default"
+    /// Whether the info bar shows its contents.
+    case revealed = "revealed"
+    /// The `GtkRoot` widget of the widget tree containing this widget.
+    /// 
+    /// This will be `nil` if the widget is not contained in a root widget.
+    case root = "root"
+    /// The scale factor of the widget.
+    case scaleFactor = "scale-factor"
+    /// Whether the widget responds to input.
+    case sensitive = "sensitive"
+    /// Whether to include a standard close button.
+    case showCloseButton = "show-close-button"
+    /// Sets the text of tooltip to be the given string, which is marked up
+    /// with Pango markup.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_markup`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case tooltipMarkup = "tooltip-markup"
+    /// Sets the text of tooltip to be the given string.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_text`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case tooltipText = "tooltip-text"
+    /// How to distribute vertical space if widget gets extra space.
+    case valign = "valign"
+    /// Whether to expand vertically.
+    case vexpand = "vexpand"
+    /// Whether to use the `vexpand` property.
+    case vexpandSet = "vexpand-set"
+    /// Whether the widget is visible.
+    case visible = "visible"
+    /// Override for width request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case widthRequest = "width-request"
+}
+
+public extension InfoBarProtocol {
+    /// Bind a `InfoBarPropertyName` source property to a given target object.
+    /// - Parameter source_property: the source property to bind
+    /// - Parameter target: the target object to bind to
+    /// - Parameter target_property: the target property to bind to
+    /// - Parameter flags: the flags to pass to the `Binding`
+    /// - Parameter transform_from: `ValueTransformer` to use for forward transformation
+    /// - Parameter transform_to: `ValueTransformer` to use for backwards transformation
+    /// - Returns: binding reference or `nil` in case of an error
+    @discardableResult @inlinable func bind<Q: PropertyNameProtocol, T: GLibObject.ObjectProtocol>(property source_property: InfoBarPropertyName, to target: T, _ target_property: Q, flags f: BindingFlags = .default, transformFrom transform_from: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }, transformTo transform_to: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }) -> BindingRef! {
+        func _bind(_ source: UnsafePointer<gchar>, to t: T, _ target_property: UnsafePointer<gchar>, flags f: BindingFlags = .default, holder: BindingClosureHolder, transformFrom transform_from: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean, transformTo transform_to: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean) -> BindingRef! {
+            let holder = UnsafeMutableRawPointer(Unmanaged.passRetained(holder).toOpaque())
+            let from = unsafeBitCast(transform_from, to: BindingTransformFunc.self)
+            let to   = unsafeBitCast(transform_to,   to: BindingTransformFunc.self)
+            let rv = GLibObject.ObjectRef(raw: ptr).bindPropertyFull(sourceProperty: source, target: t, targetProperty: target_property, flags: f, transformTo: to, transformFrom: from, userData: holder) {
+                if let swift = UnsafeRawPointer($0) {
+                    let holder = Unmanaged<GLibObject.SignalHandlerClosureHolder>.fromOpaque(swift)
+                    holder.release()
+                }
+            }
+            return rv.map { BindingRef($0) }
+        }
+
+        let rv = _bind(source_property.name, to: target, target_property.name, flags: f, holder: BindingClosureHolder(transform_from, transform_to), transformFrom: {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_from(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }) {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_to(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }
+        return rv
+    }
+
+    /// Get the value of a InfoBar property
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func get(property: InfoBarPropertyName) -> GLibObject.Value {
+        let v = GLibObject.Value()
+        g_object_get_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+        return v
+    }
+
+    /// Set the value of a InfoBar property.
+    /// *Note* that this will only have an effect on properties that are writable and not construct-only!
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func set(property: InfoBarPropertyName, value v: GLibObject.Value) {
+        g_object_set_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+    }
+}
+
+public enum InfoBarSignalName: String, SignalNameProtocol {
+    /// Gets emitted when the user uses a keybinding to dismiss the info bar.
+    /// 
+    /// The `close` signal is a [keybinding signal](class.SignalAction.html).
+    /// 
+    /// The default binding for this signal is the Escape key.
+    case close = "close"
+    /// Signals that all holders of a reference to the widget should release
+    /// the reference that they hold.
+    /// 
+    /// May result in finalization of the widget if all references are released.
+    /// 
+    /// This signal is not suitable for saving widget state.
+    case destroy = "destroy"
+    /// Emitted when the text direction of a widget changes.
+    case directionChanged = "direction-changed"
+    /// Emitted when `widget` is hidden.
+    case hide = "hide"
+    /// Emitted if keyboard navigation fails.
+    /// 
+    /// See [method`Gtk.Widget.keynav_failed`] for details.
+    case keynavFailed = "keynav-failed"
+    /// Emitted when `widget` is going to be mapped.
+    /// 
+    /// A widget is mapped when the widget is visible (which is controlled with
+    /// [property`Gtk.Widget:visible`]) and all its parents up to the toplevel widget
+    /// are also visible.
+    /// 
+    /// The `map` signal can be used to determine whether a widget will be drawn,
+    /// for instance it can resume an animation that was stopped during the
+    /// emission of [signal`Gtk.Widget::unmap`].
+    case map = "map"
+    /// Emitted when a widget is activated via a mnemonic.
+    /// 
+    /// The default handler for this signal activates `widget` if `group_cycling`
+    /// is `false`, or just makes `widget` grab focus if `group_cycling` is `true`.
+    case mnemonicActivate = "mnemonic-activate"
+    /// Emitted when the focus is moved.
+    case moveFocus = "move-focus"
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    case notify = "notify"
+    /// Emitted when the widgets tooltip is about to be shown.
+    /// 
+    /// This happens when the [property`Gtk.Widget:has-tooltip`] property
+    /// is `true` and the hover timeout has expired with the cursor hovering
+    /// "above" `widget`; or emitted when `widget` got focus in keyboard mode.
+    /// 
+    /// Using the given coordinates, the signal handler should determine
+    /// whether a tooltip should be shown for `widget`. If this is the case
+    /// `true` should be returned, `false` otherwise.  Note that if
+    /// `keyboard_mode` is `true`, the values of `x` and `y` are undefined and
+    /// should not be used.
+    /// 
+    /// The signal handler is free to manipulate `tooltip` with the therefore
+    /// destined function calls.
+    case queryTooltip = "query-tooltip"
+    /// Emitted when `widget` is associated with a `GdkSurface`.
+    /// 
+    /// This means that [method`Gtk.Widget.realize`] has been called
+    /// or the widget has been mapped (that is, it is going to be drawn).
+    case realize = "realize"
+    /// Emitted when an action widget is clicked.
+    /// 
+    /// The signal is also emitted when the application programmer
+    /// calls [method`Gtk.InfoBar.response`]. The `response_id` depends
+    /// on which action widget was clicked.
+    case response = "response"
+    /// Emitted when `widget` is shown.
+    case show = "show"
+    /// Emitted when the widget state changes.
+    /// 
+    /// See [method`Gtk.Widget.get_state_flags`].
+    case stateFlagsChanged = "state-flags-changed"
+    /// Emitted when `widget` is going to be unmapped.
+    /// 
+    /// A widget is unmapped when either it or any of its parents up to the
+    /// toplevel widget have been set as hidden.
+    /// 
+    /// As `unmap` indicates that a widget will not be shown any longer,
+    /// it can be used to, for example, stop an animation on the widget.
+    case unmap = "unmap"
+    /// Emitted when the `GdkSurface` associated with `widget` is destroyed.
+    /// 
+    /// This means that [method`Gtk.Widget.unrealize`] has been called
+    /// or the widget has been unmapped (that is, it is going to be hidden).
+    case unrealize = "unrealize"
+    /// Whether the widget or any of its descendents can accept
+    /// the input focus.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyCanFocus = "notify::can-focus"
+    /// Whether the widget can receive pointer events.
+    case notifyCanTarget = "notify::can-target"
+    /// A list of css classes applied to this widget.
+    case notifyCssClasses = "notify::css-classes"
+    /// The name of this widget in the CSS tree.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyCssName = "notify::css-name"
+    /// The cursor used by `widget`.
+    case notifyCursor = "notify::cursor"
+    /// Whether the widget should grab focus when it is clicked with the mouse.
+    /// 
+    /// This property is only relevant for widgets that can take focus.
+    case notifyFocusOnClick = "notify::focus-on-click"
+    /// Whether this widget itself will accept the input focus.
+    case notifyFocusable = "notify::focusable"
+    /// How to distribute horizontal space if widget gets extra space.
+    case notifyHalign = "notify::halign"
+    /// Whether the widget is the default widget.
+    case notifyHasDefault = "notify::has-default"
+    /// Whether the widget has the input focus.
+    case notifyHasFocus = "notify::has-focus"
+    /// Enables or disables the emission of the `query-tooltip` signal on `widget`.
+    /// 
+    /// A value of `true` indicates that `widget` can have a tooltip, in this case
+    /// the widget will be queried using [signal`Gtk.Widget::query-tooltip`] to
+    /// determine whether it will provide a tooltip or not.
+    case notifyHasTooltip = "notify::has-tooltip"
+    /// Override for height request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case notifyHeightRequest = "notify::height-request"
+    /// Whether to expand horizontally.
+    case notifyHexpand = "notify::hexpand"
+    /// Whether to use the `hexpand` property.
+    case notifyHexpandSet = "notify::hexpand-set"
+    /// The `GtkLayoutManager` instance to use to compute the preferred size
+    /// of the widget, and allocate its children.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyLayoutManager = "notify::layout-manager"
+    /// Margin on bottom side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginBottom = "notify::margin-bottom"
+    /// Margin on end of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginEnd = "notify::margin-end"
+    /// Margin on start of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginStart = "notify::margin-start"
+    /// Margin on top side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginTop = "notify::margin-top"
+    /// The type of the message.
+    /// 
+    /// The type may be used to determine the appearance of the info bar.
+    case notifyMessageType = "notify::message-type"
+    /// The name of the widget.
+    case notifyName = "notify::name"
+    /// The requested opacity of the widget.
+    case notifyOpacity = "notify::opacity"
+    /// How content outside the widget's content area is treated.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyOverflow = "notify::overflow"
+    /// The parent widget of this widget.
+    case notifyParent = "notify::parent"
+    /// Whether the widget will receive the default action when it is focused.
+    case notifyReceivesDefault = "notify::receives-default"
+    /// Whether the info bar shows its contents.
+    case notifyRevealed = "notify::revealed"
+    /// The `GtkRoot` widget of the widget tree containing this widget.
+    /// 
+    /// This will be `nil` if the widget is not contained in a root widget.
+    case notifyRoot = "notify::root"
+    /// The scale factor of the widget.
+    case notifyScaleFactor = "notify::scale-factor"
+    /// Whether the widget responds to input.
+    case notifySensitive = "notify::sensitive"
+    /// Whether to include a standard close button.
+    case notifyShowCloseButton = "notify::show-close-button"
+    /// Sets the text of tooltip to be the given string, which is marked up
+    /// with Pango markup.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_markup`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case notifyTooltipMarkup = "notify::tooltip-markup"
+    /// Sets the text of tooltip to be the given string.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_text`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case notifyTooltipText = "notify::tooltip-text"
+    /// How to distribute vertical space if widget gets extra space.
+    case notifyValign = "notify::valign"
+    /// Whether to expand vertically.
+    case notifyVexpand = "notify::vexpand"
+    /// Whether to use the `vexpand` property.
+    case notifyVexpandSet = "notify::vexpand-set"
+    /// Whether the widget is visible.
+    case notifyVisible = "notify::visible"
+    /// Override for width request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case notifyWidthRequest = "notify::width-request"
+}
+
+// MARK: InfoBar signals
+public extension InfoBarProtocol {
+    /// Connect a Swift signal handler to the given, typed `InfoBarSignalName` signal
+    /// - Parameters:
+    ///   - signal: The signal to connect
+    ///   - flags: The connection flags to use
+    ///   - data: A pointer to user data to provide to the callback
+    ///   - destroyData: A `GClosureNotify` C function to destroy the data pointed to by `userData`
+    ///   - handler: The Swift signal handler (function or callback) to invoke on the given signal
+    /// - Returns: The signal handler ID (always greater than 0 for successful connections)
+    @inlinable @discardableResult func connect(signal s: InfoBarSignalName, flags f: ConnectFlags = ConnectFlags(0), handler h: @escaping SignalHandler) -> Int {
+        connect(s, flags: f, handler: h)
+    }
+    
+    
+    /// Connect a C signal handler to the given, typed `InfoBarSignalName` signal
+    /// - Parameters:
+    ///   - signal: The signal to connect
+    ///   - flags: The connection flags to use
+    ///   - data: A pointer to user data to provide to the callback
+    ///   - destroyData: A `GClosureNotify` C function to destroy the data pointed to by `userData`
+    ///   - signalHandler: The C function to be called on the given signal
+    /// - Returns: The signal handler ID (always greater than 0 for successful connections)
+    @inlinable @discardableResult func connect(signal s: InfoBarSignalName, flags f: ConnectFlags = ConnectFlags(0), data userData: gpointer!, destroyData destructor: GClosureNotify? = nil, signalHandler h: @escaping GCallback) -> Int {
+        connectSignal(s, flags: f, data: userData, destroyData: destructor, handler: h)
+    }
+    
+    
+    /// Gets emitted when the user uses a keybinding to dismiss the info bar.
+    /// 
+    /// The `close` signal is a [keybinding signal](class.SignalAction.html).
+    /// 
+    /// The default binding for this signal is the Escape key.
+    /// - Note: This represents the underlying `close` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `close` signal is emitted
+    @discardableResult @inlinable func onClose(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: InfoBarRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(InfoBarRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer) -> Void = { unownedSelf, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((InfoBarRef(raw: unownedSelf)))
+            return output
+        }
+        return connect(
+            signal: .close,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `close` signal for using the `connect(signal:)` methods
+    static var closeSignal: InfoBarSignalName { .close }
+    
+    /// Emitted when an action widget is clicked.
+    /// 
+    /// The signal is also emitted when the application programmer
+    /// calls [method`Gtk.InfoBar.response`]. The `response_id` depends
+    /// on which action widget was clicked.
+    /// - Note: This represents the underlying `response` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter responseId: the response ID
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `response` signal is emitted
+    @discardableResult @inlinable func onResponse(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: InfoBarRef, _ responseId: Int) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(InfoBarRef, Int), Void>
+        let cCallback: @convention(c) (gpointer, gint, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((InfoBarRef(raw: unownedSelf), Int(arg1)))
+            return output
+        }
+        return connect(
+            signal: .response,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `response` signal for using the `connect(signal:)` methods
+    static var responseSignal: InfoBarSignalName { .response }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::message-type` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyMessageType` signal is emitted
+    @discardableResult @inlinable func onNotifyMessageType(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: InfoBarRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(InfoBarRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((InfoBarRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyMessageType,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::message-type` signal for using the `connect(signal:)` methods
+    static var notifyMessageTypeSignal: InfoBarSignalName { .notifyMessageType }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::revealed` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyRevealed` signal is emitted
+    @discardableResult @inlinable func onNotifyRevealed(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: InfoBarRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(InfoBarRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((InfoBarRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyRevealed,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::revealed` signal for using the `connect(signal:)` methods
+    static var notifyRevealedSignal: InfoBarSignalName { .notifyRevealed }
+    
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    /// - Note: This represents the underlying `notify::show-close-button` signal
+    /// - Parameter flags: Flags
+    /// - Parameter unownedSelf: Reference to instance of self
+    /// - Parameter pspec: the `GParamSpec` of the property which changed.
+    /// - Parameter handler: The signal handler to call
+    /// Run the given callback whenever the `notifyShowCloseButton` signal is emitted
+    @discardableResult @inlinable func onNotifyShowCloseButton(flags: ConnectFlags = ConnectFlags(0), handler: @escaping ( _ unownedSelf: InfoBarRef, _ pspec: GLibObject.ParamSpecRef) -> Void ) -> Int {
+        typealias SwiftHandler = GLib.ClosureHolder<(InfoBarRef, GLibObject.ParamSpecRef), Void>
+        let cCallback: @convention(c) (gpointer, gpointer, gpointer) -> Void = { unownedSelf, arg1, userData in
+            let holder = Unmanaged<SwiftHandler>.fromOpaque(userData).takeUnretainedValue()
+            let output: Void = holder.call((InfoBarRef(raw: unownedSelf), GLibObject.ParamSpecRef(raw: arg1)))
+            return output
+        }
+        return connect(
+            signal: .notifyShowCloseButton,
+            flags: flags,
+            data: Unmanaged.passRetained(SwiftHandler(handler)).toOpaque(),
+            destroyData: { userData, _ in UnsafeRawPointer(userData).flatMap(Unmanaged<SwiftHandler>.fromOpaque(_:))?.release() },
+            signalHandler: unsafeBitCast(cCallback, to: GCallback.self)
+        )
+    }
+    
+    /// Typed `notify::show-close-button` signal for using the `connect(signal:)` methods
+    static var notifyShowCloseButtonSignal: InfoBarSignalName { .notifyShowCloseButton }
+    
+}
+
+// MARK: InfoBar Class: InfoBarProtocol extension (methods and fields)
+public extension InfoBarProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkInfoBar` instance.
+    @inlinable var info_bar_ptr: UnsafeMutablePointer<GtkInfoBar>! { return ptr?.assumingMemoryBound(to: GtkInfoBar.self) }
+
+    /// Add an activatable widget to the action area of a `GtkInfoBar`.
+    /// 
+    /// This also connects a signal handler that will emit the
+    /// [signal`Gtk.InfoBar::response`] signal on the message area
+    /// when the widget is activated. The widget is appended to the
+    /// end of the message areas action area.
+    @inlinable func addActionWidget<WidgetT: WidgetProtocol>(child: WidgetT, responseId: Int) {
+        
+        gtk_info_bar_add_action_widget(info_bar_ptr, child.widget_ptr, gint(responseId))
+        
+    }
+
+    /// Adds a button with the given text.
+    /// 
+    /// Clicking the button will emit the [signal`Gtk.InfoBar::response`]
+    /// signal with the given response_id. The button is appended to the
+    /// end of the info bars's action area. The button widget is returned,
+    /// but usually you don't need it.
+    @inlinable func addButton(buttonText: UnsafePointer<CChar>!, responseId: Int) -> ButtonRef! {
+        let result = gtk_info_bar_add_button(info_bar_ptr, buttonText, gint(responseId))
+        let rv = ButtonRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+
+    // *** addButtons() is not available because it has a varargs (...) parameter!
+
+
+    /// Adds a widget to the content area of the info bar.
+    @inlinable func addChild<WidgetT: WidgetProtocol>(widget: WidgetT) {
+        
+        gtk_info_bar_add_child(info_bar_ptr, widget.widget_ptr)
+        
+    }
+
+    /// Returns the message type of the message area.
+    @inlinable func getMessageType() -> GtkMessageType {
+        let result = gtk_info_bar_get_message_type(info_bar_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Returns whether the info bar is currently revealed.
+    @inlinable func getRevealed() -> Bool {
+        let result = gtk_info_bar_get_revealed(info_bar_ptr)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Returns whether the widget will display a standard close button.
+    @inlinable func getShowCloseButton() -> Bool {
+        let result = gtk_info_bar_get_show_close_button(info_bar_ptr)
+        let rv = ((result) != 0)
+        return rv
+    }
+
+    /// Removes a widget from the action area of `info_bar`.
+    /// 
+    /// The widget must have been put there by a call to
+    /// [method`Gtk.InfoBar.add_action_widget`] or [method`Gtk.InfoBar.add_button`].
+    @inlinable func removeAction<WidgetT: WidgetProtocol>(widget: WidgetT) {
+        
+        gtk_info_bar_remove_action_widget(info_bar_ptr, widget.widget_ptr)
+        
+    }
+
+    /// Removes a widget from the content area of the info bar.
+    @inlinable func removeChild<WidgetT: WidgetProtocol>(widget: WidgetT) {
+        
+        gtk_info_bar_remove_child(info_bar_ptr, widget.widget_ptr)
+        
+    }
+
+    /// Emits the “response” signal with the given `response_id`.
+    @inlinable func response(responseId: Int) {
+        
+        gtk_info_bar_response(info_bar_ptr, gint(responseId))
+        
+    }
+
+    /// Sets the last widget in the info bar’s action area with
+    /// the given response_id as the default widget for the dialog.
+    /// 
+    /// Pressing “Enter” normally activates the default widget.
+    /// 
+    /// Note that this function currently requires `info_bar` to
+    /// be added to a widget hierarchy.
+    @inlinable func setDefaultResponse(responseId: Int) {
+        
+        gtk_info_bar_set_default_response(info_bar_ptr, gint(responseId))
+        
+    }
+
+    /// Sets the message type of the message area.
+    /// 
+    /// GTK uses this type to determine how the message is displayed.
+    @inlinable func set(messageType: GtkMessageType) {
+        
+        gtk_info_bar_set_message_type(info_bar_ptr, messageType)
+        
+    }
+
+    /// Sets the sensitivity of action widgets for `response_id`.
+    /// 
+    /// Calls `gtk_widget_set_sensitive (widget, setting)` for each
+    /// widget in the info bars’s action area with the given `response_id`.
+    /// A convenient way to sensitize/desensitize buttons.
+    @inlinable func setResponseSensitive(responseId: Int, setting: Bool) {
+        
+        gtk_info_bar_set_response_sensitive(info_bar_ptr, gint(responseId), gboolean((setting) ? 1 : 0))
+        
+    }
+
+    /// Sets whether the `GtkInfoBar` is revealed.
+    /// 
+    /// Changing this will make `info_bar` reveal or conceal
+    /// itself via a sliding transition.
+    /// 
+    /// Note: this does not show or hide `info_bar` in the
+    /// [property`Gtk.Widget:visible`] sense, so revealing has no effect
+    /// if [property`Gtk.Widget:visible`] is `false`.
+    @inlinable func set(revealed: Bool) {
+        
+        gtk_info_bar_set_revealed(info_bar_ptr, gboolean((revealed) ? 1 : 0))
+        
+    }
+
+    /// If true, a standard close button is shown.
+    /// 
+    /// When clicked it emits the response `GTK_RESPONSE_CLOSE`.
+    @inlinable func setShowCloseButton(setting: Bool) {
+        
+        gtk_info_bar_set_show_close_button(info_bar_ptr, gboolean((setting) ? 1 : 0))
+        
+    }
+    /// Returns the message type of the message area.
+    @inlinable var messageType: GtkMessageType {
+        /// Returns the message type of the message area.
+        get {
+            let result = gtk_info_bar_get_message_type(info_bar_ptr)
+        let rv = result
+            return rv
+        }
+        /// Sets the message type of the message area.
+        /// 
+        /// GTK uses this type to determine how the message is displayed.
+        nonmutating set {
+            gtk_info_bar_set_message_type(info_bar_ptr, newValue)
+        }
+    }
+
+    /// Whether the info bar shows its contents.
+    @inlinable var revealed: Bool {
+        /// Returns whether the info bar is currently revealed.
+        get {
+            let result = gtk_info_bar_get_revealed(info_bar_ptr)
+        let rv = ((result) != 0)
+            return rv
+        }
+        /// Sets whether the `GtkInfoBar` is revealed.
+        /// 
+        /// Changing this will make `info_bar` reveal or conceal
+        /// itself via a sliding transition.
+        /// 
+        /// Note: this does not show or hide `info_bar` in the
+        /// [property`Gtk.Widget:visible`] sense, so revealing has no effect
+        /// if [property`Gtk.Widget:visible`] is `false`.
+        nonmutating set {
+            gtk_info_bar_set_revealed(info_bar_ptr, gboolean((newValue) ? 1 : 0))
+        }
+    }
+
+    /// Returns whether the widget will display a standard close button.
+    @inlinable var showCloseButton: Bool {
+        /// Returns whether the widget will display a standard close button.
+        get {
+            let result = gtk_info_bar_get_show_close_button(info_bar_ptr)
+        let rv = ((result) != 0)
+            return rv
+        }
+        /// If true, a standard close button is shown.
+        /// 
+        /// When clicked it emits the response `GTK_RESPONSE_CLOSE`.
+        nonmutating set {
+            gtk_info_bar_set_show_close_button(info_bar_ptr, gboolean((newValue) ? 1 : 0))
+        }
+    }
+
+
+}
+
+
+
+// MARK: - Inscription Class
+
+/// `GtkInscription` is a widget to show text in a predefined area.
+/// 
+/// You likely want to use `GtkLabel` instead as this widget is intended only
+/// for a small subset of use cases. The main scenario envisaged is inside lists
+/// such as `GtkColumnView`.
+/// 
+/// While a `GtkLabel` sizes itself depending on the text that is displayed,
+/// `GtkInscription` is given a size and inscribes the given text into that
+/// space as well as it can.
+/// 
+/// Users of this widget should take care to plan behaviour for the common case
+/// where the text doesn't fit exactly in the allocated space, .
+///
+/// The `InscriptionProtocol` protocol exposes the methods and properties of an underlying `GtkInscription` instance.
+/// The default implementation of these can be found in the protocol extension below.
+/// For a concrete class that implements these methods and properties, see `Inscription`.
+/// Alternatively, use `InscriptionRef` as a lighweight, `unowned` reference if you already have an instance you just want to use.
+///
+public protocol InscriptionProtocol: WidgetProtocol {
+        /// Untyped pointer to the underlying `GtkInscription` instance.
+    var ptr: UnsafeMutableRawPointer! { get }
+
+    /// Typed pointer to the underlying `GtkInscription` instance.
+    var inscription_ptr: UnsafeMutablePointer<GtkInscription>! { get }
+
+    /// Required Initialiser for types conforming to `InscriptionProtocol`
+    init(raw: UnsafeMutableRawPointer)
+}
+
+/// `GtkInscription` is a widget to show text in a predefined area.
+/// 
+/// You likely want to use `GtkLabel` instead as this widget is intended only
+/// for a small subset of use cases. The main scenario envisaged is inside lists
+/// such as `GtkColumnView`.
+/// 
+/// While a `GtkLabel` sizes itself depending on the text that is displayed,
+/// `GtkInscription` is given a size and inscribes the given text into that
+/// space as well as it can.
+/// 
+/// Users of this widget should take care to plan behaviour for the common case
+/// where the text doesn't fit exactly in the allocated space, .
+///
+/// The `InscriptionRef` type acts as a lightweight Swift reference to an underlying `GtkInscription` instance.
+/// It exposes methods that can operate on this data type through `InscriptionProtocol` conformance.
+/// Use `InscriptionRef` only as an `unowned` reference to an existing `GtkInscription` instance.
+///
+public struct InscriptionRef: InscriptionProtocol, GWeakCapturing {
+        /// Untyped pointer to the underlying `GtkInscription` instance.
+    /// For type-safe access, use the generated, typed pointer `inscription_ptr` property instead.
+    public let ptr: UnsafeMutableRawPointer!
+}
+
+public extension InscriptionRef {
+    /// Designated initialiser from the underlying `C` data type
+    @inlinable init(_ p: UnsafeMutablePointer<GtkInscription>) {
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type
+    @inlinable init(_ p: UnsafePointer<GtkInscription>) {
+        ptr = UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: p))
+    }
+
+    /// Conditional initialiser from an optional pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafeMutablePointer<GtkInscription>?) {
+        guard let p = maybePointer else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable pointer to the underlying `C` data type
+    @inlinable init!(_ maybePointer: UnsafePointer<GtkInscription>?) {
+        guard let p = UnsafeMutablePointer(mutating: maybePointer) else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional `gpointer`
+    @inlinable init!(gpointer g: gpointer?) {
+        guard let p = g else { return nil }
+        ptr = UnsafeMutableRawPointer(p)
+    }
+
+    /// Conditional initialiser from an optional, non-mutable `gconstpointer`
+    @inlinable init!(gconstpointer g: gconstpointer?) {
+        guard let p = UnsafeMutableRawPointer(mutating: g) else { return nil }
+        ptr = p
+    }
+
+    /// Reference intialiser for a related type that implements `InscriptionProtocol`
+    @inlinable init<T: InscriptionProtocol>(_ other: T) {
+        ptr = other.ptr
+    }
+
+    /// This factory is syntactic sugar for setting weak pointers wrapped in `GWeak<T>`
+    @inlinable static func unowned<T: InscriptionProtocol>(_ other: T) -> InscriptionRef { InscriptionRef(other) }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    @inlinable init<T>(cPointer: UnsafeMutablePointer<T>) {
+        ptr = UnsafeMutableRawPointer(cPointer)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    @inlinable init<T>(constPointer: UnsafePointer<T>) {
+        ptr = UnsafeMutableRawPointer(mutating: UnsafeRawPointer(constPointer))
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    @inlinable init(mutating raw: UnsafeRawPointer) {
+        ptr = UnsafeMutableRawPointer(mutating: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    @inlinable init(raw: UnsafeMutableRawPointer) {
+        ptr = raw
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    @inlinable init(opaquePointer: OpaquePointer) {
+        ptr = UnsafeMutableRawPointer(opaquePointer)
+    }
+
+        /// Creates a new `GtkInscription` with the given text.
+    @inlinable init( text: UnsafePointer<CChar>? = nil) {
+            let result = gtk_inscription_new(text)
+        let rv = result
+            ptr = UnsafeMutableRawPointer(rv)
+    }
+}
+
+/// `GtkInscription` is a widget to show text in a predefined area.
+/// 
+/// You likely want to use `GtkLabel` instead as this widget is intended only
+/// for a small subset of use cases. The main scenario envisaged is inside lists
+/// such as `GtkColumnView`.
+/// 
+/// While a `GtkLabel` sizes itself depending on the text that is displayed,
+/// `GtkInscription` is given a size and inscribes the given text into that
+/// space as well as it can.
+/// 
+/// Users of this widget should take care to plan behaviour for the common case
+/// where the text doesn't fit exactly in the allocated space, .
+///
+/// The `Inscription` type acts as a reference-counted owner of an underlying `GtkInscription` instance.
+/// It provides the methods that can operate on this data type through `InscriptionProtocol` conformance.
+/// Use `Inscription` as a strong reference or owner of a `GtkInscription` instance.
+///
+open class Inscription: Widget, InscriptionProtocol {
+        /// Designated initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Inscription` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafeMutablePointer<GtkInscription>) {
+        super.init(cPointer: op)
+    }
+
+    /// Designated initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Inscription` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(_ op: UnsafePointer<GtkInscription>) {
+        super.init(raw: UnsafeMutableRawPointer(UnsafeMutablePointer(mutating: op)))
+    }
+
+    /// Optional initialiser from a non-mutating `gpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Inscription` instance.
+    /// - Parameter op: gpointer to the underlying object
+    @inlinable override public init!(gpointer op: gpointer?) {
+        guard let p = UnsafeMutableRawPointer(op) else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a non-mutating `gconstpointer` to
+    /// the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Inscription` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable override public init!(gconstpointer op: gconstpointer?) {
+        guard let p = op else { return nil }
+        super.init(raw: p)
+    }
+
+    /// Optional initialiser from a constant pointer to the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Inscription` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafePointer<GtkInscription>?) {
+        guard let p = UnsafeMutablePointer(mutating: op) else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Optional initialiser from the underlying `C` data type.
+    /// This creates an instance without performing an unbalanced retain
+    /// i.e., ownership is transferred to the `Inscription` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init!(_ op: UnsafeMutablePointer<GtkInscription>?) {
+        guard let p = op else { return nil }
+        super.init(cPointer: p)
+    }
+
+    /// Designated initialiser from the underlying `C` data type.
+    /// Will retain `GtkInscription`.
+    /// i.e., ownership is transferred to the `Inscription` instance.
+    /// - Parameter op: pointer to the underlying object
+    @inlinable public init(retaining op: UnsafeMutablePointer<GtkInscription>) {
+        super.init(retainingCPointer: op)
+    }
+
+    /// Reference intialiser for a related type that implements `InscriptionProtocol`
+    /// Will retain `GtkInscription`.
+    /// - Parameter other: an instance of a related type that implements `InscriptionProtocol`
+    @inlinable public init<T: InscriptionProtocol>(inscription other: T) {
+        super.init(retainingRaw: other.ptr)
+    }
+
+    /// Unsafe typed initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(cPointer p: UnsafeMutablePointer<T>) {
+        super.init(cPointer: p)
+    }
+
+    /// Unsafe typed, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    /// - Parameter cPointer: pointer to the underlying object
+    @inlinable override public init<T>(retainingCPointer cPointer: UnsafeMutablePointer<T>) {
+        super.init(retainingCPointer: cPointer)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    /// - Parameter p: raw pointer to the underlying object
+    @inlinable override public init(raw p: UnsafeRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    @inlinable override public init(retainingRaw raw: UnsafeRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    /// - Parameter p: mutable raw pointer to the underlying object
+    @inlinable public required init(raw p: UnsafeMutableRawPointer) {
+        super.init(raw: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    /// - Parameter raw: mutable raw pointer to the underlying object
+    @inlinable required public init(retainingRaw raw: UnsafeMutableRawPointer) {
+        super.init(retainingRaw: raw)
+    }
+
+    /// Unsafe untyped initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(opaquePointer p: OpaquePointer) {
+        super.init(opaquePointer: p)
+    }
+
+    /// Unsafe untyped, retaining initialiser.
+    /// **Do not use unless you know the underlying data type the pointer points to conforms to `InscriptionProtocol`.**
+    /// - Parameter p: opaque pointer to the underlying object
+    @inlinable override public init(retainingOpaquePointer p: OpaquePointer) {
+        super.init(retainingOpaquePointer: p)
+    }
+
+    /// Creates a new `GtkInscription` with the given text.
+    @inlinable public init( text: UnsafePointer<CChar>? = nil) {
+            let result = gtk_inscription_new(text)
+        let rv = result
+            super.init(gpointer: gpointer(rv))
+    if typeIsA(type: self.type, isAType: InitiallyUnownedClassRef.metatypeReference) { _ = self.refSink() } 
+    }
+
+
+}
+
+public enum InscriptionPropertyName: String, PropertyNameProtocol {
+    /// A list of style attributes to apply to the text of the inscription.
+    case attributes = "attributes"
+    /// Whether the widget or any of its descendents can accept
+    /// the input focus.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case canFocus = "can-focus"
+    /// Whether the widget can receive pointer events.
+    case canTarget = "can-target"
+    /// A list of css classes applied to this widget.
+    case cssClasses = "css-classes"
+    /// The name of this widget in the CSS tree.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case cssName = "css-name"
+    /// The cursor used by `widget`.
+    case cursor = "cursor"
+    /// Whether the widget should grab focus when it is clicked with the mouse.
+    /// 
+    /// This property is only relevant for widgets that can take focus.
+    case focusOnClick = "focus-on-click"
+    /// Whether this widget itself will accept the input focus.
+    case focusable = "focusable"
+    /// How to distribute horizontal space if widget gets extra space.
+    case halign = "halign"
+    /// Whether the widget is the default widget.
+    case hasDefault = "has-default"
+    /// Whether the widget has the input focus.
+    case hasFocus = "has-focus"
+    /// Enables or disables the emission of the `query-tooltip` signal on `widget`.
+    /// 
+    /// A value of `true` indicates that `widget` can have a tooltip, in this case
+    /// the widget will be queried using [signal`Gtk.Widget::query-tooltip`] to
+    /// determine whether it will provide a tooltip or not.
+    case hasTooltip = "has-tooltip"
+    /// Override for height request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case heightRequest = "height-request"
+    /// Whether to expand horizontally.
+    case hexpand = "hexpand"
+    /// Whether to use the `hexpand` property.
+    case hexpandSet = "hexpand-set"
+    /// The `GtkLayoutManager` instance to use to compute the preferred size
+    /// of the widget, and allocate its children.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case layoutManager = "layout-manager"
+    /// Margin on bottom side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginBottom = "margin-bottom"
+    /// Margin on end of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginEnd = "margin-end"
+    /// Margin on start of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginStart = "margin-start"
+    /// Margin on top side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case marginTop = "margin-top"
+    /// Utility property that sets both the [property`Gtk.Inscription:text`] and
+    /// [property`Gtk.Inscription:attributes`] properties, mainly intended for use in
+    /// GtkBuilder ui files to ease translation support and bindings.
+    /// 
+    /// This function uses [func`Pango.parse_markup`] to parse the markup into text and
+    /// attributes. The markup must be valid. If you cannot ensure that, consider using
+    /// [func`Pango.parse_markup`] and setting the two properties yourself.
+    case markup = "markup"
+    /// The number of characters that should fit into the inscription at minimum.
+    /// 
+    /// This influences the requested width, not the width actually given to the widget,
+    /// which might turn out to be larger.
+    /// 
+    /// Note that this is an approximate character width, so some characters might be
+    /// wider and some might be thinner, so do not expect the number of characters to
+    /// exactly match.
+    /// 
+    /// If you set this property to 0, the inscription will not request any width at all
+    /// and its width will be determined entirely by its surroundings.
+    case minChars = "min-chars"
+    /// The number of lines that should fit into the inscription at minimum.
+    /// 
+    /// This influences the requested height, not the height actually given to the widget,
+    /// which might turn out to be larger.
+    /// 
+    /// Note that this is an approximate line height, so if the text uses things like fancy
+    /// Unicode or attribute that influence the height, the text might not fit.
+    /// 
+    /// If you set this property to 0, the inscription will not request any height at all
+    /// and its height will be determined entirely by its surroundings.
+    case minLines = "min-lines"
+    /// The name of the widget.
+    case name = "name"
+    /// The number of characters that should ideally fit into the inscription.
+    /// 
+    /// This influences the requested width, not the width actually given to the widget.
+    /// The widget might turn out larger as well as smaller.
+    /// 
+    /// If this property is set to a value smaller than [property`Gtk.Inscription:min-chars`],
+    /// that value will be used. In particular, for the default value of 0, this will always
+    /// be the case.
+    case natChars = "nat-chars"
+    /// The number of lines that should ideally fit into the inscription.
+    /// 
+    /// This influences the requested height, not the height actually given to the widget.
+    /// The widget might turn out larger as well as smaller.
+    /// 
+    /// If this property is set to a value smaller than [property`Gtk.Inscription:min-lines`],
+    /// that value will be used. In particular, for the default value of 0, this will always
+    /// be the case.
+    case natLines = "nat-lines"
+    /// The requested opacity of the widget.
+    case opacity = "opacity"
+    /// How content outside the widget's content area is treated.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case overflow = "overflow"
+    /// The parent widget of this widget.
+    case parent = "parent"
+    /// Whether the widget will receive the default action when it is focused.
+    case receivesDefault = "receives-default"
+    /// The `GtkRoot` widget of the widget tree containing this widget.
+    /// 
+    /// This will be `nil` if the widget is not contained in a root widget.
+    case root = "root"
+    /// The scale factor of the widget.
+    case scaleFactor = "scale-factor"
+    /// Whether the widget responds to input.
+    case sensitive = "sensitive"
+    /// The displayed text.
+    case text = "text"
+    /// The overflow method to use for the text.
+    case textOverflow = "text-overflow"
+    /// Sets the text of tooltip to be the given string, which is marked up
+    /// with Pango markup.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_markup`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case tooltipMarkup = "tooltip-markup"
+    /// Sets the text of tooltip to be the given string.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_text`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case tooltipText = "tooltip-text"
+    /// How to distribute vertical space if widget gets extra space.
+    case valign = "valign"
+    /// Whether to expand vertically.
+    case vexpand = "vexpand"
+    /// Whether to use the `vexpand` property.
+    case vexpandSet = "vexpand-set"
+    /// Whether the widget is visible.
+    case visible = "visible"
+    /// Override for width request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case widthRequest = "width-request"
+    /// Controls how the line wrapping is done.
+    /// 
+    /// Note that unlike `GtkLabel`, the default here is `PANGO_WRAP_WORD_CHAR`.
+    case wrapMode = "wrap-mode"
+    /// The horizontal alignment of the text inside the allocated size.
+    /// 
+    /// Compare this to [property`Gtk.Widget:halign`], which determines how the
+    /// inscription's size allocation is positioned in the available space.
+    case xalign = "xalign"
+    /// The vertical alignment of the text inside the allocated size.
+    /// 
+    /// Compare this to [property`Gtk.Widget:valign`], which determines how the
+    /// inscription's size allocation is positioned in the available space.
+    case yalign = "yalign"
+}
+
+public extension InscriptionProtocol {
+    /// Bind a `InscriptionPropertyName` source property to a given target object.
+    /// - Parameter source_property: the source property to bind
+    /// - Parameter target: the target object to bind to
+    /// - Parameter target_property: the target property to bind to
+    /// - Parameter flags: the flags to pass to the `Binding`
+    /// - Parameter transform_from: `ValueTransformer` to use for forward transformation
+    /// - Parameter transform_to: `ValueTransformer` to use for backwards transformation
+    /// - Returns: binding reference or `nil` in case of an error
+    @discardableResult @inlinable func bind<Q: PropertyNameProtocol, T: GLibObject.ObjectProtocol>(property source_property: InscriptionPropertyName, to target: T, _ target_property: Q, flags f: BindingFlags = .default, transformFrom transform_from: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }, transformTo transform_to: @escaping GLibObject.ValueTransformer = { $0.transform(destValue: $1) }) -> BindingRef! {
+        func _bind(_ source: UnsafePointer<gchar>, to t: T, _ target_property: UnsafePointer<gchar>, flags f: BindingFlags = .default, holder: BindingClosureHolder, transformFrom transform_from: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean, transformTo transform_to: @convention(c) @escaping (gpointer, gpointer, gpointer, gpointer) -> gboolean) -> BindingRef! {
+            let holder = UnsafeMutableRawPointer(Unmanaged.passRetained(holder).toOpaque())
+            let from = unsafeBitCast(transform_from, to: BindingTransformFunc.self)
+            let to   = unsafeBitCast(transform_to,   to: BindingTransformFunc.self)
+            let rv = GLibObject.ObjectRef(raw: ptr).bindPropertyFull(sourceProperty: source, target: t, targetProperty: target_property, flags: f, transformTo: to, transformFrom: from, userData: holder) {
+                if let swift = UnsafeRawPointer($0) {
+                    let holder = Unmanaged<GLibObject.SignalHandlerClosureHolder>.fromOpaque(swift)
+                    holder.release()
+                }
+            }
+            return rv.map { BindingRef($0) }
+        }
+
+        let rv = _bind(source_property.name, to: target, target_property.name, flags: f, holder: BindingClosureHolder(transform_from, transform_to), transformFrom: {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_from(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }) {
+            let ptr = UnsafeRawPointer($3)
+            let holder = Unmanaged<BindingClosureHolder>.fromOpaque(ptr).takeUnretainedValue()
+            return holder.transform_to(GLibObject.ValueRef(raw: $1), GLibObject.ValueRef(raw: $2)) ? 1 : 0
+        }
+        return rv
+    }
+
+    /// Get the value of a Inscription property
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func get(property: InscriptionPropertyName) -> GLibObject.Value {
+        let v = GLibObject.Value()
+        g_object_get_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+        return v
+    }
+
+    /// Set the value of a Inscription property.
+    /// *Note* that this will only have an effect on properties that are writable and not construct-only!
+    /// - Parameter property: the property to get the value for
+    /// - Returns: the value of the named property
+    @inlinable func set(property: InscriptionPropertyName, value v: GLibObject.Value) {
+        g_object_set_property(ptr.assumingMemoryBound(to: GObject.self), property.rawValue, v.value_ptr)
+    }
+}
+
+public enum InscriptionSignalName: String, SignalNameProtocol {
+    /// Signals that all holders of a reference to the widget should release
+    /// the reference that they hold.
+    /// 
+    /// May result in finalization of the widget if all references are released.
+    /// 
+    /// This signal is not suitable for saving widget state.
+    case destroy = "destroy"
+    /// Emitted when the text direction of a widget changes.
+    case directionChanged = "direction-changed"
+    /// Emitted when `widget` is hidden.
+    case hide = "hide"
+    /// Emitted if keyboard navigation fails.
+    /// 
+    /// See [method`Gtk.Widget.keynav_failed`] for details.
+    case keynavFailed = "keynav-failed"
+    /// Emitted when `widget` is going to be mapped.
+    /// 
+    /// A widget is mapped when the widget is visible (which is controlled with
+    /// [property`Gtk.Widget:visible`]) and all its parents up to the toplevel widget
+    /// are also visible.
+    /// 
+    /// The `map` signal can be used to determine whether a widget will be drawn,
+    /// for instance it can resume an animation that was stopped during the
+    /// emission of [signal`Gtk.Widget::unmap`].
+    case map = "map"
+    /// Emitted when a widget is activated via a mnemonic.
+    /// 
+    /// The default handler for this signal activates `widget` if `group_cycling`
+    /// is `false`, or just makes `widget` grab focus if `group_cycling` is `true`.
+    case mnemonicActivate = "mnemonic-activate"
+    /// Emitted when the focus is moved.
+    case moveFocus = "move-focus"
+    /// The notify signal is emitted on an object when one of its properties has
+    /// its value set through `g_object_set_property()`, `g_object_set()`, et al.
+    /// 
+    /// Note that getting this signal doesn’t itself guarantee that the value of
+    /// the property has actually changed. When it is emitted is determined by the
+    /// derived GObject class. If the implementor did not create the property with
+    /// `G_PARAM_EXPLICIT_NOTIFY`, then any call to `g_object_set_property()` results
+    /// in `notify` being emitted, even if the new value is the same as the old.
+    /// If they did pass `G_PARAM_EXPLICIT_NOTIFY`, then this signal is emitted only
+    /// when they explicitly call `g_object_notify()` or `g_object_notify_by_pspec()`,
+    /// and common practice is to do that only when the value has actually changed.
+    /// 
+    /// This signal is typically used to obtain change notification for a
+    /// single property, by specifying the property name as a detail in the
+    /// `g_signal_connect()` call, like this:
+    /// 
+    /// (C Language Example):
+    /// ```C
+    /// g_signal_connect (text_view->buffer, "notify::paste-target-list",
+    ///                   G_CALLBACK (gtk_text_view_target_list_notify),
+    ///                   text_view)
+    /// ```
+    /// 
+    /// It is important to note that you must use
+    /// [canonical parameter names](#canonical-parameter-names) as
+    /// detail strings for the notify signal.
+    case notify = "notify"
+    /// Emitted when the widgets tooltip is about to be shown.
+    /// 
+    /// This happens when the [property`Gtk.Widget:has-tooltip`] property
+    /// is `true` and the hover timeout has expired with the cursor hovering
+    /// "above" `widget`; or emitted when `widget` got focus in keyboard mode.
+    /// 
+    /// Using the given coordinates, the signal handler should determine
+    /// whether a tooltip should be shown for `widget`. If this is the case
+    /// `true` should be returned, `false` otherwise.  Note that if
+    /// `keyboard_mode` is `true`, the values of `x` and `y` are undefined and
+    /// should not be used.
+    /// 
+    /// The signal handler is free to manipulate `tooltip` with the therefore
+    /// destined function calls.
+    case queryTooltip = "query-tooltip"
+    /// Emitted when `widget` is associated with a `GdkSurface`.
+    /// 
+    /// This means that [method`Gtk.Widget.realize`] has been called
+    /// or the widget has been mapped (that is, it is going to be drawn).
+    case realize = "realize"
+    /// Emitted when `widget` is shown.
+    case show = "show"
+    /// Emitted when the widget state changes.
+    /// 
+    /// See [method`Gtk.Widget.get_state_flags`].
+    case stateFlagsChanged = "state-flags-changed"
+    /// Emitted when `widget` is going to be unmapped.
+    /// 
+    /// A widget is unmapped when either it or any of its parents up to the
+    /// toplevel widget have been set as hidden.
+    /// 
+    /// As `unmap` indicates that a widget will not be shown any longer,
+    /// it can be used to, for example, stop an animation on the widget.
+    case unmap = "unmap"
+    /// Emitted when the `GdkSurface` associated with `widget` is destroyed.
+    /// 
+    /// This means that [method`Gtk.Widget.unrealize`] has been called
+    /// or the widget has been unmapped (that is, it is going to be hidden).
+    case unrealize = "unrealize"
+    /// A list of style attributes to apply to the text of the inscription.
+    case notifyAttributes = "notify::attributes"
+    /// Whether the widget or any of its descendents can accept
+    /// the input focus.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyCanFocus = "notify::can-focus"
+    /// Whether the widget can receive pointer events.
+    case notifyCanTarget = "notify::can-target"
+    /// A list of css classes applied to this widget.
+    case notifyCssClasses = "notify::css-classes"
+    /// The name of this widget in the CSS tree.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyCssName = "notify::css-name"
+    /// The cursor used by `widget`.
+    case notifyCursor = "notify::cursor"
+    /// Whether the widget should grab focus when it is clicked with the mouse.
+    /// 
+    /// This property is only relevant for widgets that can take focus.
+    case notifyFocusOnClick = "notify::focus-on-click"
+    /// Whether this widget itself will accept the input focus.
+    case notifyFocusable = "notify::focusable"
+    /// How to distribute horizontal space if widget gets extra space.
+    case notifyHalign = "notify::halign"
+    /// Whether the widget is the default widget.
+    case notifyHasDefault = "notify::has-default"
+    /// Whether the widget has the input focus.
+    case notifyHasFocus = "notify::has-focus"
+    /// Enables or disables the emission of the `query-tooltip` signal on `widget`.
+    /// 
+    /// A value of `true` indicates that `widget` can have a tooltip, in this case
+    /// the widget will be queried using [signal`Gtk.Widget::query-tooltip`] to
+    /// determine whether it will provide a tooltip or not.
+    case notifyHasTooltip = "notify::has-tooltip"
+    /// Override for height request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case notifyHeightRequest = "notify::height-request"
+    /// Whether to expand horizontally.
+    case notifyHexpand = "notify::hexpand"
+    /// Whether to use the `hexpand` property.
+    case notifyHexpandSet = "notify::hexpand-set"
+    /// The `GtkLayoutManager` instance to use to compute the preferred size
+    /// of the widget, and allocate its children.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyLayoutManager = "notify::layout-manager"
+    /// Margin on bottom side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginBottom = "notify::margin-bottom"
+    /// Margin on end of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginEnd = "notify::margin-end"
+    /// Margin on start of widget, horizontally.
+    /// 
+    /// This property supports left-to-right and right-to-left text
+    /// directions.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginStart = "notify::margin-start"
+    /// Margin on top side of widget.
+    /// 
+    /// This property adds margin outside of the widget's normal size
+    /// request, the margin will be added in addition to the size from
+    /// [method`Gtk.Widget.set_size_request`] for example.
+    case notifyMarginTop = "notify::margin-top"
+    /// Utility property that sets both the [property`Gtk.Inscription:text`] and
+    /// [property`Gtk.Inscription:attributes`] properties, mainly intended for use in
+    /// GtkBuilder ui files to ease translation support and bindings.
+    /// 
+    /// This function uses [func`Pango.parse_markup`] to parse the markup into text and
+    /// attributes. The markup must be valid. If you cannot ensure that, consider using
+    /// [func`Pango.parse_markup`] and setting the two properties yourself.
+    case notifyMarkup = "notify::markup"
+    /// The number of characters that should fit into the inscription at minimum.
+    /// 
+    /// This influences the requested width, not the width actually given to the widget,
+    /// which might turn out to be larger.
+    /// 
+    /// Note that this is an approximate character width, so some characters might be
+    /// wider and some might be thinner, so do not expect the number of characters to
+    /// exactly match.
+    /// 
+    /// If you set this property to 0, the inscription will not request any width at all
+    /// and its width will be determined entirely by its surroundings.
+    case notifyMinChars = "notify::min-chars"
+    /// The number of lines that should fit into the inscription at minimum.
+    /// 
+    /// This influences the requested height, not the height actually given to the widget,
+    /// which might turn out to be larger.
+    /// 
+    /// Note that this is an approximate line height, so if the text uses things like fancy
+    /// Unicode or attribute that influence the height, the text might not fit.
+    /// 
+    /// If you set this property to 0, the inscription will not request any height at all
+    /// and its height will be determined entirely by its surroundings.
+    case notifyMinLines = "notify::min-lines"
+    /// The name of the widget.
+    case notifyName = "notify::name"
+    /// The number of characters that should ideally fit into the inscription.
+    /// 
+    /// This influences the requested width, not the width actually given to the widget.
+    /// The widget might turn out larger as well as smaller.
+    /// 
+    /// If this property is set to a value smaller than [property`Gtk.Inscription:min-chars`],
+    /// that value will be used. In particular, for the default value of 0, this will always
+    /// be the case.
+    case notifyNatChars = "notify::nat-chars"
+    /// The number of lines that should ideally fit into the inscription.
+    /// 
+    /// This influences the requested height, not the height actually given to the widget.
+    /// The widget might turn out larger as well as smaller.
+    /// 
+    /// If this property is set to a value smaller than [property`Gtk.Inscription:min-lines`],
+    /// that value will be used. In particular, for the default value of 0, this will always
+    /// be the case.
+    case notifyNatLines = "notify::nat-lines"
+    /// The requested opacity of the widget.
+    case notifyOpacity = "notify::opacity"
+    /// How content outside the widget's content area is treated.
+    /// 
+    /// This property is meant to be set by widget implementations,
+    /// typically in their instance init function.
+    case notifyOverflow = "notify::overflow"
+    /// The parent widget of this widget.
+    case notifyParent = "notify::parent"
+    /// Whether the widget will receive the default action when it is focused.
+    case notifyReceivesDefault = "notify::receives-default"
+    /// The `GtkRoot` widget of the widget tree containing this widget.
+    /// 
+    /// This will be `nil` if the widget is not contained in a root widget.
+    case notifyRoot = "notify::root"
+    /// The scale factor of the widget.
+    case notifyScaleFactor = "notify::scale-factor"
+    /// Whether the widget responds to input.
+    case notifySensitive = "notify::sensitive"
+    /// The displayed text.
+    case notifyText = "notify::text"
+    /// The overflow method to use for the text.
+    case notifyTextOverflow = "notify::text-overflow"
+    /// Sets the text of tooltip to be the given string, which is marked up
+    /// with Pango markup.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_markup`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case notifyTooltipMarkup = "notify::tooltip-markup"
+    /// Sets the text of tooltip to be the given string.
+    /// 
+    /// Also see [method`Gtk.Tooltip.set_text`].
+    /// 
+    /// This is a convenience property which will take care of getting the
+    /// tooltip shown if the given string is not `nil`:
+    /// [property`Gtk.Widget:has-tooltip`] will automatically be set to `true`
+    /// and there will be taken care of [signal`Gtk.Widget::query-tooltip`] in
+    /// the default signal handler.
+    /// 
+    /// Note that if both [property`Gtk.Widget:tooltip-text`] and
+    /// [property`Gtk.Widget:tooltip-markup`] are set, the last one wins.
+    case notifyTooltipText = "notify::tooltip-text"
+    /// How to distribute vertical space if widget gets extra space.
+    case notifyValign = "notify::valign"
+    /// Whether to expand vertically.
+    case notifyVexpand = "notify::vexpand"
+    /// Whether to use the `vexpand` property.
+    case notifyVexpandSet = "notify::vexpand-set"
+    /// Whether the widget is visible.
+    case notifyVisible = "notify::visible"
+    /// Override for width request of the widget.
+    /// 
+    /// If this is -1, the natural request will be used.
+    case notifyWidthRequest = "notify::width-request"
+    /// Controls how the line wrapping is done.
+    /// 
+    /// Note that unlike `GtkLabel`, the default here is `PANGO_WRAP_WORD_CHAR`.
+    case notifyWrapMode = "notify::wrap-mode"
+    /// The horizontal alignment of the text inside the allocated size.
+    /// 
+    /// Compare this to [property`Gtk.Widget:halign`], which determines how the
+    /// inscription's size allocation is positioned in the available space.
+    case notifyXalign = "notify::xalign"
+    /// The vertical alignment of the text inside the allocated size.
+    /// 
+    /// Compare this to [property`Gtk.Widget:valign`], which determines how the
+    /// inscription's size allocation is positioned in the available space.
+    case notifyYalign = "notify::yalign"
+}
+
+// MARK: Inscription has no signals
+// MARK: Inscription Class: InscriptionProtocol extension (methods and fields)
+public extension InscriptionProtocol {
+    /// Return the stored, untyped pointer as a typed pointer to the `GtkInscription` instance.
+    @inlinable var inscription_ptr: UnsafeMutablePointer<GtkInscription>! { return ptr?.assumingMemoryBound(to: GtkInscription.self) }
+
+    /// Gets the inscription's attribute list.
+    @inlinable func getAttributes() -> Pango.AttrListRef! {
+        let result = gtk_inscription_get_attributes(inscription_ptr)
+        let rv = Pango.AttrListRef(gconstpointer: gconstpointer(result))
+        return rv
+    }
+
+    /// Gets the `min-chars` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:min-chars`] property.
+    @inlinable func getMinChars() -> Int {
+        let result = gtk_inscription_get_min_chars(inscription_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Gets the `min-lines` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:min-lines`] property.
+    @inlinable func getMinLines() -> Int {
+        let result = gtk_inscription_get_min_lines(inscription_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Gets the `nat-chars` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:nat-chars`] property.
+    @inlinable func getNatChars() -> Int {
+        let result = gtk_inscription_get_nat_chars(inscription_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Gets the `nat-lines` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:nat-lines`] property.
+    @inlinable func getNatLines() -> Int {
+        let result = gtk_inscription_get_nat_lines(inscription_ptr)
+        let rv = Int(result)
+        return rv
+    }
+
+    /// Gets the text that is displayed.
+    @inlinable func getText() -> String! {
+        let result = gtk_inscription_get_text(inscription_ptr)
+        let rv = result.map({ String(cString: $0) })
+        return rv
+    }
+
+    /// Gets the inscription's overflow method.
+    @inlinable func getTextOverflow() -> GtkInscriptionOverflow {
+        let result = gtk_inscription_get_text_overflow(inscription_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Returns line wrap mode used by the inscription.
+    /// 
+    /// See [method`Gtk.Inscription.set_wrap_mode`].
+    @inlinable func getWrapMode() -> PangoWrapMode {
+        let result = gtk_inscription_get_wrap_mode(inscription_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Gets the `xalign` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:xalign`] property.
+    @inlinable func getXalign() -> CFloat {
+        let result = gtk_inscription_get_xalign(inscription_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Gets the `yalign` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:yalign`] property.
+    @inlinable func getYalign() -> CFloat {
+        let result = gtk_inscription_get_yalign(inscription_ptr)
+        let rv = result
+        return rv
+    }
+
+    /// Apply attributes to the inscription text.
+    /// 
+    /// These attributes will not be evaluated for sizing the inscription.
+    @inlinable func setAttributes(attrs: Pango.AttrListRef? = nil) {
+            
+        gtk_inscription_set_attributes(inscription_ptr, attrs?.attr_list_ptr)
+            
+    }
+    /// Apply attributes to the inscription text.
+    /// 
+    /// These attributes will not be evaluated for sizing the inscription.
+    @inlinable func setAttributes<PangoAttrListT: Pango.AttrListProtocol>(attrs: PangoAttrListT?) {
+        
+        gtk_inscription_set_attributes(inscription_ptr, attrs?.attr_list_ptr)
+        
+    }
+
+    /// Utility function to set the text and attributes to be displayed.
+    /// 
+    /// See the [property`Gtk.Inscription:markup`] property.
+    @inlinable func set(markup: UnsafePointer<CChar>? = nil) {
+        
+        gtk_inscription_set_markup(inscription_ptr, markup)
+        
+    }
+
+    /// Sets the `min-chars` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:min-chars`] property.
+    @inlinable func set(minChars: Int) {
+        
+        gtk_inscription_set_min_chars(inscription_ptr, guint(minChars))
+        
+    }
+
+    /// Sets the `min-lines` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:min-lines`] property.
+    @inlinable func set(minLines: Int) {
+        
+        gtk_inscription_set_min_lines(inscription_ptr, guint(minLines))
+        
+    }
+
+    /// Sets the `nat-chars` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:nat-chars`] property.
+    @inlinable func set(natChars: Int) {
+        
+        gtk_inscription_set_nat_chars(inscription_ptr, guint(natChars))
+        
+    }
+
+    /// Sets the `nat-lines` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:nat-lines`] property.
+    @inlinable func set(natLines: Int) {
+        
+        gtk_inscription_set_nat_lines(inscription_ptr, guint(natLines))
+        
+    }
+
+    /// Sets the text to be displayed.
+    @inlinable func set(text: UnsafePointer<CChar>? = nil) {
+        
+        gtk_inscription_set_text(inscription_ptr, text)
+        
+    }
+
+    /// Sets what to do when the text doesn't fit.
+    @inlinable func setText(overflow: GtkInscriptionOverflow) {
+        
+        gtk_inscription_set_text_overflow(inscription_ptr, overflow)
+        
+    }
+
+    /// Controls how line wrapping is done.
+    @inlinable func set(wrapMode: PangoWrapMode) {
+        
+        gtk_inscription_set_wrap_mode(inscription_ptr, wrapMode)
+        
+    }
+
+    /// Sets the `xalign` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:xalign`] property.
+    @inlinable func set(xalign: CFloat) {
+        
+        gtk_inscription_set_xalign(inscription_ptr, xalign)
+        
+    }
+
+    /// Sets the `yalign` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:yalign`] property.
+    @inlinable func set(yalign: CFloat) {
+        
+        gtk_inscription_set_yalign(inscription_ptr, yalign)
+        
+    }
+    /// A list of style attributes to apply to the text of the inscription.
+    @inlinable var attributes: Pango.AttrListRef! {
+        /// Gets the inscription's attribute list.
+        get {
+            let result = gtk_inscription_get_attributes(inscription_ptr)
+        let rv = Pango.AttrListRef(gconstpointer: gconstpointer(result))
+            return rv
+        }
+        /// Apply attributes to the inscription text.
+        /// 
+        /// These attributes will not be evaluated for sizing the inscription.
+        nonmutating set {
+            gtk_inscription_set_attributes(inscription_ptr, UnsafeMutablePointer<PangoAttrList>(newValue?.attr_list_ptr))
+        }
+    }
+
+    /// Gets the `min-chars` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:min-chars`] property.
+    @inlinable var minChars: Int {
+        /// Gets the `min-chars` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:min-chars`] property.
+        get {
+            let result = gtk_inscription_get_min_chars(inscription_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `min-chars` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:min-chars`] property.
+        nonmutating set {
+            gtk_inscription_set_min_chars(inscription_ptr, guint(newValue))
+        }
+    }
+
+    /// Gets the `min-lines` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:min-lines`] property.
+    @inlinable var minLines: Int {
+        /// Gets the `min-lines` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:min-lines`] property.
+        get {
+            let result = gtk_inscription_get_min_lines(inscription_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `min-lines` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:min-lines`] property.
+        nonmutating set {
+            gtk_inscription_set_min_lines(inscription_ptr, guint(newValue))
+        }
+    }
+
+    /// Gets the `nat-chars` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:nat-chars`] property.
+    @inlinable var natChars: Int {
+        /// Gets the `nat-chars` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:nat-chars`] property.
+        get {
+            let result = gtk_inscription_get_nat_chars(inscription_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `nat-chars` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:nat-chars`] property.
+        nonmutating set {
+            gtk_inscription_set_nat_chars(inscription_ptr, guint(newValue))
+        }
+    }
+
+    /// Gets the `nat-lines` of the inscription.
+    /// 
+    /// See the [property`Gtk.Inscription:nat-lines`] property.
+    @inlinable var natLines: Int {
+        /// Gets the `nat-lines` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:nat-lines`] property.
+        get {
+            let result = gtk_inscription_get_nat_lines(inscription_ptr)
+        let rv = Int(result)
+            return rv
+        }
+        /// Sets the `nat-lines` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:nat-lines`] property.
+        nonmutating set {
+            gtk_inscription_set_nat_lines(inscription_ptr, guint(newValue))
+        }
+    }
+
+    /// The displayed text.
+    @inlinable var text: String! {
+        /// Gets the text that is displayed.
+        get {
+            let result = gtk_inscription_get_text(inscription_ptr)
+        let rv = result.map({ String(cString: $0) })
+            return rv
+        }
+        /// Sets the text to be displayed.
+        nonmutating set {
+            gtk_inscription_set_text(inscription_ptr, newValue)
+        }
+    }
+
+    /// Gets the inscription's overflow method.
+    @inlinable var textOverflow: GtkInscriptionOverflow {
+        /// Gets the inscription's overflow method.
+        get {
+            let result = gtk_inscription_get_text_overflow(inscription_ptr)
+        let rv = result
+            return rv
+        }
+        /// Sets what to do when the text doesn't fit.
+        nonmutating set {
+            gtk_inscription_set_text_overflow(inscription_ptr, newValue)
+        }
+    }
+
+    /// Returns line wrap mode used by the inscription.
+    /// 
+    /// See [method`Gtk.Inscription.set_wrap_mode`].
+    @inlinable var wrapMode: PangoWrapMode {
+        /// Returns line wrap mode used by the inscription.
+        /// 
+        /// See [method`Gtk.Inscription.set_wrap_mode`].
+        get {
+            let result = gtk_inscription_get_wrap_mode(inscription_ptr)
+        let rv = result
+            return rv
+        }
+        /// Controls how line wrapping is done.
+        nonmutating set {
+            gtk_inscription_set_wrap_mode(inscription_ptr, newValue)
+        }
+    }
+
+    /// The horizontal alignment of the text inside the allocated size.
+    /// 
+    /// Compare this to [property`Gtk.Widget:halign`], which determines how the
+    /// inscription's size allocation is positioned in the available space.
+    @inlinable var xalign: CFloat {
+        /// Gets the `xalign` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:xalign`] property.
+        get {
+            let result = gtk_inscription_get_xalign(inscription_ptr)
+        let rv = result
+            return rv
+        }
+        /// Sets the `xalign` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:xalign`] property.
+        nonmutating set {
+            gtk_inscription_set_xalign(inscription_ptr, newValue)
+        }
+    }
+
+    /// The vertical alignment of the text inside the allocated size.
+    /// 
+    /// Compare this to [property`Gtk.Widget:valign`], which determines how the
+    /// inscription's size allocation is positioned in the available space.
+    @inlinable var yalign: CFloat {
+        /// Gets the `yalign` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:yalign`] property.
+        get {
+            let result = gtk_inscription_get_yalign(inscription_ptr)
+        let rv = result
+            return rv
+        }
+        /// Sets the `yalign` of the inscription.
+        /// 
+        /// See the [property`Gtk.Inscription:yalign`] property.
+        nonmutating set {
+            gtk_inscription_set_yalign(inscription_ptr, newValue)
+        }
+    }
+
+
+}
+
+
+
