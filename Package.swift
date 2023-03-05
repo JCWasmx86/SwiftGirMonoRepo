@@ -450,5 +450,6 @@ let package = Package(
           .when(configuration: .debug)),
       ]
     ),
+    .executableTarget(name: "Example", dependencies: ["Adw"]),
   ]
 )

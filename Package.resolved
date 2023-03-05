@@ -1,0 +1,59 @@
+{
+  "pins" : [
+    {
+      "identity" : "gir2swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rhx/gir2swift.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "90f7f80104829d5700919463bd1dbfaf7f39c588"
+      }
+    },
+    {
+      "identity" : "swift-argument-parser",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-argument-parser",
+      "state" : {
+        "revision" : "4ad606ba5d7673ea60679a61ff867cc1ff8c8e86",
+        "version" : "1.2.1"
+      }
+    },
+    {
+      "identity" : "swift-docc-plugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-docc-plugin",
+      "state" : {
+        "revision" : "10bc670db657d11bdd561e07de30a9041311b2b1",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swift-docc-symbolkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-docc-symbolkit",
+      "state" : {
+        "revision" : "b45d1f2ed151d057b54504d653e0da5552844e34",
+        "version" : "1.0.0"
+      }
+    },
+    {
+      "identity" : "swiftlibxml",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/rhx/SwiftLibXML.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "1b9b259c27cd70868d50bdd9f6bffcb824d81b24"
+      }
+    },
+    {
+      "identity" : "yams",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jpsim/Yams.git",
+      "state" : {
+        "revision" : "9ff1cc9327586db4e0c8f46f064b6a82ec1566fa",
+        "version" : "4.0.6"
+      }
+    }
+  ],
+  "version" : 2
+}
